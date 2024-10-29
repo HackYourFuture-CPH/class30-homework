@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Order Form</title>
+
+</head>
+<body>
+    <div class="page_background">
+        <header>
+           <h1 >SOME HEADER</h1>
+            <p class="optional_title">some optional stuff</p>
+        </header>
+        <div class="form_background">
+            <div class="form_top">
+                <h1 class="form_title">Order Summary</h1>
+                <div class="monthly_total"><p>Total</p><p><span>$333</span>/month</p></div>
+                <div class="immediate_total"><p id="imtotal">Total</p><p>$100</p></div>
+            </div>
+            <div class="form_body">
+                <div class="payment_method">
+                    <h2>Payment Method</h2>
+                    <div class="rectangles">
+                    <div class="rectangle_left"><img src="./cards.png"><p class="cardsoptions">Credit / Debit</p></div>
+                    <div class="rectangle_right"><img src="./paypal.png"><p class="cardsoptions">Paypal</p></div>
+                    </div>
+                </div>
+                <div class="cardinfo">
+                    <h2>Card Info</h2>
+                    <form id="paymentinfo">
+                        <div class="card">
+                        <label id="cardnum-label" for="cardnumber">
+                            <span>Card Number</span>
+                            <input id="cardnumber" type="text" placeholder="1234 1234 1234 1234"  maxlength="14" required>
+                        </label>
+                        </div>
+                        <div class="date">
+                        <label id="expdate-label" for="expiry">
+                            <span>Expiry Date</span>
+                            <input id="expiry" type="text" placeholder="MM/YY"  maxlength="5" required>
+                        </label>
+                        </div>
+                        <div class="code">
+                        <label id="ccv-label" for="ccv">
+                            <span>Security Code</span>
+                            <input id="ccv" type="text" placeholder="CCV" maxlength="3" required>
+                        </label>
+                        </div>
+                    </form>
+                </div>
+
+                <button id="submit">Buy Now</button>
+                <a id="help">Need Help?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
