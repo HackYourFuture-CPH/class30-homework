@@ -3,3 +3,78 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(255, 169, 138);
+}
+
+.navigation {
+  text-align: center;
+}
+
+.list {
+  padding: 30px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+  margin-right: 50px;
+}
+
+.list-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.list-link:hover {
+  cursor: pointer;
+  color: #d23317;
+  transition: color 0.3s ease;
+}
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.name {
+  font-size: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.description,
+.portfolio-description {
+  font-size: 24px;
+  text-align: center;
+}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.about-me,
+.portfolio-header,
+.contact-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
