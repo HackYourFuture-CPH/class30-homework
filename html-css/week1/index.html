@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guzide Guzelbey Esengun</title>
+  </head>
+  <body>
+    <nav>
+      <label for="nav-toggle" class="navbar-toggle-btn">
+        <span class="hamburger-icon">&#9776;</span>
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="navigation-list">
+        <li><a class="active" href="#hero-text">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header id="hero-text">
+      <div class="hero-text">
+        <h1 class="developer-name">
+          G ü z i d e &ensp; G Ü Z E L B E Y &ensp; E S E N G Ü N
+        </h1>
+        <h2>Front-end Developer</h2>
+      </div>
+      <div id="contact" class="hero-contact">
+        <ul class="contact-icons">
+          <li><a class="github" href="#">Github</a></li>
+          <li><a class="linkedin" href="#">Linkedin</a></li>
+          <li><a class="email" href="#">Email</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <div class="about-text">
+          <p>
+            Passionate about web development with a strong foundation in
+            industrial design and extensive experience in ergonomics, user
+            interaction, and usability.<br /><br />Eager to leverage skills in
+            HTML, CSS, JavaScript, and React.js to create engaging and
+            user-friendly web applications.<br /><br />Experienced in applying
+            Scrum in project management and dedicated to continuous learning and
+            professional growth in front-end development.
+          </p>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="skills-container">
+          <ul class="programming-skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>React.js</li>
+            <li>Angular</li>
+            <li>Git</li>
+            <li>Vs Code</li>
+            <li>Python</li>
+          </ul>
+          <div class="skills-core">
+            <p>Skills</p>
+          </div>
+          <ul class="additional-skills">
+            <li>Figma</li>
+            <li>Adobe Creative Suite</li>
+            <li>Figma</li>
+            <li>Functional Testing</li>
+            <li>Regression Testing</li>
+            <li>Smoke Testing</li>
+            <li>Project Management</li>
+          </ul>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="cards">
+          <a
+            href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form"
+            target="_blank"
+            class="card card1"
+          >
+            <img src="images/fcc-project.jpg" alt="FCC Survey Form" />
+            <p>FreeCodeCamp Survey Form</p>
+          </a>
+          <a href="" target="_blank" class="card card2">
+            <img src="" alt="Project 2" />
+            <p>Project 2</p>
+          </a>
+          <a href="" target="_blank" class="card card3">
+            <img src="" alt="Project 3" />
+            <p>Project 3</p>
+          </a>
+        </div>
+      </section>
+      <section class="experience" id="experience">Experience</section>
+      <section class="education" id="education">Education</section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.querySelector(".hamburger-icon");
+        const navList = document.querySelector(".navigation-list");
+
+        toggleBtn.addEventListener("click", function () {
+          navList.classList.toggle("active"); // Toggle the overlay menu
+        });
+      });
+    </script>
+  </body>
+</html>

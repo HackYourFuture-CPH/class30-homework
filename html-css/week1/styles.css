@@ -1,0 +1,358 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(30, 24, 24);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 50px;
+  height: 5%;
+  width: 100%;
+  z-index: 25;
+  background-color: rgb(30, 24, 24);
+  padding-bottom: 10px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.navigation-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  justify-self: left;
+}
+
+.navigation-list li a:hover {
+  border-radius: 8px;
+  border: 2px dotted #ffc300;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header {
+  min-height: 600px;
+  height: 100vh;
+  background-color: rgb(30, 24, 24);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.hero-text h1 {
+  font-family: "AdamDrawn", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.hero-text h2 {
+  font-family: "Courier New", Courier, sans-serif;
+  font-weight: lighter;
+  color: #02c9c9;
+}
+
+.hero-contact {
+  width: 100px;
+  height: 25%;
+  z-index: 1000;
+  display: block;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  border-style: dotted;
+  border-color: #f751a7;
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+
+.hero-contact:hover {
+  border: none;
+}
+
+.contact-icons {
+  list-style: none;
+  text-align: center;
+}
+
+main {
+  background-color: rgb(30, 24, 24);
+}
+
+.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px dotted #02c9c9;
+}
+
+.about-text {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  border: 3px dotted #02c9c9;
+  border-radius: 20px;
+  padding: 30px 15px 35px 30px;
+}
+
+.about-text p {
+  margin: 0;
+  text-align: left;
+  color: rgb(255, 255, 240);
+  line-height: 40px;
+  font-family: "Overlock", sans-serif;
+  font-weight: 500;
+}
+
+.skills {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.skills-core {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(255, 255, 240);
+  font-family: "Overlock", sans-serif;
+  font-weight: 500;
+  border: 3px dotted #02c9c9;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Horizontal lines extending from skills-core */
+.skills-core::before,
+.skills-core::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 150px;
+  border-top: 3px dotted #02c9c9;
+  z-index: 0;
+}
+
+.skills-core::before {
+  left: -160px;
+}
+
+.skills-core::after {
+  right: -160px;
+}
+
+.programming-skills,
+.additional-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 255, 240);
+  font-family: "AdamDrawn", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.programming-skills {
+  text-align: left;
+  line-height: 36px;
+  border: 3px dotted #ffc300;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.additional-skills {
+  text-align: left;
+  line-height: 50px;
+  border: 3px dotted #ffc300;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.projects {
+  background-color: rgb(30, 24, 24); /* Background color for the section */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between; /* Ensures cards are evenly spaced */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 60px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none; /* Remove underline from link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); /* Grayscale filter */
+  transition: filter 0.3s ease; /* Smooth transition to color */
+}
+
+.card:hover img {
+  filter: grayscale(0%);
+}
+
+.experience {
+  background-color: rgb(253, 237, 10);
+  height: 100vh;
+}
+
+.education {
+  background-color: rgb(159, 6, 220);
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .navigation-list {
+    display: none; /* Hide by default on mobile */
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(30, 24, 24, 0.9);
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  .navigation-list.active {
+    display: flex; /* Display as overlay when active */
+  }
+
+  .navigation-list li {
+    margin: 20px 0;
+  }
+
+  .navigation-list li a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .hamburger-icon {
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: white;
+    z-index: 1100;
+  }
+  .hero-text h1,
+  h2 {
+    font-size: 0.6em;
+    padding: 0 10px;
+  }
+
+  .about-text {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    border: 3px dotted #02c9c9;
+    border-radius: 10px;
+    padding: 30px 15px 35px 30px;
+  }
+
+  .about-text p {
+    margin: 10px;
+    text-align: left;
+    color: rgb(255, 255, 240);
+    line-height: 40px;
+    font-family: "Overlock", sans-serif;
+    font-weight: 500;
+  }
+
+  .skills-container {
+    width: smaller;
+    padding: 10px;
+  }
+  .skills-core {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    width: 90%;
+    height: 250px;
+  }
+}
