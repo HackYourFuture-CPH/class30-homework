@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background-color: rgb(255, 169, 138);
-}
+} */
 
 .navigation {
   text-align: center;
@@ -28,25 +28,55 @@ body {
 
 .list-link:hover {
   cursor: pointer;
-  color: #d23317;
+  color: #6700d4;
   transition: color 0.3s ease;
 }
 
+.container {
+  width: 1158px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
 .header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  color: white;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(./img/412ea792b6963690a4a9dce67b73f216.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .name {
   font-size: 54px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.5;
   margin-bottom: 20px;
+  -webkit-text-stroke: 1px black;
 }
 
-.description,
+.description {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  -webkit-text-stroke: 0.7px black;
+}
+
+.description-me {
+  font-size: 24px;
+  text-align: center;
+}
+
 .portfolio-description {
   font-size: 24px;
   text-align: center;
@@ -55,15 +85,22 @@ body {
 .about-section,
 .portfolio-section,
 .contact-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .about-me,
 .portfolio-header,
 .contact-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.projects {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 24px;
+  color: #330269;
 }
 
 .link-conteiner {
@@ -76,5 +113,6 @@ body {
 .contact-container {
   display: flex;
   justify-content: space-around;
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
