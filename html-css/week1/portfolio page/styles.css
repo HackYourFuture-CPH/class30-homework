@@ -108,9 +108,22 @@
   margin-top: 20px;
 }
 
+.list-link {
+  display: flex;
+  align-items: center;
+}
+
 .contact-container {
   display: flex;
   justify-content: space-around;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.icons {
+  margin-right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
 }
