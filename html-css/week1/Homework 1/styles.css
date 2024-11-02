@@ -20,7 +20,8 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    width: 100%;           
+    height: 60px; 
     background-color: white;
 }
 .logo{
@@ -58,17 +59,17 @@ a:hover{
 }
 /*Section*/
 #home{
-    padding-top: 4vh;
-    height: 96vh;
+    
     margin: 0 10rem;
     box-sizing: border-box;
+    margin-bottom: 50px;
     min-height: fit-content;
     background-color: #faf5fa;
     
 }
 .home__container{
-    min-height: 100vh;
-  max-width: var(--max-width);
+  width: 100%;
+  min-height: 600px;
   margin: auto;
   padding: 1rem;
   display: flex;
@@ -159,8 +160,7 @@ a:hover{
     border: rgb(255, 255, 255) 0.1rem solid;
   }
   .home__container{
-    min-height: 100vh;
-  max-width: var(--max-width);
+  
   margin: auto;
   padding: 1rem;
   display: flex;
@@ -170,15 +170,15 @@ a:hover{
 }
 /*about*/
 #about{
-    padding-top: 4vh;
-    height: 96vh;
+  width: 100%; 
+  height: auto;
+  margin-bottom: 60px;
 }
 
 .about-container{
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 2vh;
 }
 .about-title{
     display: flex;
@@ -223,14 +223,15 @@ gap: 2vh;
 }
 /*Projects*/
 #projects{
-    padding-top: 4vh;
-    height: 96vh;
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
 }
 .project-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+   
 }
 .project-title{
     display: flex;
@@ -276,17 +277,16 @@ gap: 2vh;
 
 /* CONTACT */
 #contact {
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    height: 92vh;
+    width: 100%;
     background-color: #faf5fa;
+    margin-bottom: 70px;
   }
   
   .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+    gap: 50px;
   }
   
   .contact-title h2 {
@@ -403,26 +403,34 @@ gap: 2vh;
     nav {
       flex-direction: column;
       height: auto;
-      padding: 1rem;
+      width: 100%;
     }
   
     .nav-links {
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
+      align-content: center;
+      gap:1rem;
     }
   
     #home {
       margin: 0 2rem;
+      margin-bottom: 30px;
     }
   
     .home__container {
       flex-direction: column;
       text-align: center;
+      align-items: center;
     }
   
     .section_pic-container {
-      width: 200px;
-      height: 200px;
+      width: 400px;
+      height: auto;
+    }
+
+    .section_pic-container img{
+      width: 300px;
     }
   
     .section_text {
@@ -430,8 +438,19 @@ gap: 2vh;
     }
   
     .btn-container {
-      flex-direction: column;
+      flex-direction: row;
       gap: 0.5rem;
+    }
+    .about-content{
+      flex-direction: column;
+    }
+
+    .skill-box{
+      justify-items: center;
+    }
+
+    .contact-title{
+      margin-left: 3px;
     }
   
     /* Footer adjustments */
@@ -459,17 +478,23 @@ gap: 2vh;
   @media (min-width: 601px) and (max-width: 768px) {
     nav {
       flex-direction: column;
-      padding: 1rem;
+      padding-bottom: 40px;
     }
   
     .home__container {
       flex-direction: column;
       gap: 2rem;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
     }
   
     .section_pic-container {
       width: 250px;
-      height: 250px;
+      height: auto;
+    }
+    .section_pic-container img{
+      width: 430px;
     }
   
     .footer {
