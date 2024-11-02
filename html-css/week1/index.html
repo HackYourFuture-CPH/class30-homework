@@ -16,12 +16,10 @@
     />
     <title>Guzide Guzelbey Esengun</title>
   </head>
-  <body>
+  <body id="top">
     <nav>
-      <label for="nav-toggle" class="navbar-toggle-btn">
-        <span class="hamburger-icon">&#9776;</span>
-        <i class="fas fa-bars"></i>
-      </label>
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
       <ul class="navigation-list">
         <li><a class="active" href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -83,6 +81,9 @@
 
     <main>
       <section class="about" id="about">
+        <div class="about-title">
+          <h2 class="about-title-text">About Me</h2>
+        </div>
         <div class="about-text">
           <p>
             Passionate about web development with a strong foundation in
@@ -119,6 +120,9 @@
         </div>
       </section>
       <section class="projects" id="projects">
+        <div class="projects-title">
+          <h2 class="projects-title-text">Projects</h2>
+        </div>
         <div class="cards">
           <a
             href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form"
@@ -157,5 +161,6 @@
         });
       });
     </script>
+    <a href="#top" class="go-up">&#8679;</a>
   </body>
 </html>

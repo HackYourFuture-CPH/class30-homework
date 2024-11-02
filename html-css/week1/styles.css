@@ -29,7 +29,7 @@ nav {
 }
 
 .navigation-list {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   flex-direction: row;
   font-size: 18px;
@@ -48,10 +48,20 @@ nav {
   border: 2px dotted #ffc300;
 }
 
+.menu-checkbox {
+  display: none;
+}
+
 .hamburger-icon {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px;
+  color: #ffc300;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
 }
 
 header {
@@ -127,10 +137,24 @@ i {
 .about {
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: 3px dotted rgb(2, 201, 201, 0.5);
+}
+
+.about-title {
+  margin-bottom: 10px;
+  max-width: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-title-text {
+  font-size: 3rem;
+  color: whitesmoke;
+  font-family: "AdamDrawn", Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .about-text {
@@ -175,10 +199,9 @@ i {
   padding: 20px 30px;
   border-radius: 12px;
   text-align: center;
-  margin: 0 30px; /* Adds spacing between core and lists on larger screens */
+  margin: 0 30px;
 }
 
-/* Left and Right Columns */
 .skills-list {
   list-style: none;
   padding: 0;
@@ -268,7 +291,7 @@ i {
   width: 50px;
 }
 
-/* Text Styling */
+/* skills text styling */
 .skills-list li span {
   font-family: "AdamDrawn", Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -277,7 +300,7 @@ i {
   padding: 0 20px;
 }
 
-/* Animation for line and item appearance */
+/* Animation for dotted lines*/
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -343,16 +366,31 @@ i {
   background-color: rgb(30, 24, 24);
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
   border-top: 3px dotted rgb(2, 201, 201, 0.5);
 }
 
+.projects-title {
+  margin-bottom: 30px;
+  max-width: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-title-text {
+  font-size: 3rem;
+  color: whitesmoke;
+  font-family: "AdamDrawn", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Ensures cards are evenly spaced */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -376,7 +414,7 @@ i {
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
+  transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -395,13 +433,27 @@ i {
   filter: grayscale(10%);
 }
 
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #f751a7;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1000;
+}
+
 @media (max-width: 821px) {
   body {
     width: 100%;
   }
   .navigation-list {
-    display: none; /* Hide by default on mobile */
+    display: none;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -412,8 +464,12 @@ i {
     padding-top: 60px;
   }
 
+  .menu-checkbox:checked ~ .navigation-list {
+    display: flex;
+  }
+
   .navigation-list.active {
-    display: flex; /* Display as overlay when active */
+    display: flex;
   }
 
   .navigation-list li {
@@ -432,7 +488,6 @@ i {
     top: 15px;
     right: 15px;
     color: #ffc300;
-    z-index: 1500;
   }
 
   header {
@@ -587,12 +642,27 @@ i {
     flex-direction: column;
     height: auto;
   }
+
+  .projects-title {
+    margin-bottom: 10px;
+  }
+
+  .projects-title-text {
+    font-size: 2.2rem;
+  }
+
   .cards {
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .card {
     width: smaller;
     height: smaller;
+  }
+
+  .go-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
