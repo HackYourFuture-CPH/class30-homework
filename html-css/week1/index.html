@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Electrolize&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <title>Guzide Guzelbey Esengun</title>
   </head>
   <body>
@@ -19,28 +23,60 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul class="navigation-list">
-        <li><a class="active" href="#hero-text">Home</a></li>
+        <li><a class="active" href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero">Contact</a></li>
       </ul>
     </nav>
 
-    <header id="hero-text">
+    <header id="hero">
       <div class="hero-text">
         <h1 class="developer-name">
-          G ü z i d e &ensp; G Ü Z E L B E Y &ensp; E S E N G Ü N
+          Güzide &nbsp; GÜZELBEY &nbsp; ESENGÜN
         </h1>
         <h2>Front-end Developer</h2>
       </div>
       <div id="contact" class="hero-contact">
         <ul class="contact-icons">
-          <li><a class="github" href="#">Github</a></li>
-          <li><a class="linkedin" href="#">Linkedin</a></li>
-          <li><a class="email" href="#">Email</a></li>
+          <li>
+            <a
+              class="github"
+              href="https://github.com/GuzideGuzelbey"
+              target="_blank"
+              ><i class="bi bi-github" style="color: #02c9c9;"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="linkedin"
+              href="https://www.linkedin.com/in/guzide-guzelbeyesengun/"
+              target="_blank"
+              ><i class="bi bi-linkedin" style="color: #02c9c9;"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="fcc"
+              href="https://www.freecodecamp.org/Guzide"
+              target="_blank"
+              ><img src="images/free-code-camp.png" alt="free-code-camp"
+            /></a>
+          </li>
+          <li>
+            <a class="codepen" href="https://codepen.io/guzit" target="_blank"
+              ><img src="images/codepen.png"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="email"
+              href="mailto:guzide.guzelbey@gmail.com"
+              target="_blank"
+              ><i class="bi-regular bi-envelope" style="color: #02c9c9;"></i
+            ></a>
+          </li>
         </ul>
       </div>
     </header>
@@ -61,28 +97,24 @@
       </section>
       <section class="skills" id="skills">
         <div class="skills-container">
-          <ul class="programming-skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Typescript</li>
-            <li>React.js</li>
-            <li>Angular</li>
-            <li>Git</li>
-            <li>Vs Code</li>
-            <li>Python</li>
+          <!-- Left Side Skills (Yellow Lines) -->
+          <ul class="skills-list left">
+            <li><span>HTML</span></li>
+            <li><span>CSS</span></li>
+            <li><span>JavaScript</span></li>
+            <li><span>TypeScript</span></li>
+            <li><span>React.js</span></li>
+            <li><span>Angular</span></li>
+            <li><span>VS Code</span></li>
+            <li><span>Git</span></li>
           </ul>
-          <div class="skills-core">
-            <p>Skills</p>
-          </div>
-          <ul class="additional-skills">
-            <li>Figma</li>
-            <li>Adobe Creative Suite</li>
-            <li>Figma</li>
-            <li>Functional Testing</li>
-            <li>Regression Testing</li>
-            <li>Smoke Testing</li>
-            <li>Project Management</li>
+          <div class="skills-core">Technical Skills</div>
+          <ul class="skills-list right">
+            <li><span>Figma</span></li>
+            <li><span>Adobe Creative Suite</span></li>
+            <li><span>Smoke Testing</span></li>
+            <li><span>Functional Testing</span></li>
+            <li><span>Regression Testing</span></li>
           </ul>
         </div>
       </section>
@@ -96,18 +128,24 @@
             <img src="images/fcc-project.jpg" alt="FCC Survey Form" />
             <p>FreeCodeCamp Survey Form</p>
           </a>
-          <a href="" target="_blank" class="card card2">
-            <img src="" alt="Project 2" />
-            <p>Project 2</p>
+          <a
+            href="https://guzideguzelbey.github.io/redi-project-alumniwebsite/"
+            target="_blank"
+            class="card card2"
+          >
+            <img src="images/redialumni.jpg" alt="Redi School Alumni Website" />
           </a>
-          <a href="" target="_blank" class="card card3">
-            <img src="" alt="Project 3" />
-            <p>Project 3</p>
+          <a
+            href="https://guzideguzelbey.github.io/redi-GFM-react-seekfestival/"
+            target="_blank"
+            class="card card3"
+          >
+            <img src="images/seekfestival.jpg" alt="Seek Festival Website" />
           </a>
         </div>
       </section>
-      <section class="experience" id="experience">Experience</section>
-      <section class="education" id="education">Education</section>
+      <!--<section class="experience" id="experience">Experience</section>
+      <section class="education" id="education">Education</section>-->
     </main>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -115,7 +153,7 @@
         const navList = document.querySelector(".navigation-list");
 
         toggleBtn.addEventListener("click", function () {
-          navList.classList.toggle("active"); // Toggle the overlay menu
+          navList.classList.toggle("active");
         });
       });
     </script>
