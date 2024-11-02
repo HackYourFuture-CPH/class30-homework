@@ -49,7 +49,7 @@
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(./img/DALL·E\ 2024-11-01\ 17.01.13\ -\ A\ young\ woman\ programmer\ sitting\ with\ her\ back\ turned\ in\ a\ dark\ room\,\ wearing\ a\ black\ hoodie\ with\ the\ hood\ up.\ She\ is\ illuminated\ only\ by\ the\ glow\ of\ .webp);
+    url(./img/code-girl.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -103,6 +103,24 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+
+.clicable-img-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-form {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.clickable-image img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  border: 0.5px solid #000;
 }
 
 .contact-container {
