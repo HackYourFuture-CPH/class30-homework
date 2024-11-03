@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>S J H </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="profile-pic" src="./images/me.jpeg" alt="profile-sjh"/>
+            <div class="nav-container">
+                
+                <div id="nav-home" class="nav-item">
+                    <i class="fas fa-home" onclick="scrollToIntro()"></i>
+                    <button  id="home-text" onclick="scrollToIntro()">Home</button>
+                </div>
+                <div id="nav-home" class="nav-item">
+                    <i class="fas fa-binoculars" onclick="scrollToProjects()"></i>
+                    <button id="home-text"onclick="scrollToProjects()">Projects</button>
+                </div>
+                <div id="nav-home" class="nav-item">
+                    <i class="fas fa-comment" onclick="scrollToAboutme()"></i>
+                    <button id="home-text" onclick="scrollToAboutme()">About Me</button>
+                </div>
+            </div>
+            <h3>EN / FR</h3>
+            <div class="socials">
+            <span> <i class="fab fa-instagram"></i></span>
+        <span><i class="fab fa-linkedin"></i></span>
+        <span><i class="fab fa-tiktok"></i></span>
+        <span><i class="fab fa-facebook"></i></span>
+            </div>
+        </nav>
+    </header>
+   <main>
+    <section id="intro">
+        <div id="square">
+
+        </div>
+        <div id="introduction">
+            <span>01</span><h2><</h2><h1 class="intro-texts">Hello, I'm Jalil!</h1><h2>></h2><span class="nextline"></span>
+            <span>02</span><h2><</h2><h1 class="intro-texts">I design and develop</h1><span class="nextline"></span>
+            <span>03</span><h2 class="off"><</h2><h1 class="intro-texts">websites.</h1><h2>></h2><span class="nextline"></span>
+        </div>
+        <div class="intro-design">
+            <h3><strong>I also design your brand image, logo...</strong></h3>
+        </div>
+        <div class="learn">
+            <div class="learn-sec">
+                <p>Learn more</p>
+                <button class="icon-button">
+                    <i class="fa-solid fa-arrow-down"></i>                
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="stepone">
+        <div id="square">
+
+        </div>
+        <div class="stepone-idea">
+            <h2>01</h2><h3><strong>First, we need an</strong></h3>
+            <h2>02</h2><h3><strong>idea...</strong></h3>
+        </div>
+        <div class="conversation">
+            <div class="client-photo">
+                <i>P</i>
+            </div> 
+             <div class="conversation-text">
+                <p>I need a website for my company, PERIOD.</p>
+                <p>We specialize in marketing eco-friendly and gender-neutral feminine hygiene products.</p>
+            </div>
+             <div class="conversation-text">
+                <p>Alright, great!</p>
+                <p>I'll handle everything, first the design that I'll share with you. Once validated,</p>
+                <p>I'll develop your website and put it online!</p>
+            </div>
+            <div class="client-photo">
+                <img src="#" alt="Jalil">
+            </div> 
+            <div class="client-photo">
+                <i>P</i>
+            </div> 
+             <div class="conversation-text">
+                <p>Perfect, when do we start :D?</p>
+            </div>
+            <div class="now-section">
+                <p class="now">Now!</p>
+                <button class="icon-button-two">
+                    <i class="fa-solid fa-arrow-down"></i>                
+                </button>
+            </div>
+        </div>
+    </section>
+        <section id="projects" class="my-projects">
+            <h1>My best projects</h1>
+            <div id="pro-item">
+                <h2>.SurveyForm</h2>
+                <div class="pro-images">
+                    <img src="./images/surveyform.png" alt="surveyform">
+                </div>
+                <div class="link-to">
+                    <span><i>Icon link</i></span><br/>
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form">to the platform</a> 
+                    <p>Web design / Presentation</p>
+                </div>
+            </div>
+            <div id="pro-item">
+                <h2>.ComperCafe</h2>
+                <div class="pro-images">
+                    <img src="./images/CamperCafe.png" alt="CamperCafe">
+                </div>
+                <div class="link-to">
+                    <span><i>Icon link</i></span>
+                    <p>Web design / Presentation</p>
+                </div>
+            </div>
+        </section>
+        <section class="testmonial">
+            <h1>They trusted me</h1>
+            <div class="test-container">
+
+                <div id="test-item">
+                    <h2>Pierre</h2>
+                    <h2>CEO, Bykaomes</h2>
+                    <p>"I gave Brice free rein to create my entire platform. Very professional and above all very responsive. I am really more than satisfied with the result. I highly recommend Brice! I look forward to continuing the evolution of the platform with your feedback and relevant advice."</p>
+                </div>
+                <div id="test-item">
+                    <h2>Xénia</h2>
+                    <h2>Partner, Noje be</h2>
+                    <p>"Very nice professional encounter with Brice. Even separated by a few kilometers because we are in Belgium, Brice has always been very responsive and proactive. Always attentive to ideas, he perfectly creates a beautiful visual identity. I highly recommend his services for creating websites, business cards, flyers, etc. (We only have praises for your work)."</p>
+                </div>
+                <div id="test-item">
+                    <h2>Riaz</h2>
+                    <h2>CEO, Dealrun</h2>
+                    <p>""Brice is a person who was attentive and delivered a result on time, the result was top-notch, Brice's work brought a fresh look to my website's design. I recommend."</p>
+                </div>
+            </div>
+        </section>
+        <section id="aboutme" class="my-introduction">
+            <h1>Sayed Jalil Hussaini</h1>
+            <h3>Vejle</h3>
+            <h2>I design and develop websites that are both elegant, intuitive, and accessible.</h2>
+            <p>Driven by a deep passion for graphic design and web development, I specialize in harmonizing the logic of code with the aesthetics of design. This ensures effective intervention on all aspects of the project, without intermediaries.</p>
+            <h2>I also specialize in creating your brand image: logo, banner, and much more.</h2>
+            <p>From a simple idea, a unique brand identity and an exceptional website are created. My clients appreciate my versatility and the quality of my work, forged by significant experience in an agency.</p>
+            <a href="#">Discover my journey(LinkedIn).</a>
+            <div class="skill-items">
+                <div class="graphic">
+                    <h2>.Graphic and UX/UI design</h2>
+                    <span> <i class="fa-regular fa-image"></i></span>
+                    <span><i class="fa-solid fa-compass-drafting"></i></span>
+                    <span><i class="fa-solid fa-paint-roller"></i></span>
+                    <span><i class="fa-solid fa-pen"></i></span>
+                </div>
+                <div class="web">
+                    <h2>.Web development</h2>
+                    <span> <i class="fa-brands fa-js"></i></span>
+                    <span><i class="fa-brands fa-react"></i></span>
+                    <span><i class="fa-brands fa-node-js"></i></span>
+                    <span><i class="fa-brands fa-angular"></i></span>
+                </div>
+            </div>
+        </section>
+
+   </main>
+   <footer>
+    © Jalil Hu      <a href="#">Privacy Policy</a> | <a href="#">Legal Notice</a>
+   </footer>
+    <script>
+        function scrollToAboutme() {
+            document.getElementById("aboutme").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToProjects() {
+            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToIntro() {
+            document.getElementById("intro").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
