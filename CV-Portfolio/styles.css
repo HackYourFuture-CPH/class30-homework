@@ -129,6 +129,19 @@ header::after {
 
 }
 
+
+.edu-list li {
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.edu-list hr {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
 .skills {
     display: flex;
     justify-content: space-evenly;
@@ -363,6 +376,12 @@ svg {
 
     .section-title {
         margin-bottom: 30px;
+    }
+
+    .edu-list {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
     }
 
     footer {
