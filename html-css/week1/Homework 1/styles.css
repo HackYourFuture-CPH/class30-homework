@@ -62,13 +62,10 @@ a:hover{
 }
 /*Section*/
 #home{
-    
-    margin: 0 10rem;
+    margin: 0 10rem 5rem;
     box-sizing: border-box;
-    margin-bottom: 50px;
     min-height: fit-content;
     background-color: #faf5fa;
-    
 }
 .home__container{
   width: 100%;
