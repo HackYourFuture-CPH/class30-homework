@@ -1,0 +1,436 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Raleway';
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+}
+
+h2 {
+    font-family: 'Chakra Petch';
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 20%;
+    bottom: 0px;
+    background: linear-gradient(180deg, rgba(91, 108, 24, 0) 0%, #a8caba 100%);
+    pointer-events: none;
+}
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 16px;
+    background: linear-gradient(240deg, rgba(139, 167, 32, 0) 0%, #a8caba 100%);
+}
+
+.logo {
+    width: 20vw;
+
+}
+
+.my-name {
+    font-family: 'Chakra Petch';
+    font-weight: 600;
+    font-size: 24px;
+    color: #e2dddd;
+
+}
+
+.nav-list-item {
+    color: #e2dddd;
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.nav-list-item:hover {
+    color: #02b384
+}
+
+.my-img {
+    float: left;
+    width: 30vw;
+    margin: 0 16px 10px 0;
+    border-radius: 20px;
+    filter: contrast(100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about-me {
+    margin-bottom: 24px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.about>h2 {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.about-me>span {
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 14px;
+
+}
+
+
+.edu-list li {
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.edu-list hr {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.skills li {
+    font-size: 14px;
+}
+
+.port-list-item {
+    padding: 8px;
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.port-list-item img {
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.port-list-item p {
+    text-align: center;
+    color: black;
+    font-style: italic;
+    font-weight: 600;
+}
+
+footer {
+    padding: 12px;
+
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    background-image: linear-gradient(to left, #a8caba 0%, #5d4157 100%);
+    border-radius: 8px 8px 0 0
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 10%;
+    bottom: 0px;
+    background: linear-gradient(180deg, rgba(139, 167, 32, 0) 0%, #a8caba 100%);
+    pointer-events: none;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    fill: rgb(55, 21, 21);
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.contacts-title {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.tlf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.tlf svg {
+    margin-right: 12px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+
+    color: black;
+    font-weight: 600;
+}
+
+.email svg {
+    margin-right: 12px;
+}
+
+.tlf-link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+}
+
+.alma {
+    font-weight: 600;
+}
+
+/* Tablet styles */
+
+
+@media (768px <=width) {
+
+    header {
+        padding: 28px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .my-name {
+        font-size: 40px;
+    }
+
+    .nav-list-item {
+        font-size: 20px;
+    }
+
+    .my-img {
+        width: 120px;
+    }
+
+    .about-me {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .edu-list li {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .edu-list hr {
+        width: 50%;
+    }
+
+    .skills {
+        margin-top: 40px;
+    }
+
+    .skills h3 {
+        font-size: 20px;
+    }
+
+    .skills li {
+        font-size: 16px;
+    }
+
+    .port-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .port-list-item {
+        width: 30vw;
+        padding: 12px;
+    }
+
+    .port-img {
+        height: 90%;
+    }
+
+    .social-list {
+        justify-content: space-evenly;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Desktop styles */
+
+
+@media (1200px <=width) {
+
+    .container {
+        width: 100%;
+        padding: 48px;
+    }
+
+    .my-name {
+        font-size: 46px;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-list>li:not(:last-child) {
+        margin-right: 14px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px
+    }
+
+    .my-img {
+        float: none;
+        margin-right: 30px;
+        width: 10vw;
+    }
+
+    .about-me {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .alma {
+        font-size: 20px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .edu-list {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    footer {
+        position: relative;
+        padding: 60px;
+    }
+
+    .contacts-wrap {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .social-list {
+        margin: 0;
+        width: 25%;
+    }
+
+    .social-list svg {
+        width: 36px;
+        height: 36px;
+        transition: transform 300ms ease-in;
+    }
+
+
+
+    .social-list svg:hover,
+    .tlf-link:hover,
+    .email:hover {
+        transform: scale(1.3);
+    }
+
+    .port-list li:hover {
+        transform: scale(0.9);
+    }
+
+    .tlf-link,
+    .email,
+    .port-list li {
+        font-size: 20px;
+        transition: transform 300ms ease-in;
+
+    }
+
+    .nav-list li {
+        transition: transform 300ms ease-in;
+    }
+
+    .nav-list li:hover {
+        transform: scale(1.2);
+    }
+}
