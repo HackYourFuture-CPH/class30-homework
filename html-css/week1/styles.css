@@ -3,12 +3,24 @@
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffdfd3;
 }
 
 header {
-  width: 2020px;
+  width: 100%;
   height: 150px;
   display: flex;
   flex-direction: row;
