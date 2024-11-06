@@ -142,6 +142,7 @@ header {
 }
 
 .about_content p {
+  padding: 15px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -159,7 +160,7 @@ header {
   flex-direction: row;
   align-items: flex_start;
   text-align: center;
-  padding: 50px 40px;
+  padding: 50px 50px;
   gap: 30px;
   width: 100%;
   height: 600px;
@@ -285,7 +286,7 @@ header {
 }
 
 .skill_content p {
-  width: 400px;
+  width: 350px;
   height: 36px;
   font-family: "Roboto";
   font-style: normal;
@@ -308,18 +309,20 @@ header {
   display: flex;
   flex-direction: row;
   align-items: flex_start;
+  justify-content: center;
   padding: 30px;
   gap: 30px;
-  width: auto;
-  height: 300px;
+  width: 100%;
+  height: 400px;
   border-radius: 20px;
+  margin-top: 50px;
   flex: none;
   order: 1;
-  flex-grow: 0;
+  flex-grow: 1;
 }
 
 .projects_section h2 {
-  width: 750px;
+  width: 100%;
   height: 12px;
   font-family: "Roboto";
   font-style: normal;
@@ -327,10 +330,9 @@ header {
   font-size: 45px;
   line-height: 12px;
   display: flex;
-  align-items: flex-center;
-  text-align: right;
-  justify-content: right;
-  left: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   color: #21005d;
   flex: none;
   order: 0;
@@ -342,17 +344,17 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 50px 50px;
   border-radius: 2rem;
-  height: auto;
-  gap: 25px;
-  width: 80%;
+  height: 900px;
+  gap: 15px;
+  width: 100%;
   height: 200px;
   flex: none;
   order: 1;
   flex-grow: 1;
   margin-top: 40px;
-  margin-left: -775px;
+  margin-left: -1270px;
 }
 
 .project_description h3 {
@@ -369,6 +371,7 @@ header {
   align-self: stretch;
   letter-spacing: 0.5px;
   word-spacing: 1px;
+  margin-top: -40px;
   color: #21005d;
   flex: none;
   order: 1;
@@ -408,7 +411,6 @@ header {
   margin-top: -10px;
   font-size: medium;
   font-weight: bold;
-
   text-decoration: none;
   width: 200px;
   height: 30px;
@@ -419,28 +421,22 @@ header {
   flex-grow: 0;
 }
 
-button a {
-  text-decoration: none;
-  color: #21005d;
-}
-
 .contact_section {
   display: flex;
   flex-direction: row;
   align-items: flex_start;
+  justify-content: center;
   padding: 30px;
   gap: 30px;
-  width: auto;
-  height: 300px;
+  height: auto;
   border-radius: 20px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 .contact_section h2 {
-  width: 750px;
   height: 12px;
   font-family: "Roboto";
   font-style: normal;
@@ -449,8 +445,8 @@ button a {
   line-height: 12px;
   display: flex;
   align-items: flex-center;
-  text-align: right;
-  justify-content: right;
+  text-align: center;
+  justify-content: center;
   left: 20px;
   color: #21005d;
   flex: none;
@@ -466,12 +462,10 @@ button a {
   text-align: left;
   padding: 20px 50px;
   gap: 10px;
-  width: 300px;
   height: 300px;
   border-radius: 20px;
   margin-left: -825px;
   position: relative;
-  left: -40%;
   margin-top: 15px;
   flex: none;
   order: 1;
@@ -530,22 +524,20 @@ input[type="submit"] {
   display: flex;
   flex-direction: row;
   margin-top: 600px;
-  margin-left: -200px;
-  align-items: center;
-  justify-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
   text-align: left;
-  padding: 20px 50px;
-  gap: 10px;
-  width: 300px;
+  padding: 20px 20px;
+  margin-left: -825px;
   height: auto;
-  border-radius: 20px;
   position: relative;
-  left: -60%;
+  left: 15%;
   flex: none;
   order: 2;
   align-self: stretch;
   flex-grow: 0;
 }
+
 .social_list a {
   font-size: 24px;
   margin: 10px 10px;
@@ -563,16 +555,16 @@ input[type="submit"] {
 .bottom_section {
   background-color: #21005d;
   color: white;
+  display: flex;
+  flex-direction: row;
   text-align: center;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 10px 0;
-  width: 80%;
-  height: 10px;
-  margin-top: 700px;
-  margin-left: -450px;
+  justify-content: center;
+  height: 20px;
+  margin-top: 750px;
+  margin-left: -1025px;
   position: relative;
-  left: -20%;
+  left: -2%;
 }
 .bottom_section nav a {
   color: white;
