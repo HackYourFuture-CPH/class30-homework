@@ -176,7 +176,7 @@ body {
 #about > p:nth-child(3) {
     margin-top: 3rem;
 } 
-#name {
+.name {
     color:#6be98b;
     font-weight: 700;
 }
