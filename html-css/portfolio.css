@@ -122,11 +122,16 @@ img{
 }
 
 .download-resume{
+  display: inline-block;
+  padding: 10px 20px;
+background-color: #5e615f;
+color: white;
+text-decoration: none;
   margin-left: 690px;
   margin-bottom: 20px;
   margin-top: 20px;
-  height: 30px;
-  font-size: 12px;
+  
+  font-size: 16px;
   font-weight: bold;
   border: 1px solid black;
   border-radius: 5px;
