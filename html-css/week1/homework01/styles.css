@@ -260,7 +260,7 @@ body {
     transition: opacity 0.3s ease-in;
 }
 
-#footnote {
+.footnote {
     color: #6be98b;
     opacity: 0.3;
 
