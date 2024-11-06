@@ -448,7 +448,7 @@ main img{
         font-size: 18px;
     }
 
-    .projects-box {
+    .project-box {
         grid-template-columns: 1fr;
     }
 
