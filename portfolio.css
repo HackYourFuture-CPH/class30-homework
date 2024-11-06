@@ -1,0 +1,209 @@
+body {
+  zoom: 4.4; /* تنظیم زوم به ۴۴۰٪ */
+}
+
+img{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  display: block;
+  padding: 0;
+
+}
+.my-profile{
+  position: relative;
+}
+.my-name{
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  
+}
+.hrone{
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  border-top: .5px solid white;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 70%;
+}
+.titel{
+  position: absolute;
+  color: white;
+  top: 65px;
+  left: 120px;
+  font-size:xx-large;
+}
+.my-toolbars{
+  display: flex;
+  justify-content: space-between;
+  color: rgb(78, 76, 76);
+  font-size: 4px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: rgb(210, 205, 205);
+  border-top: .6px solid rgb(108, 9, 9);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.link-tollbars{
+  text-decoration: none;
+}
+.link-tollbars:hover{
+  color: white;
+  font-size: 5px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgb(0, 0,0,0.3);
+}
+
+.title-aboutme{
+  display: flex;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.text-aboutme{
+  color: brown;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style:oblique ;
+  font-size:10px;
+  margin-left: 0;
+  margin-top: -5px;
+  margin-right: 50px;
+}
+.vertical-line{
+  width: .5px;
+  height: 50px;
+  background-color: rgb(48, 48, 52);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.my-photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+.text-thanks{
+  font-size: 5px;
+}
+.text-myitroduction{
+  font-size: 4px;
+  font-weight: 1px;
+  width: 150px;
+}
+.text-thanks{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-social-media{
+  color: brown;
+  font-style: inherit;
+  font-size: 6px;
+  font-weight: bolder;
+  margin-left: 150px;
+  margin-top: 0;
+}
+.social-media{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.pic-github, .pic-linkedin, .pic-medium{
+  width: 30px;
+}
+.pic-gmail{
+  width: 24px;
+}
+.download-resume{
+  margin-left: 140px;
+  
+  font-size: 3px;
+  font-weight: bold;
+  border: .2px solid black;
+  border-radius: 2px;
+  
+}
+.lebel-project{
+  color: rgb(247, 44, 33);
+display :block;
+font-family :Arial, Helvetica, sans-serif;
+font-size :10px;
+font-weight :500;
+margin-left: 150px;
+font-style: italic;
+}
+.hr-two{
+  border-top: solid .5px rgb(222, 76, 18);
+  border-bottom: none;
+  width: 50%;
+}
+
+.text-project,.titel-About-me{
+  margin-left: 120px;
+  font-size: 8px;
+  font-style: italic;
+  color: brown;
+}
+
+.titel-survey-form{
+  margin-bottom: 0;
+  margin-left: 70px;
+  font-size: 6px;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ 
+  
+}
+.survey-from{
+  margin-bottom: 10px;
+ 
+}
+.survey-part{
+  display: flex;
+  margin-bottom: 0%;
+  margin-left: 20px;
+  
+}
+.pic-survey{
+  width: 50px;
+ margin-top: -15px;
+}
+.link-github{
+  font-size: 4px;
+ font-weight: bold;
+  margin-top: -10px;
+  margin-left: 10px; 
+  color: black;
+  border: .3px solid rgb(78, 76, 76);
+  padding: 2px;
+  text-decoration: none;
+   
+}
+.introduction-survey{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3px;
+  width: 60%;
+  line-height: 5px;
+  margin-top: 0;
+}
+.text-about-me{
+  margin-left: 90px;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3px;
+  width: 44%;
+  line-height: 5px;
+  margin-top: 0;
+}
+.mohsen{
+  display: flex;
+}
