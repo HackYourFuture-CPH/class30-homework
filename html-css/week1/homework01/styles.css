@@ -2,46 +2,46 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Use border-box for all elements */
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
 html, body {
-    height: 100%; /* Ensure full height for HTML and body */
-    font-family: sans-serif; /* Set a default sans-serif font */
-    line-height: 1.5; /* Smooth line-height for text */
-    -webkit-font-smoothing: antialiased; /* Font smoothing */
+    height: 100%;
+    font-family: sans-serif; 
+    line-height: 1.5; 
+    -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    text-rendering: optimizeSpeed; /* Faster rendering */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    text-rendering: optimizeSpeed; 
+    overflow-x: hidden; 
 }
 
 img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%; /* Ensure media elements fit their containers */
+    max-width: 100%; 
 }
 
 input, button, textarea, select {
-    font: inherit; /* Inherit font settings */
-    color: inherit; /* Inherit color */
+    font: inherit; 
+    color: inherit; 
 }
 
 a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit parent color */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 ul, ol {
-    list-style: none; /* Remove bullets from lists */
+    list-style: none; 
 }
 
 table {
-    border-collapse: collapse; /* Merge table borders */
-    border-spacing: 0; /* Remove space between cells */
+    border-collapse: collapse; 
+    border-spacing: 0; 
 }
 
 /*page code begins*/
@@ -63,7 +63,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background-color: hsla(222, 62%, 7%, 1);*/
     
 
 }
