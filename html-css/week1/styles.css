@@ -586,23 +586,26 @@ input[type="submit"] {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media (max-width: 450px) {
   body {
-    position: relative;
-    width: 700px;
-    height: auto;
+    margin: 0;
+    font-size: 14px;
+    padding: 2%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   header {
-    width: 700px;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 2%;
   }
 
   .name_section {
     display: flex;
     flex-direction: column;
-    width: 300px;
   }
 
   .name_section h1 {
@@ -613,75 +616,78 @@ input[type="submit"] {
 
   .name_section h3 {
     font-size: 16px;
-    margin-left: 20px;
   }
 
   .page_navbar {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: auto;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
     position: relative;
+    padding: 6%;
   }
 
   .header_nav_links {
     display: flex;
     flex-direction: column;
-    width: 130px;
-    height: auto;
-    margin-top: 125px;
-    margin-right: 800px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
     gap: 10px;
   }
 
   .about_section {
     display: flex;
     flex-direction: column;
-    width: 80%;
     height: auto;
-    margin-top: 60px;
+    padding: 2%;
   }
 
   .about_content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     height: auto;
     position: relative;
   }
 
   .about_content h2 {
-    width: 70%;
     font-size: 24px;
-    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .about_content p {
-    width: 70%;
     font-size: 16px;
-    margin-right: 75px;
-    margin-left: -20px;
+    align-items: center;
+    justify-content: center;
   }
 
   .techskills_section {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: auto;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
   }
 
   .techskills_section h2 {
-    width: 70%;
-    margin-left: -130px;
     font-size: 24px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .technical_skills_content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    width: 70%;
+    align-items: flex-start;
+    justify-content: center;
     height: auto;
-    margin-left: -130px;
+    margin: 0 auto;
     flex: none;
     order: 1;
     flex-grow: 1;
@@ -691,55 +697,33 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
-    margin-top: -10px;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-    margin-bottom: -110px;
+    justify-content: center;
   }
 
   .skill_image {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -20px;
     width: 300px;
     height: 300px;
-    flex: none;
-    order: 0;
-    flex-grow: none;
-    align-self: none;
-    margin-left: 120px;
     justify-content: center;
   }
 
   .skill_image img {
     width: 300px;
     height: 300px;
-    margin-top: auto;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
   }
 
   .skill_content {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    align-items: center;
+    justify-content: center;
     height: auto;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin-left: 120px;
-    margin-bottom: -50px;
   }
 
   .skill_content h3 {
-    width: 300px;
     font-size: 18px;
-    margin-top: 10px;
   }
 
   .skill_content p {
@@ -752,97 +736,85 @@ input[type="submit"] {
   .projects_section {
     display: flex;
     flex-direction: column;
-    align-items: flex_start;
-    width: 85%;
+    justify-content: center;
+    align-items: center;
     height: auto;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    margin: 0 auto;
   }
 
   .projects_section h2 {
-    width: 60%;
     font-size: 22px;
-    margin-left: -70px;
-    margin-top: -150px;
   }
 
   .project_description {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 60%;
+    justify-content: center;
     height: auto;
-    gap: 40px;
+    gap: 30px;
     font-size: 22px;
-    margin-left: 70px;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin: 0 auto;
     position: relative;
-    padding: 10px;
-    margin-left: -5px;
   }
 
   .project_description p {
-    width: 85%;
-    margin-left: 20px;
+    width: 80%;
+    margin: 0 auto;
     font-size: 16px;
     line-height: 20px;
-    display: flex;
-    letter-spacing: 0.5px;
-    word-spacing: 1px;
   }
 
   .contact_section {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     height: auto;
     flex: none;
     order: 1;
     flex-grow: 1;
-    margin-top: 40px;
-    margin-left: 1100px;
+    margin: 0 auto;
     position: relative;
   }
 
   .contact_section h2 {
-    width: 70%;
-    height: auto;
+    height: 10px;
     font-size: 22px;
-
     position: relative;
-    margin-left: -1220px;
-
     flex: none;
     order: 0;
-    flex-grow: 1;
+    flex-grow: 0;
   }
 
   .contact_details {
     display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 300px;
-
-    margin-left: -850px;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    height: 75px;
+    margin: 200px auto;
+    padding: 25%;
     position: relative;
-    left: -40%;
-    margin-top: -55px;
     flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 1;
+    flex-grow: 0;
   }
 
   .social_list {
     display: flex;
     flex-direction: row;
-    margin-top: -250px;
-    margin-left: -775px;
-    width: 70%;
-    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    margin: -10px auto;
+    margin-left: -45px;
+    gap: 20px;
+    height: 20px;
     position: relative;
+    flex: none;
+    order: 2;
+    flex-grow: 1;
   }
 
   .social_list a:hover {
@@ -853,13 +825,13 @@ input[type="submit"] {
     background-color: #21005d;
     color: white;
     text-align: center;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 70%;
-    height: 10px;
-    margin-top: 400px;
-    margin-left: -1000px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 70px auto;
     position: relative;
-    left: -20%;
+    flex: none;
+    order: 3;
+    flex-grow: 1;
   }
 }
