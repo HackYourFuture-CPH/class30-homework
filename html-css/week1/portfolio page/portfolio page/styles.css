@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.list {
+  padding: 15px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-item {
+  margin: 10px 0;
+}
+
+.list-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.list-link:hover {
+  cursor: pointer;
+  color: #1f7927;
+  transition: color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 100px 0;
+  color: white;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(./img/code-girl.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1px black;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  -webkit-text-stroke: 0.7px black;
+}
+
+.description-me,
+.portfolio-description {
+  font-size: 18px;
+  text-align: center;
+}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+  padding: 30px 0;
+}
+
+.about-me,
+.portfolio-header,
+.contact-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 18px;
+  color: #1f7927;
+}
+
+.link-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.clicable-img-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-form {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.clickable-image img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  border: 0.5px solid #000;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.list-link {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icons {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+@media (min-width: 600px) {
+  .list {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 50px;
+    gap: 50px;
+  }
+
+  .header {
+    padding: 200px 0;
+  }
+
+  .name {
+    font-size: 54px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 24px;
+  }
+
+  .description-me,
+  .portfolio-description {
+    font-size: 24px;
+  }
+
+  .about-section,
+  .portfolio-section,
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  .about-me,
+  .portfolio-header,
+  .contact-header {
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    font-size: 24px;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 0;
+  }
+
+  .icons {
+    width: 28px;
+    height: 28px;
+  }
+}
