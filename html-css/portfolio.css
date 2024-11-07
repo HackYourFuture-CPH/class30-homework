@@ -1,0 +1,136 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;}
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: cadetblue;
+    color: #fff;
+    width: 100%;
+    animation: fadeIn 2s ease-in;
+}
+header img {
+    max-width: 150px;
+}
+header h1 {
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.about-me {
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+}
+
+.about-me h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+.about-me p {
+    font-size: 1rem;
+    margin-bottom: -30px;
+    color: #333;
+}
+.skills {
+    font-size: 1.5rem;
+    margin: 20px;
+    color: #333;
+    text-align: center;
+}
+.skills p {
+    font-size: 1rem;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background-color: teal;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.Projects {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    color: #333;
+    text-align: center;
+}
+.achievements{
+    background-color: skyblue;
+   max-width: 400px;
+   font-size: 0.8rem;
+    padding: 20px;
+    margin-top: 15px;
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+    justify-content: center;
+}
+
+.contact h5{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #333;
+    text-align: center;
+}
+.contact p{
+    font-size: 1rem;
+}
+.social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
