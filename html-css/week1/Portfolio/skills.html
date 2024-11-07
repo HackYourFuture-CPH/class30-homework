@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer CV / Portfolio - About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="skills">
+  <header class="flex-container">
+    <nav class="hover-grow">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="skillss" id="skills">
+    <h2>SKILLS</h2>
+
+     <!-- Radio Buttons for Skills -->
+     <input type="radio" id="skill1-radio" name="skill" hidden>
+     <input type="radio" id="skill2-radio" name="skill" hidden>
+     <input type="radio" id="skill3-radio" name="skill" hidden>
+
+     <!-- Skill Circles -->
+     <div class="circle-container">
+         <label for="skill1-radio" class="circle">JavaScript</label>
+         <label for="skill2-radio" class="circle">HTML/CSS</label>
+         <label for="skill3-radio" class="circle">Python</label>
+     </div>
+
+     <!-- Skill Information Containers -->
+     <div class="skill-info" id="skill1-info">
+         <p>I build both small and large scale applications in JavaScript daily for desktop, tablet, mobile or server. Combined with an in-depth understanding of UX and design means I can take applications from start to finish. I can also provide consulting and advice on solutions. On the web, I work with both vanilla and framework-based applications with strong capabilities in popular frameworks such as React/React Native, Redux and web technologies such as WebGL/canvas.</p>
+     </div>
+     <div class="skill-info" id="skill2-info">
+         <p>I aim for performance, simplicity and integrity in my work. I'm a stickler for a slick build process, whether that's unit testing, linting integrations, tree shaking and so on. I write CSS modules predominately in SASS and when not working vanilla HTML, solutions such as React's JSX are my choice for DOM manipulation.</p>
+     </div>
+     <div class="skill-info" id="skill3-info">
+         <p>I’m dedicated to crafting efficient, readable, and maintainable Python code. My approach centers on performance and simplicity, with a strong emphasis on modularity and code clarity. I rely on tools like unit testing frameworks (such as Pytest) and static analyzers (like Pylint and Black) to ensure quality and consistency across projects. When it comes to data handling and processing, I often turn to libraries like Pandas and NumPy, and for web development, Flask and Django are my frameworks of choice. My goal is to write Python that’s as elegant as it is powerful, integrating seamlessly into robust applications and data pipelines.</p>
+     </div>
+</body>
+</html>
