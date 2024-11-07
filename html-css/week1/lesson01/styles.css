@@ -1,0 +1,355 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*CSS CODE */
+.page_background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2310164D;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+.form_background {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000000;
+    width: 800px;
+    gap: 0px;
+
+}
+
+.form_top {
+width: 100%;
+height: 161px;
+background: linear-gradient(92.74deg, #FD7B46 1.15%, #FE4E9B 98.48%);
+display: flex;
+flex-direction: column;
+align-items: space-between;
+justify-content: flex-end;
+padding: 20px;
+}
+
+.form_title {
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+align-self: flex-start;
+color: #FFFFFF;
+margin-bottom: 20px;
+
+}
+
+.monthly_total, .immediate_total {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.monthly_total {
+border-bottom: 1px solid white;
+}
+.immediate_total{
+    font-weight: bold;
+}
+
+.form_body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.form_body h2, .cardinfo h2 {
+    margin-bottom: 20px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.payment_method {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.rectangles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.rectangle_left, .rectangle_right {
+    width: 370px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+
+.cardsoptions {
+font-family: 'Montserrat', 'tahoma';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #939393;
+}
+
+.rectangle_left:hover, .rectangle_right:hover{
+    border: 4px solid #FE4E9B;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cardinfo {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#paymentinfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card, .date, .code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Add space between fields */
+}
+
+.cardinfo label span, #expdate-label span, #ccv-label span {
+    display: block;
+    margin-bottom: 20px; /* Space below label text */
+    font-family: 'Montserrat', 'tahoma';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    color: #939393;
+}
+
+#cardnumber, #expiry, #ccv {
+    box-sizing: border-box;
+    width: 100%; /* Width for consistent alignment */
+    height: 44px;
+    background: #F3F1F2;
+    border: 1px solid #939393;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+#cardnumber {
+    width: 342px;
+    background-image: url('./questionmark.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px; /* Adjust the size */
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+#expiry {
+    width: 162px;
+}
+
+#ccv {
+    width: 199px;
+    background-image: url('./questionmark.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px; /* Adjust the size */
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+#submit {
+
+width: 326px;
+height: 68px;
+background: linear-gradient(92.74deg, #FD7B46 1.15%, #FE4E9B 98.48%);
+border-radius: 68px;
+/*button text*/
+font-family: 'Montserrat', 'tahoma';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+border: none;
+color: #FFF;
+margin-bottom: 20px;
+}
+
+#help {
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+background: linear-gradient(91.07deg, #FE4E9B 32.21%, #FD7B46 67.08%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+margin-bottom: 40px;
+
+}
+
+/*Reponsiveness */
+
+@media (max-width: 800px){
+
+    .page_background {
+        
+    }
+ 
+    .form_background{
+        width: 300px;
+    }
+
+    .form_title {
+         align-self: center;       
+        }
+
+    .rectangles {
+        justify-content: space-around;
+        gap: 10px;
+        width: 90%;
+    }
+    .rectangle_right img {
+        height: 30px;
+    }
+    .rectangle_left, .rectangle_right{
+       justify-content: space-evenly;
+       padding: 5px;
+    }
+    .cardsoptions {
+        font-size: small;
+    }
+    .rectangle_left:hover, .rectangle_right:hover{
+        border: 4px solid #FE4E9B;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .cardinfo{
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+    }
+    #paymentinfo{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #cardnumber {
+        width: 100%;
+    }
+
+    .date, .code {
+       width: 45%;
+    }
+
+    #expiry, #ccv{
+        width: 89%;
+    }
+
+    #submit{
+        width: 260px;
+    }
+
+
+
+}
