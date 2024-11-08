@@ -1,0 +1,1240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primary-color: rgb(0, 20, 119);
+    --secondary-color: rgb(151, 151, 151);
+}
+body{
+    margin:0 auto;
+    font-family: "Roboto", serif;
+    height: 100vh;
+    width: 100%;
+    
+}
+header{
+    height: 100vh;
+    width: 270px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 0.5px solid var(--primary-color);
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 50px 0;
+
+}
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: -140px;
+}
+#nav-home{
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 55px;
+    justify-content: flex-end;
+    align-items: center;
+}
+#nav-home i{
+font-size: 25px;
+width: 20%;
+
+}
+nav h3{
+    margin-top: -120px;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+nav h3:hover{
+    font-weight: 600;
+    cursor: pointer;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    width: 110px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+.socials span{
+width: 40%;
+height: 40%;
+
+
+}
+.socials span:nth-child(2){
+    text-align: center ;
+}
+.socials i{
+    font-size: 40px;
+}
+.socials i:hover{
+    font-size: 55px;
+    color:var(--primary-color);
+    cursor: pointer;
+}
+
+#nav-home button{
+    font-size: 20px;
+    background-color:transparent;
+    border: 0;
+    font-weight: 700;
+    height: 60px;
+    text-align: left;
+    padding-left: 20px;
+    border-radius: 5px;
+    width: 155px;
+}
+
+/* Hover styles - scale up both the i and button when hovering over the button */
+
+#nav-home:hover button{
+    cursor: pointer;
+  font-size: 20px;
+  width: 70%;
+  height: 45px;
+  margin-left: 15px;
+  color: var(--primary-color);
+  background-color: rgba(222, 222, 222, 0.327);
+  text-align: center;
+  padding: 0 5px;
+  font-weight: 600;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+
+  border-bottom-right-radius: 0px;
+  border-left: 2px solid var(--primary-color);
+}
+#nav-home:hover i{
+    font-size: 35px;
+    background-color: transparent;
+    width: 25%;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+nav img{
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 50%;
+}
+
+main{
+    margin-left: 270px;
+    margin-right: auto;
+    width: calc(100% - 270px); 
+    overflow-y: auto; 
+    height: 100vh;
+
+ 
+
+}
+footer{
+    margin-left: 270px; 
+    width: calc(100% - 320px); 
+    overflow-y: auto; 
+    padding: 20px;
+}
+#intro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 190px;
+    
+    
+
+}
+@keyframes gradientAnimation {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+#intro #square{
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    margin-left: 155px;
+    margin-bottom: 0;
+    background: linear-gradient(-45deg,rgb(255, 255, 255), rgb(255, 255, 255), rgba(107, 143, 222, 0.754), rgb(107, 144, 222), rgb(255, 255, 255),rgb(255, 255, 255));
+	background-size: 400% 400%;
+	animation: gradientAnimation 6s ease infinite;
+}
+#introduction{
+    margin-left: 155px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin-top: 0;
+    padding-left: 60px;
+    margin-top: -29px;
+    
+}
+#introduction span{
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    
+
+}
+.off{
+    visibility: hidden;
+}
+.nextline{
+    flex: 1 1 100%;
+}
+#introduction h2{
+    font-size: 84px;
+    font-weight: 300;
+    color: var(--secondary-color);
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+#introduction h1{
+    font-size: 65px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+.intro-design{
+    margin-left: 55px;
+    font-size: 22px;
+    margin-left: 175px;
+   
+}
+.learn{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+   
+}
+.learn-sec{
+    margin: 0 auto;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:flex-end;
+    gap: 10px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+.learn-sec p{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+  @keyframes iconAnimation {
+    0% {
+        
+        /* font-size: 50px;
+        transform: scaleX(0.5); */
+        
+       
+        
+	}
+    25%{
+        font-size: 25px;
+        transform: scaleX(1);
+       
+      
+        
+        height: 0;
+
+    }
+	50% {
+       
+        /* font-size: 50px;
+        transform: scaleX(0.5); */
+       
+        
+        
+	}
+	100%{
+        font-size: 40px;
+        
+        
+        transform: scaleX(0.3);
+       
+        
+	}
+  }
+
+.icon-button{
+    background-color: rgb(0, 0, 135);
+    border: 0;
+    box-shadow: 0;
+    width: 42px;
+    border-radius: 5px;
+    color: white;
+    height: 100%;
+    display: inline-block; /* Allows scaling on inline elements */
+
+}
+.icon-button i{
+    height: 50px;
+    font-size: 40px;
+    transform: scaleX(0.5);
+    
+    margin: 0 auto;
+    animation: iconAnimation 2s ease-in-out infinite;
+}
+#stepone{
+    margin-top: 50px;
+    margin-left: 85px;
+}
+#stepone #square{
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    background: linear-gradient(-45deg,rgb(255, 255, 255), rgb(255, 255, 255), rgba(107, 143, 222, 0.754), rgb(107, 144, 222), rgb(255, 255, 255),rgb(255, 255, 255));
+	background-size: 400% 400%;
+	animation: gradientAnimation 6s ease infinite;
+}
+.stepone-idea{
+    margin-top: -20px;
+    margin-left: 25px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: -15px -15px 20px  white;
+
+}
+.stepone-idea h3{
+    font-size: 25px;
+    margin: 0 0 0 15px;
+    width: 94%;
+
+}
+.stepone-idea h2{
+    font-size: 25px;
+
+    font-weight: 200;
+    margin: 0 0 0 15px;
+   
+}
+.conversation{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 70px;
+    padding-right: 40px;
+}
+.conversation-text{
+    
+    background-color: rgb(246, 246, 246);
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 20px;
+    flex: 1 1 85%;
+}
+.client-photo{
+    background-color: rgb(229, 255, 246);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.client-photo i{
+    font: 3em "Roboto";
+
+}
+.now-section{
+    width: 100%;
+    max-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.now{
+    margin: 0 auto;
+}
+
+@keyframes buttonAnimationtwo {
+    0% {
+
+	}
+    25%{
+        width: 45px;
+        height: 20px;
+
+    }
+	50% {
+
+    
+	}
+	100%{
+        width: 23px;
+        
+	}
+  }
+  .icon-button-two{
+    background-color: rgb(0, 0, 135);
+    border: 0;
+    box-shadow: 0;
+   max-height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    align-items:end;
+    justify-content: flex-end; 
+
+}
+  @keyframes iconAnimationtwo {
+    0% {
+        font-size: 40px;
+        transform: scaleX(0.5);
+        margin: 0px -5px;
+        
+	}
+    25%{
+        font-size: 30px;
+        transform: scaleX(1);
+    }
+	50% {
+
+	}
+	100%{
+        font-size: 40px;
+        transform: scaleX(0.5);
+        margin: 0px -5px;
+        
+	}
+  }
+.icon-button-two i{
+    animation: iconAnimationtwo 2s ease-in-out infinite;
+}
+.my-projects{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-projects h1{
+    width: 100%;
+    font-size: 40px;
+    padding: 10px 50px;
+}
+#pro-item{
+    padding-left: 30px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(white, rgba(203, 255, 244, 0.652), rgb(255, 251, 232),white);
+}
+.pro-images{
+    width: 50%;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    margin: auto;
+}
+#pro-item img{
+   width: 100%;
+   height: 100%;
+}
+.testmonial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.testmonial h1{
+  width: 100%;
+  font-size: 29px;
+  padding-top: 30px;
+}
+#test-item{
+    width: 26%;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content:start;
+  margin: 40px 30px;
+   align-items: center;
+}
+#test-item :nth-child(1){
+    font-size: 20px;
+    height: 15px;
+}
+#test-item :nth-child(2){
+    font-size: 25px;
+    font-weight: 200;
+    height: 20;
+    margin: 0;
+}
+#test-item :nth-child(3){
+
+}
+
+.test-container{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.my-introduction{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    width: 75%;
+}
+.my-introduction h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.my-introduction h3{
+    font-weight: 400;
+    margin-top: 0;
+}
+.my-introduction h2{
+    font-size: 33px;
+    font-weight: 400;
+
+}
+.my-introduction p{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.my-introduction a{
+    color: black;
+    
+    font-size: 23px;
+}
+.skill-items{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+.skill-items h2{
+    margin-top: 20px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.skill-items i{
+    font-size: 40px;
+    margin: 0 10px
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    footer a{
+        margin: 0 10px;
+    }
+ @media only screen and (min-device-width: 320px) and (max-device-width: 480px){ 
+        header{
+            position:fixed  ;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            background-color: beige;
+            top: 200px;
+            height: 200px;
+          }
+          header i{
+            margin-top: 200px;
+            margin-right: 30px;
+            cursor: pointer;
+          }
+          .fas{
+            cursor: pointer;
+          }
+    
+          header img, button, h3, .socials {
+            display: none;
+          } 
+         
+            main{
+                padding-top: 0;
+                margin-top: 0;
+                width: 100%;
+                margin-left: 0;
+    
+            }
+
+            #introduction{
+                margin-left: 0px;
+                padding-left: 20px;
+            }
+        #intro{
+        margin-left: 0;
+        padding-top: 0;
+       margin-top: 0
+        }
+        #introduction h1{
+            font-size: 20px;
+
+        }
+        #introduction h2{
+            font-size: 45px;
+
+        }
+        #intro #square{
+            margin: 50px auto;
+        }
+        .learn{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .my-projects{
+            padding: 0;
+            gap: 0;
+            margin-left: -40px;
+            width: 100%;
+            flex-direction: column;
+        }
+        .my-projects h1{
+           font-size: 25px;
+        }
+        #pro-item{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .learn button{
+            
+            height: 50px;
+        }
+        .learn-sec{
+            height: 45px;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+        }
+        .conversation{
+            margin-left: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+        #stepone{
+            margin: 0 5px;
+        }
+        .stepone-idea{
+            width: 100%;
+            flex-direction: column;
+            justify-content: start;
+            align-items:start;
+        }
+        .stepone-idea h3{
+            visibility:visible;
+            color: black;
+        }
+        .conversation-text{
+
+            flex: 1 1 53%;
+        }
+        .test-container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center ;
+        }
+        #test-item{
+            width: 100%;
+        }
+        .my-introduction{
+            margin-left: 5px;
+            padding-left: 5px;
+        }
+        footer{
+        width:            90%;
+        margin-left: 0;
+        }
+       
+     }
+     @media only screen and (min-device-width: 481px) and (max-device-width: 640px) { 
+         header{
+            position:fixed  ;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            background-color: beige;
+            top: 200px;
+            height: 200px;
+          }
+          header i{
+            margin-top: 200px;
+            margin-right: 30px;
+            cursor: pointer;
+          }
+          .fas{
+            cursor: pointer;
+          }
+    
+          header img, button, h3, .socials {
+            display: none;
+          }
+
+            main{
+                margin-top: 0;
+                width: 100%;
+                margin-left: 0;
+    
+            }
+
+            #introduction{
+                margin-left: 10px;
+            }
+        #intro{
+        margin-left: 0;
+        }
+        #introduction h1{
+            font-size: 30px;
+
+        }
+        #introduction h2{
+            font-size: 55px;
+
+        }
+        #intro #square{
+            margin-left: 20px;
+        }
+        .learn{
+            width: 100%;
+        }
+        .learn button{
+            
+            height: 50px;
+        }
+        .learn-sec{
+            height: 45px;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+        }
+        .conversation{
+            margin-left: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+        #stepone{
+            margin: 0 20px;
+        }
+        .stepone-idea{
+            width: 100%;
+            flex-direction: column;
+            justify-content: start;
+            align-items:start;
+        }
+        .stepone-idea h3{
+            visibility:visible;
+            color: black;
+        }
+        .conversation-text{
+
+            flex: 1 1 53%;
+        }
+        .test-container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center ;
+        }
+        #test-item{
+            width: 90%;
+        }
+        
+
+     }
+     @media only screen and (min-device-width: 641px) and (max-device-width: 960px)  { 
+        body{
+            height: 100%
+        }
+      header{
+        position:fixed  ;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        background-color: beige;
+        top: 200px;
+        height: 200px;
+      }
+      header i{
+        margin-top: 200px;
+        margin-right: 30px;
+        cursor: pointer;
+      }
+      .fas{
+        cursor: pointer;
+      }
+
+      header img, button, h3, .socials {
+        display: none;
+      }
+     
+        main{
+            margin-top: 0;
+            width: 100%;
+            margin-left: 0;
+
+        }
+        #intro{
+        margin-left: 0;
+        }
+        #intro #square{
+            margin-left: 20px;
+        }
+        #introduction{
+            margin-left: 20px;
+        }
+
+        #introduction h1{
+            font-size: 40px;
+
+        }
+        #stepone{
+
+            
+        }
+        .learn-sec{
+            height: 40px;
+            width: 150px;
+            justify-content: end;
+            align-items: center;
+        }
+        .stepone-idea h3{
+            font-size: 25px;
+            margin: 0 0 0 15px;
+            width: 89%;
+        }
+        .stepone-idea h2{
+            font-size: 25px;
+            font-weight: 200;
+            margin: 0 0 0 15px;
+        }
+        .conversation-text{
+            flex: 1 1 75%;
+        }
+        #projects{
+            
+
+        }
+        #pro-item{
+            width: 45%;
+            padding: 0;
+        }
+        .my-projects{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            
+           
+           
+        }
+        .my-projects h1{
+            width: 50%;
+        }
+        .testmonial{
+            
+        }
+        .my-introduction{
+            
+        }
+        footer{
+            width: calc(100% - 320px);
+        }
+        
+     }
+     @media only screen and (min-device-width: 961px) and (max-device-width: 1281) { 
+       
+        body{
+            width: 100wv;
+        }
+        main{
+            width: 100% - 270px;
+            max-width: 1200px
+
+        }
+        #intro{
+        margin-left: 0;
+        }
+        #intro #square{
+            margin-left: 20px;
+        }
+        #introduction{
+            margin-left: 20px;
+        }
+
+        #introduction h1{
+            font-size: 40px;
+
+        }
+        #stepone{
+
+            
+        }
+        .learn-sec{
+            height: 40px;
+            width: 150px;
+            justify-content: end;
+            align-items: center;
+        }
+        .stepone-idea h3{
+            font-size: 25px;
+            margin: 0 0 0 15px;
+            width: 89%;
+        }
+        .stepone-idea h2{
+            font-size: 25px;
+            font-weight: 200;
+            margin: 0 0 0 15px;
+        }
+        .conversation-text{
+            flex: 1 1 75%;
+        }
+        #projects{
+            
+
+        }
+        #pro-item{
+            width: 45%;
+            padding: 0;
+        }
+        .my-projects{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            
+           
+           
+        }
+        .my-projects h1{
+            width: 50%;
+        }
+        .testmonial{
+            
+        }
+        .my-introduction{
+            
+        }
+        footer{
+            width: calc(100% - 320px);
+        }
+       
+    }
+    @media (min-width:1025px) { 
+        header{
+            height: 100vh;
+            width: 270px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right: 0.5px solid var(--primary-color);
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 50px 0;
+        
+        }
+        .nav-container{
+            display: flex;
+            flex-direction: column;
+            margin-top: -140px;
+        }
+        #nav-home{
+            margin-top: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 55px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        #nav-home i{
+        font-size: 25px;
+        width: 20%;
+        
+        }
+        nav h3{
+            margin-top: -120px;
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 400;
+        }
+        nav h3:hover{
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .socials{
+            display: flex;
+            flex-direction: row;
+            width: 110px;
+            height: 110px;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        
+        }
+        .socials span{
+        width: 40%;
+        height: 40%;
+        
+        
+        }
+        .socials span:nth-child(2){
+            text-align: center ;
+        }
+        .socials i{
+            font-size: 40px;
+        }
+        .socials i:hover{
+            font-size: 55px;
+            color:var(--primary-color);
+            cursor: pointer;
+        }
+        
+        #nav-home button{
+            font-size: 20px;
+            background-color:transparent;
+            border: 0;
+            font-weight: 700;
+            height: 60px;
+            text-align: left;
+            padding-left: 20px;
+            border-radius: 5px;
+            width: 155px;
+        }
+        
+        /* Hover styles - scale up both the i and button when hovering over the button */
+        
+        #nav-home:hover button{
+            cursor: pointer;
+          font-size: 20px;
+          width: 70%;
+          height: 45px;
+          margin-left: 15px;
+          color: var(--primary-color);
+          background-color: rgba(222, 222, 222, 0.327);
+          text-align: center;
+          padding: 0 5px;
+          font-weight: 600;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-top-right-radius: 0px;
+        
+          border-bottom-right-radius: 0px;
+          border-left: 2px solid var(--primary-color);
+        }
+        #nav-home:hover i{
+            font-size: 35px;
+            background-color: transparent;
+            width: 25%;
+            color: var(--primary-color);
+            cursor: pointer;
+        
+        }
+        
+        nav img{
+            width: 200px;
+            object-fit: cover;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+     }
+    @media (min-width:1281px) { 
+        header{
+            height: 100vh;
+            width: 270px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right: 0.5px solid var(--primary-color);
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 50px 0;
+        
+        }
+        .nav-container{
+            display: flex;
+            flex-direction: column;
+            margin-top: -140px;
+        }
+        #nav-home{
+            margin-top: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 55px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        #nav-home i{
+        font-size: 25px;
+        width: 20%;
+        
+        }
+        nav h3{
+            margin-top: -120px;
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 400;
+        }
+        nav h3:hover{
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .socials{
+            display: flex;
+            flex-direction: row;
+            width: 110px;
+            height: 110px;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        
+        }
+        .socials span{
+        width: 40%;
+        height: 40%;
+        
+        
+        }
+        .socials span:nth-child(2){
+            text-align: center ;
+        }
+        .socials i{
+            font-size: 40px;
+        }
+        .socials i:hover{
+            font-size: 55px;
+            color:var(--primary-color);
+            cursor: pointer;
+        }
+        
+        #nav-home button{
+            font-size: 20px;
+            background-color:transparent;
+            border: 0;
+            font-weight: 700;
+            height: 60px;
+            text-align: left;
+            padding-left: 20px;
+            border-radius: 5px;
+            width: 155px;
+        }
+        
+        /* Hover styles - scale up both the i and button when hovering over the button */
+        
+        #nav-home:hover button{
+            cursor: pointer;
+          font-size: 20px;
+          width: 70%;
+          height: 45px;
+          margin-left: 15px;
+          color: var(--primary-color);
+          background-color: rgba(222, 222, 222, 0.327);
+          text-align: center;
+          padding: 0 5px;
+          font-weight: 600;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-top-right-radius: 0px;
+        
+          border-bottom-right-radius: 0px;
+          border-left: 2px solid var(--primary-color);
+        }
+        #nav-home:hover i{
+            font-size: 35px;
+            background-color: transparent;
+            width: 25%;
+            color: var(--primary-color);
+            cursor: pointer;
+        
+        }
+        
+        nav img{
+            width: 200px;
+            object-fit: cover;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+    }
