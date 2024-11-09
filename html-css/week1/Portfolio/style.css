@@ -89,6 +89,54 @@ nav ul li a:hover {
 .hover-grow:hover {
   transform: scale(1.05);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+  .flex-container {
+      flex-direction: column;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  nav ul li a {
+      padding: 8px 12px;
+      font-size: 1rem;
+  }
+
+  main {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+
+  nav ul li a {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+  }
+}
+
 main{
   height: 80%;
   width: 80%;
