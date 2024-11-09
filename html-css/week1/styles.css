@@ -171,7 +171,7 @@ footer{
 		background-position: 0% 50%;
 	}
   }
-#intro #square{
+#square_two{
     border-radius: 5px;
     width: 80px;
     height: 80px;
@@ -252,14 +252,7 @@ footer{
 }
 
   @keyframes iconAnimation {
-    0% {
-        
-        /* font-size: 50px;
-        transform: scaleX(0.5); */
-        
-       
-        
-	}
+
     25%{
         font-size: 25px;
         transform: scaleX(1);
@@ -269,14 +262,6 @@ footer{
         height: 0;
 
     }
-	50% {
-       
-        /* font-size: 50px;
-        transform: scaleX(0.5); */
-       
-        
-        
-	}
 	100%{
         font-size: 40px;
         
@@ -290,7 +275,6 @@ footer{
 .icon-button{
     background-color: rgb(0, 0, 135);
     border: 0;
-    box-shadow: 0;
     width: 42px;
     border-radius: 5px;
     color: white;
@@ -310,7 +294,7 @@ footer{
     margin-top: 50px;
     margin-left: 85px;
 }
-#stepone #square{
+#square_one{
     border-radius: 5px;
     width: 60px;
     height: 60px;
@@ -370,7 +354,6 @@ footer{
     height: 70px;
     border-radius: 50%;
     display: flex;
-    flex-direction: center;
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -393,18 +376,13 @@ footer{
 }
 
 @keyframes buttonAnimationtwo {
-    0% {
 
-	}
     25%{
         width: 45px;
         height: 20px;
 
     }
-	50% {
 
-    
-	}
 	100%{
         width: 23px;
         
@@ -413,7 +391,7 @@ footer{
   .icon-button-two{
     background-color: rgb(0, 0, 135);
     border: 0;
-    box-shadow: 0;
+
    max-height: 40px;
     border-radius: 5px;
     color: white;
@@ -428,20 +406,16 @@ footer{
         font-size: 40px;
         transform: scaleX(0.5);
         margin: 0px -5px;
-        
 	}
     25%{
         font-size: 30px;
         transform: scaleX(1);
     }
-	50% {
 
-	}
 	100%{
         font-size: 40px;
         transform: scaleX(0.5);
-        margin: 0px -5px;
-        
+        margin: 0px -5px;   
 	}
   }
 .icon-button-two i{
@@ -497,7 +471,7 @@ footer{
   font-size: 29px;
   padding-top: 30px;
 }
-#test-item{
+.test-item{
     width: 26%;
    
    display: flex;
@@ -506,18 +480,15 @@ footer{
   margin: 40px 30px;
    align-items: center;
 }
-#test-item :nth-child(1){
+.test-item :nth-child(1){
     font-size: 20px;
     height: 15px;
 }
-#test-item :nth-child(2){
+.test-item :nth-child(2){
     font-size: 25px;
     font-weight: 200;
-    height: 20;
+    height: 20px;
     margin: 0;
-}
-#test-item :nth-child(3){
-
 }
 
 .test-container{
@@ -582,7 +553,7 @@ footer{
     footer a{
         margin: 0 10px;
     }
- @media only screen and (min-device-width: 320px) and (max-device-width: 480px){ 
+ @media only screen and (min-width: 320px) and (max-width: 480px){ 
         header{
             position:fixed  ;
             right: 20px;
@@ -635,7 +606,7 @@ footer{
             font-size: 45px;
 
         }
-        #intro #square{
+        #square_two{
             margin: 50px auto;
         }
         .learn{
@@ -694,7 +665,7 @@ footer{
             align-items: center;
             justify-content: center ;
         }
-        #test-item{
+        .test-item{
             width: 100%;
         }
         .my-introduction{
@@ -707,7 +678,7 @@ footer{
         }
        
      }
-     @media only screen and (min-device-width: 481px) and (max-device-width: 640px) { 
+     @media only screen and (min-width: 481px) and (max-width: 640px) { 
          header{
             position:fixed  ;
             right: 20px;
@@ -756,7 +727,7 @@ footer{
             font-size: 55px;
 
         }
-        #intro #square{
+        #square_two{
             margin-left: 20px;
         }
         .learn{
@@ -799,13 +770,13 @@ footer{
             align-items: center;
             justify-content: center ;
         }
-        #test-item{
+        .test-item{
             width: 90%;
         }
         
 
      }
-     @media only screen and (min-device-width: 641px) and (max-device-width: 960px)  { 
+     @media only screen and (min-width: 641px) and (max-width: 960px)  { 
         body{
             height: 100%
         }
@@ -845,7 +816,7 @@ footer{
         #intro{
         margin-left: 0;
         }
-        #intro #square{
+        #square_two{
             margin-left: 20px;
         }
         #introduction{
@@ -856,10 +827,7 @@ footer{
             font-size: 40px;
 
         }
-        #stepone{
-
-            
-        }
+        
         .learn-sec{
             height: 40px;
             width: 150px;
@@ -883,7 +851,7 @@ footer{
             
 
         }
-        #pro-item{
+        .pro-item{
             width: 45%;
             padding: 0;
         }
@@ -909,20 +877,17 @@ footer{
         }
         
      }
-     @media only screen and (min-device-width: 961px) and (max-device-width: 1281) { 
+     @media only screen and (min-width: 961px) and (max-width: 1281px) { 
        
-        body{
-            width: 100wv;
-        }
-        main{
-            width: 100% - 270px;
-            max-width: 1200px
-
+        
+        main {
+            width: calc(100% - 270px);
+            max-width: 1200px;
         }
         #intro{
         margin-left: 0;
         }
-        #intro #square{
+        #square_two{
             margin-left: 20px;
         }
         #introduction{
