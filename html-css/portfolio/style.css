@@ -1,0 +1,2105 @@
+* {
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+
+    max-width: 100vw;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* -------------- Navbar -------------- */
+
+.navbar {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Cambiado a rgba para tener transparencia */
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Aplica el desenfoque a lo que está debajo de la navbar */
+    opacity: 100;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    justify-content: center; /* Centra los elementos */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+/* Estilo del interruptor */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch-label .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch-label .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Estado activado (modo oscuro) */
+.checkbox:checked + .slider {
+    background-color: #2196F3;
+}
+
+.checkbox:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+
+
+/* -------------- Section 1 -------------- */
+
+
+.contenedor-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    color: #333;
+
+
+    max-width: 100%;
+    overflow-x: hidden; /* Asegura que no haya desbordamientos */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.contenedor-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62%;
+    width: 100%;
+    max-width: 1200px;
+    color: #666666;
+    margin: 20px 0;
+    flex-wrap: nowrap; /* Asegura que el contenido no se ajuste automáticamente */
+}
+
+.texto-introductorio {
+    max-width: 60%; /* Ajusta el ancho del texto para dejar espacio a la imagen */
+}
+
+.texto-introductorio h1 {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+    height: 1.2em;
+}
+
+.texto-introductorio h1 span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.texto-introductorio h1 .current {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.texto-introductorio h1 .next {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.texto-introductorio p {
+    font-size: 1rem;
+    margin: 20px 0;
+    line-height: 2; 
+}
+
+.imagen-principal {
+    max-width: 36%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6%;
+    margin: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+
+
+}
+
+.imagen-principal img {
+    max-width: 100%;
+    height: auto;
+    transform-origin: 83%;
+    transform: scale(1.35);
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    image-rendering: auto; /* Asegura que el navegador escale bien la imagen */
+}
+
+.imagen-principal img:hover {
+    transform: scale(1.45);
+}
+
+
+
+/* Botones generales */
+button {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(40, 144, 241);
+    outline: none;
+    overflow: hidden;
+    color: rgb(40, 144, 241);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+button span {
+    margin: 10px;
+}
+
+button::before {
+    position: absolute;
+    top: 250%;
+    left: -150%;
+    width: 290%;
+    height: 400%;
+    content: '';
+    background-color: rgb(40, 144, 241);
+    transform: rotate(45deg);
+    transition: top 0.5s ease-out, left 0.5s ease-out;
+    z-index: -1;
+}
+
+button:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+}
+
+button:hover::before {
+    top: -50%;
+    left: -50%;
+}
+
+/* Estilos específicos para botones */
+.boton-youtube { }
+
+.boton-github { }
+
+.boton-cv { }
+
+.botones-ordenados-inicio {
+    display: flex;
+    gap: 1rem; /* Espacio entre los botones */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.no-underline:hover {
+    text-decoration: none;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translateY(-10px);
+    transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover with animation */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+
+
+/* -------------- Section 2  -------------- */
+
+#section-skills {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto; /* Centra horizontalmente en su contenedor */
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente si es necesario */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.carousel1 {
+    display: flex;
+    width: 100%;  /* Aumenta el ancho del carrusel */
+    height: 600px;  /* Ajusta la altura del carrusel */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carousel1-container {
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.carousel1-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel1-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.carousel1-header p {
+    font-size: 18px;
+}
+
+.carousel1-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegúrate de que ocupe el 100% del contenedor del carrusel */
+}
+
+.carousel1-item {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;  /* Asegura que los elementos ocupen toda la altura */
+    align-items: center;
+}
+
+.carousel1-item img,
+.carousel1-item video,
+.carousel1-item iframe {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Asegura que el contenido se ajuste al contenedor */
+}
+
+.carousel1-content {
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Alinea el texto a la izquierda */
+}
+
+.carousel1-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.carousel1-content p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.carousel1-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel1-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+
+.carousel1-nav button:hover {
+    color: #333;
+}
+
+.carousel1-description {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carousel1-description p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(3, auto);   /* 3 filas, con alturas iguales */
+    height: 80%;
+    width: 80%;
+    text-align: left;
+    justify-items: center; /* Alinea los íconos al centro horizontalmente */
+    align-items: center; /* Alinea los íconos al centro verticalmente */
+}
+
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Coloca el texto debajo del ícono */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Asegura que el texto esté centrado debajo del ícono */
+}
+
+.skill-item:hover {
+    transform: scale(1.2);
+}
+
+.skill-item img {
+    margin: 0 0 -2px 0; /* Añade un margen inferior para separar el ícono del texto */
+    width: 44px !important;  /* Forzamos el ancho del ícono */
+    height: 44px !important; /* Forzamos la altura del ícono */
+
+}
+
+
+
+
+  .ml12 {
+    width: 100%;
+    padding-left: 60px;
+    font-size: 1.5em;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-align: center;  /* Asegura que el texto esté centrado */
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; /* Ajusta el espaciado de letras para mejorar la visibilidad */
+    margin: 0 auto; /* Asegura que esté centrado dentro del contenedor */
+}
+  
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+    
+    float: none; /* Evita que las letras se apilen verticalmente */
+
+  }
+
+ 
+
+
+
+/* -------------- Section 3 -------------- */
+
+
+#section-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carousel-container {
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.carousel-header p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;  /* Aumenta el ancho del carrusel */
+    height: 600px;  /* Ajusta la altura del carrusel */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;  /* Asegura que los elementos internos ocupen toda la altura */
+}
+
+.carousel-item {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;  /* Asegura que los elementos ocupen toda la altura */
+    align-items: center;
+}
+
+.carousel-item img,
+.carousel-item video,
+.carousel-item iframe {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Asegura que el contenido se ajuste al contenedor */
+}
+
+.carousel-content {
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.carousel-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.carousel-content p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+
+.carousel-nav button:hover {
+    color: #333;
+}
+
+.carousel-description {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carousel-description p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.projects {
+    padding-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+
+
+/* -------------- Section 4 -------------- */
+
+#section-testimonials {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea al principio verticalmente */
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials-text {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-container {
+
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+}
+
+
+
+/* New Card Styles */
+.new-card {
+    background-color: white;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0px 1.5rem 1.5rem rgba(0, 0, 0, 0.5);
+    margin: 20px; /* Reducido para más espacio entre tarjetas */
+    width: 360px;
+    height: 60vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega animación suave */
+}
+
+.new-card:hover {
+    transform: translateY(-10px); /* Desplaza la tarjeta ligeramente hacia arriba */
+    box-shadow: 0px 2rem 2rem rgba(0, 0, 0, 0.5); /* Aumenta la sombra para darle más énfasis */
+}
+
+.new-try, .new-lokomotion, .new-gonzo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 11rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.new-try img, .new-lokomotion img, .new-gonzo img {
+    background-color: white;
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transform: translateY(50%);
+    transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.new-try img:hover, .new-lokomotion img:hover, .new-gonzo img:hover {
+    transform: translateY(50%) scale(1.1); /* Escala la imagen cuando se pasa el cursor por encima */
+}
+
+.new-gonzo {
+    background-image: url("../images/fg.png");
+}
+
+.new-lokomotion {
+    background-image: url("../images/fluxo.png");
+}
+
+.new-try {
+    background-image: url("../images/imperial.jpg");
+}
+
+.new-menu {
+    width: 100%;
+    height: 5.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.new-name {
+    text-align: center;
+    padding: 0 2rem 0.5rem;
+    margin: 0;
+}
+
+.new-title {
+    color: #afafaf;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 2rem 1.2rem;
+}
+
+.new-desc {
+    text-align: left;
+    padding: 0 2rem 2.5rem;
+    order: 100;
+    line-height: 25px;
+}
+
+.ml7 {
+    margin-top: 8rem; /* Ajuste para reducir espacio arriba */
+    position: relative;
+    font-weight: 300;
+    font-size: 3.7em;
+}
+
+.ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* -------------- Section 5 -------------- */
+
+#section-contact {
+    height: 60vh; /* Mantén la altura de la sección */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    padding: 20px; /* Espacio adicional para evitar que el contenido se pegue a los bordes */
+}
+
+
+.contact-titulo {
+    margin-bottom: 2rem; /* Espacio entre el título y el contenido */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-contact {
+    margin-bottom: 2rem; /* Espacio entre los textos y los botones */
+    width: 100%;
+    
+}
+
+.textos-contact h2 {
+    font-size: 48px;
+}
+
+.textos-contact h4 {
+    font-size: 20px;
+    width: 100%;
+}
+
+.botones-ordenados {
+    gap: 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.ml11 {
+    font-weight: 700;
+    font-size: 4.3em;
+    white-space: nowrap;
+    
+  }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    
+        line-height: 1em;
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        text-align: center;   /* Centra el texto */
+        display: inline-block;
+        margin: 0 auto; /* Asegura que esté centrado */
+    
+  }
+
+/* -------------- FOOTERS -------------- */
+
+.footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 40px 0;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho del contenedor */
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(40, 144, 241);
+    height: 2px;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        align-items: center;
+  text-align: left;
+    }
+    .footer-col {
+        width: 100vw;
+        padding-left: 3vh;
+    }
+}
+
+/* MODO OSCURO */
+
+/* Estilo general para el modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #f1f1f1; /* Texto claro */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar en modo oscuro */
+body.dark-mode .navbar {
+    background-color: rgba(30, 30, 30, 0.8); /* Navbar más oscura */
+    color: #f1f1f1; /* Texto claro en la navbar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Añade un borde ligero */
+}
+
+/* Links en la navbar en modo oscuro */
+body.dark-mode .nav-links a {
+    color: #f1f1f1; /* Color de texto claro en los enlaces */
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #316de3; /* Cambia el hover a un verde claro */
+}
+
+/* Fondo de la sección contenedora */
+body.dark-mode .contenedor-1 {
+    background-color: #2c2c2c; /* Fondo más oscuro para las secciones */
+}
+
+body.dark-mode .contenedor-2,
+body.dark-mode .contenedor-3,
+body.dark-mode .contenedor-4,
+body.dark-mode .contenedor-5 {
+    background-color: #2c2c2c; /* Aplica fondo oscuro para todas las secciones */
+}
+
+/* Cambios en los textos */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode p {
+    color: #f1f1f1; /* Texto claro */
+    transition: color 0.4s ease;
+}
+
+/* Imágenes con un filtro ligero en modo oscuro */
+body.dark-mode img {
+    filter: brightness(0.9); /* Reduce el brillo de las imágenes */
+}
+
+/* Estilo del footer en modo oscuro */
+body.dark-mode .footer {
+    background-color: #333; /* Fondo del footer más oscuro */
+}
+
+body.dark-mode .footer-col h4::before {
+    background-color: #1d75b9; /* Cambia el borde a verde */
+}
+
+/* Botones en modo oscuro */
+body.dark-mode button {
+    color: #f1f1f1; /* Texto claro */
+    border: 1px solid #c2d4c8; /* Bordes verdes */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .new-card {
+    background-color: #2e2e2e; /* Fondo de la tarjeta más oscuro */
+    color: #f1f1f1; /* Texto más claro */
+}
+
+body.dark-mode .new-name,
+body.dark-mode .new-title,
+body.dark-mode .new-desc {
+    color: #ffffff; /* Color del texto claro para mejor contraste */
+}
+
+body.dark-mode .new-card:hover {
+    box-shadow: 0px 2rem 2rem rgba(255, 255, 255, 0.1); /* Sombra más ligera al hacer hover */
+}
+
+/* Mejora de la legibilidad del texto */
+.new-desc {
+    color: #666666; /* Texto ligeramente más oscuro en modo claro */
+}
+
+body.dark-mode .new-desc {
+    color: #e0e0e0; /* Texto más claro para modo oscuro */
+}
+
+
+/* Dropdown en modo oscuro */
+body.dark-mode .dropdown-content {
+    background-color: #d6d6d6; /* Fondo más oscuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+
+body.dark-mode .toggle-switch .slider:before {
+    background-color: #fff; /* Botón blanco */
+}
+
+
+
+/* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
+/* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
+/* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
+/* ---------------------------- MEDIA QUERY MOVIL ---------------------------- */
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+    /* ---------------------------- NAVBAR ---------------------------- */
+
+    .navbar {
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+        height: 2rem; /* Ajusta la altura de la navbar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Asegúrate de que la barra ocupe todo el ancho */
+        z-index: 1000; /* Asegura que la barra de navegación esté por encima del contenido */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de profundidad */
+        background-color: #fff; /* Asegúrate de que tenga un color de fondo visible */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Mantiene los enlaces en fila (horizontal) */
+        justify-content: space-around; /* Distribuye los enlaces horizontalmente */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .nav-links li {
+        margin: 0 5px; /* Ajuste del margen entre los elementos en móviles */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Tamaño de fuente adecuado para pantallas pequeñas */
+    }
+
+    /* ---------------------------- SECCION-1 ---------------------------- */
+
+    .contenedor-1 {
+        flex-direction: column; /* Organiza los elementos en columna */
+        height: 100vh; /* Mantén la altura al 100% del viewport */
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding-top: 4rem;
+    }
+
+    .contenedor-contenido {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        justify-content: center; /* Centra el contenido */
+        align-items: center; /* Centra el contenido */
+        width: 100%;
+        height: auto; /* Deja que el contenedor se ajuste al contenido */
+    }
+
+    .texto-introductorio {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 20px; /* Añade espacio inferior al texto */
+    }
+
+    .texto-introductorio h1 {
+        font-size: 2rem; /* Tamaño de la fuente reducido para pantallas pequeñas */
+        font-weight: 700;
+        margin: 20px 0; /* Margen reducido */
+        position: relative;
+        overflow: hidden; /* Permite que la animación funcione */
+        height: 1.2em; /* Mantiene la altura para la animación */
+        white-space: nowrap; /* Previene quiebres de línea */
+    }
+
+    .texto-introductorio h1 span {
+        display: block;
+        position: absolute; /* Necesario para la animación */
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .texto-introductorio h1 .current {
+        transform: translateY(0); /* Asegura que el texto actual esté visible */
+        opacity: 1;
+    }
+
+    .texto-introductorio h1 .next {
+        transform: translateY(100%); /* Movimiento vertical para la animación */
+        opacity: 0;
+    }
+
+    .texto-introductorio p {
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente para móviles */
+        line-height: 1.5; /* Ajusta la altura de línea para mejorar la legibilidad */
+    }
+
+    .imagen-principal {
+        max-width: 70%; /* Reduce el tamaño de la imagen en móviles */
+        margin-top: 0;
+    }
+
+    .botones-ordenados-inicio {
+        justify-content: center; /* Centra los botones horizontalmente */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en una fila */
+    }
+
+    .dropdown-content {
+        min-width: 100px; /* Reduce el ancho mínimo del dropdown para pantallas pequeñas */
+        left: 50%; /* Centra el contenido dropdown */
+        transform: translateX(-50%); /* Ajusta la posición centrada */
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* -------------- Section 2  -------------- */
+    #section-skills {
+        height: auto; /* Ajusta la altura automáticamente al contenido */
+        padding: 20px; /* Añade padding para dar espacio en los bordes */
+        text-align: center; /* Centra el contenido para móviles */
+        padding-top: 4rem;
+    }
+
+    .carousel1 {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .carousel1-container {
+        width: 100%;
+        padding: 10px; /* Reduce el padding para ajustarlo a pantallas pequeñas */
+    }
+
+    .carousel1-header h2 {
+        font-size: 20px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-header p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-inner {
+        flex-direction: column; /* Apila el contenido verticalmente */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    }
+
+    .carousel1-item {
+        flex-direction: column; /* Alinea el contenido en una columna */
+        padding: 10px;
+    }
+
+    .carousel1-item img,
+    .carousel1-item video,
+    .carousel1-item iframe {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        border-radius: 10px;
+        object-fit: cover; /* Asegura que el contenido se ajuste bien */
+    }
+
+    .carousel1-content {
+        padding: 10px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .carousel1-content h2 {
+        font-size: 18px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-content p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .carousel1-nav {
+        display: none; /* Oculta la navegación en pantallas pequeñas para simplificar */
+    }
+
+    .carousel1-description p {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    /* Ajustes para la cuadrícula de habilidades */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para mejor visualización en móvil */
+        grid-template-rows: repeat(auto-fit, auto); /* Ajusta las filas automáticamente */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+        gap: 20px; /* Añade espacio entre los íconos */
+    }
+
+    .skill-item {
+        width: 100%;
+        margin-bottom: 10px; /* Espacio inferior entre elementos */
+    }
+
+    .skill-item img {
+        width: 36px !important; /* Ajusta el tamaño de los íconos para pantallas pequeñas */
+        height: 36px !important;
+    }
+
+    .ml12 {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente para móviles */
+        margin-left: -3.5rem;
+    }
+
+    h1.ml12 {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        text-align: center; /* Asegura que esté centrado en la pantalla */
+        justify-content: center; /* Asegura que esté centrado en el eje horizontal */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .mobile-hide {
+        display: none !important; /* !important para asegurar que se aplique */
+    }
+}
+
+/* -------------- Section 3  -------------- */
+
+@media (max-width: 480px) {
+    .carousel-container {
+        width: 100%;
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
+        box-sizing: border-box;
+        height: 100vh; /* Ocupa el 100% del viewport */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente */
+    }
+
+    .carousel-header h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3rem; /* Ajusta el tamaño del título para móviles */
+        text-align: center;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .carousel-header hr {
+        width: 50px;
+        margin: 10px auto;
+        border: 2px solid #007BFF;
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 70vh; /* Permite que el carrusel ajuste su altura */
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .carousel-item {
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carousel-item iframe {
+        width: 100%; /* Aumenta el ancho del video */
+        height: auto; /* Ajusta la altura del video */
+    }
+
+    .carousel-content {
+        text-align: center; /* Centra el contenido en móviles */
+        max-width: 90%; /* Aumenta el ancho del contenido del texto */
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+        margin: 0 auto; /* Centra el contenido horizontalmente */
+        padding: 15px 0; /* Añade espacio vertical para separación */
+    }
+
+    .carousel-content h2 {
+        font-size: 1.1rem; /* Aumenta un poco el tamaño del título */
+        color: #333;
+        margin-bottom: 10px; /* Añade más espacio inferior al título */
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .carousel-content p {
+        font-size: 0.9rem; /* Aumenta un poco el tamaño del texto para mejor legibilidad */
+        line-height: 1.6; /* Aumenta el espacio entre líneas */
+        color: #666;
+        margin: 0 0 15px 0;
+        padding: 0 20px;
+        max-height: none;
+        overflow: visible;
+        text-align: justify;
+    }
+
+    .carousel1-nav button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        padding: 0 20px;
+        transition: color 0.3s;
+    }
+
+    .carousel-nav button:hover {
+        color: #0056b3;
+    }
+
+    .carousel-nav .prev {
+        left: 10px;
+    }
+
+    .carousel-nav .next {
+        right: 10px;
+    }
+
+    h2.ml12 {
+        margin-left: -3rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+}
+
+/* -------------- Section 4  -------------- */
+
+@media (max-width: 480px) {
+    #section-testimonials {
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        padding: 20px; /* Añade algo de padding */
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .new-card {
+        background-color: white;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 15px 0;
+        border-radius: 1.5rem;
+        box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .new-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 1.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    }
+
+    .new-try, .new-lokomotion, .new-gonzo {
+        height: 10rem;
+    }
+
+    .new-try img, .new-lokomotion img, .new-gonzo img {
+        width: 7rem;
+        height: 7rem;
+        transform: translateY(50%);
+    }
+
+    .new-name {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .new-title {
+        font-size: 0.8rem;
+        padding-bottom: 0.8rem;
+        color: #afafaf;
+    }
+
+    .new-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 1.5rem 2rem;
+    }
+
+    .ml7 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .ml7 .text-wrapper {
+        display: block;
+        overflow: hidden;
+    }
+
+    .ml7 .letter {
+        line-height: 1em;
+    }
+}
+
+/* -------------- Section 5  -------------- */
+
+@media (max-width: 480px) {
+    #section-contact {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .contact-titulo {
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .textos-contact {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .textos-contact h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .textos-contact h4 {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .botones-ordenados {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .botones-ordenados button {
+        width: 120px;
+        padding: 10px;
+        font-size: 1rem;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .ml11 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .ml11 .text-wrapper {
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml11 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #fff;
+        transform-origin: 0 50%;
+    }
+
+    .ml11 .line1 { 
+        top: 0; 
+        left: 0;
+    }
+
+    .ml11 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+}
+
+
+
+
+/* ---------------------------- iPhone 15 Pro (hasta 1179px) ---------------------------- */
+@media (max-width: 430px) {
+
+    /* Ajustes Generales */
+    .body {
+        font-size: 16px; /* Aumenta ligeramente el tamaño de fuente */
+        padding: 0 15px; /* Reduce el padding lateral */
+        width: 100vw;
+    }
+
+    /* Ajustes Navbar */
+    .navbar {
+        height: 70px; /* Ajusta la altura de la barra de navegación */
+        padding: 15px; /* Padding adicional */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    /* Ajustes Sección de Introducción */
+    .contenedor-1 {
+        flex-direction: column; /* Organiza los elementos en columna */
+        padding: 20px;
+        align-items: center;
+        height: auto; /* Ajusta la altura automáticamente */
+        width: 100vw;
+    }
+
+    .texto-introductorio {
+        text-align: center; /* Centra el texto */
+        max-width: 90%; /* Asegura que no se desborde en pantallas más pequeñas */
+    }
+
+    .texto-introductorio h1 {
+        font-size: 2.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .texto-introductorio p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+    }
+
+    .imagen-principal {
+        max-width: 80%; /* Ajusta el tamaño de la imagen */
+        margin-top: 20px;
+    }
+
+    .botones-ordenados-inicio {
+        flex-wrap: wrap; /* Permite que los botones se ajusten */
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Ajustes en la Sección Skills */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas en la cuadrícula */
+        grid-gap: 15px; /* Espacio entre los íconos */
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px; /* Ajusta el tamaño de los íconos */
+    }
+
+    /* Ajustes en la Sección Proyectos */
+    .carousel-container {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20px;
+    }
+
+    .carousel-item iframe {
+        width: 100%; /* Ancho completo para los videos */
+        height: auto;
+    }
+
+    .carousel-content {
+        max-width: 80%; /* Ajusta el ancho del contenido */
+    }
+
+    /* Ajustes en la Sección Testimonios */
+    .new-card {
+        max-width: 350px; /* Limita el ancho máximo de las tarjetas */
+        margin: 20px 0; /* Añade un margen entre tarjetas */
+    }
+
+    /* Ajustes en la Sección Contacto */
+    .botones-ordenados {
+        flex-wrap: wrap; /* Permite que los botones se ajusten */
+        gap: 15px; /* Añade un espacio entre los botones */
+        justify-content: center;
+    }
+    
+    .textos-contact {
+        margin-bottom: 1rem;
+        text-align: center; /* Centra el contenido */
+    }
+
+    .textos-contact h2 {
+        font-size: 2rem;
+    }
+
+    .textos-contact h4 {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 430px) {
+
+    /* ---------------------------- NAVBAR ---------------------------- */
+
+    .navbar {
+        padding: 10px;
+        height: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0 5px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* ---------------------------- SECCION-1 ---------------------------- */
+
+    .contenedor-1 {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vh;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding-top: 4rem;
+    }
+
+    .contenedor-contenido {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .texto-introductorio {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .texto-introductorio h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+        height: 1.2em;
+        white-space: nowrap;
+    }
+
+    .texto-introductorio h1 span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .texto-introductorio h1 .current {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .texto-introductorio h1 .next {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .texto-introductorio p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .imagen-principal {
+        max-width: 70%;
+        margin-top: 0;
+    }
+
+    .botones-ordenados-inicio {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ---------------------------- SECCION 2 ---------------------------- */
+
+    #section-skills {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .carousel1 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel1-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .carousel1-header h2 {
+        font-size: 20px;
+    }
+
+    .carousel1-header p {
+        font-size: 14px;
+    }
+
+    .carousel1-inner {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .carousel1-item {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .carousel1-item img,
+    .carousel1-item video,
+    .carousel1-item iframe {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .carousel1-content {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel1-content h2 {
+        font-size: 18px;
+    }
+
+    .carousel1-content p {
+        font-size: 14px;
+    }
+
+    .carousel1-nav {
+        display: none;
+    }
+
+    .carousel1-description p {
+        font-size: 14px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, auto);
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .skill-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .skill-item img {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .ml12 {
+        font-size: 1.2em;
+        margin-left: -3.5rem;
+    }
+
+    h1.ml12 {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* ---------------------------- SECCION 3 ---------------------------- */
+
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carousel-header h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .carousel-header hr {
+        width: 50px;
+        margin: 10px auto;
+        border: 2px solid #007BFF;
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .carousel-item {
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carousel-item iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-content {
+        text-align: center;
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .carousel-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #666;
+        margin: 0 0 15px 0;
+        padding: 0 20px;
+        max-height: none;
+        overflow: visible;
+        text-align: justify;
+    }
+
+    /* ---------------------------- SECCION 4 ---------------------------- */
+
+    #section-testimonials {
+        height: auto;
+        padding: 20px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .new-card {
+        background-color: white;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 15px 0;
+        border-radius: 1.5rem;
+        box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .new-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 1.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    }
+
+    .new-try, .new-lokomotion, .new-gonzo {
+        height: 10rem;
+    }
+
+    .new-try img, .new-lokomotion img, .new-gonzo img {
+        width: 7rem;
+        height: 7rem;
+        transform: translateY(50%);
+    }
+
+    .new-name {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .new-title {
+        font-size: 0.8rem;
+        padding-bottom: 0.8rem;
+        color: #afafaf;
+    }
+
+    .new-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 1.5rem 2rem;
+    }
+
+    .ml7 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .ml7 .text-wrapper {
+        display: block;
+        overflow: hidden;
+    }
