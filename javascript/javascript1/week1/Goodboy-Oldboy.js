@@ -8,7 +8,7 @@ const shouldShowResultInDogYears = prompt("Enter (true) for dog years or (false)
 
 if (shouldShowResultInDogYears == "true")  {
 
-    alert("Your dog will be " + dogYear*7 + " dog years old in " + dogYearFuture);
+    console.log("Your dog will be " + dogYear*7 + " dog years old in " + dogYearFuture);
 } else {
-    alert("Your dog will be " + dogYear + " human years old in " + dogYearFuture);
+    console.log("Your dog will be " + dogYear + " human years old in " + dogYearFuture);
 }
