@@ -31,8 +31,9 @@ deep= 10;
 high= 10;
 gardenSizeInM2= 100;
 const peterHousePrice = 2500000;
+const peterCalculatedHousePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 
-if (peterHousePrice <= housePrice) {
+if (peterHousePrice <= peterCalculatedHousePrice ) {
     console.log("The price is okay.");
 } else {
     console.log("The price is too high.");
@@ -44,8 +45,9 @@ deep= 11;
 high= 8;
 gardenSizeInM2= 70;
 const juliaHousePrice = 1000000;
+const juliaCalculatedHousePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 
-if (juliaHousePrice <= housePrice) {
+if (juliaHousePrice <= juliaCalculatedHousePrice) {
     console.log("The price is okay.");
 } else {
     console.log("The price is too high.");
