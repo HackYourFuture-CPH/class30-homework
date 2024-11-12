@@ -39,14 +39,13 @@ if (peterHousePrice <= housePrice) {
 }
 
 //Julia
-wide= 8;
-deep= 10;
-high= 10;
-gardenSizeInM2= 100;
+wide= 5;
+deep= 11;
+high= 8;
+gardenSizeInM2= 70;
 const juliaHousePrice = 1000000;
 
-let valuable;
-if (peterHousePrice <= housePrice) {
+if (juliaHousePricePrice <= housePrice) {
     console.log("The price is okay.");
 } else {
     console.log("The price is too high.");
