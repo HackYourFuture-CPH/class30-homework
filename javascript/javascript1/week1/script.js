@@ -29,12 +29,12 @@ const peterHouse = 25000000;
 const volumeInMeters1 = peterWidth * peterHigh * peterDeep;
 const estimatePeterHouse = volumeInMeters1 * 2.5 * 1000 + peterGarden * 300;
 
-console.log("El precio estimado de la casa es " + housePricePeter);
 
-if (housePricePeter <= peterHouse) {
-    console.log("The pice is good")
+
+if (estimatePeterHouse <= peterHouse) {
+    console.log("The price is good.The estimate price is" + estimatePeterHouse);
 } else {
-    console.log("The price is too high")
+    console.log("The price is too high. The estimate price is" + estimatePeterHouse);
 }
 
 const juliaWidth = 5;
@@ -45,12 +45,11 @@ const juliaGarden = 70 ** 2;
 const volumeInMeters2 = jualiaDeep * juliaWidth * julieaHigh
 const hestimateJuliaHouse = volumeInMeters2 * 2.5 * 10000 + juliaGarden * 300;
 
-console.log("El precio estimado de la casa es " + housePriceJulia);
 
-if (housePriceJulia <= juliaHouse) {
-    console.log("The pice is good")
+if (estimatePeterHouse <= juliaHouse) {
+    console.log("The price is good. The estimate price is" + estimatePeterHouse);
 } else {
-    console.log("The price is too high")
+    console.log("The price is too high. The estimate price is" + estimatePeterHouse);
 }
 
 //
