@@ -30,7 +30,20 @@ wide= 8;
 deep= 10;
 high= 10;
 gardenSizeInM2= 100;
-const peterHousePrice = 250000;
+const peterHousePrice = 2500000;
+
+if (peterHousePrice <= housePrice) {
+    console.log("The price is okay.");
+} else {
+    console.log("The price is too high.");
+}
+
+//Julia
+wide= 8;
+deep= 10;
+high= 10;
+gardenSizeInM2= 100;
+const juliaHousePrice = 1000000;
 
 let valuable;
 if (peterHousePrice <= housePrice) {
