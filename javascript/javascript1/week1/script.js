@@ -58,7 +58,7 @@ if (estimateJuliaHouse < juliaHouse) {
 }
 
 //Ez Namey (Startup name generator) 
-let firstWords = ["The", "Humble", "Group", "Aventure", "Dream"]
+let firstWords = ["The", "Humble", "Group", "Aventure", "Dream"] 
 let secondWords = ["Develop", "Create", "Build", "New", "Smart"]
 
 function randomNumber() {
