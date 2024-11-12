@@ -14,5 +14,5 @@ const dogYearInDogYear = dogYearInHumanYear * 7
 if (shouldShowResultInDogYears = true) {
     console.log("Your dog will be " + dogAgeInDogYears + "dog years old in" + dogYearFuture + ".");
 } else {
-    console.log("Your dog will be " + dogYearInHumanYear + "dog years old in" + dogYearFuture + "."));
+    console.log("Your dog will be " + dogYearInHumanYear + "dog years old in" + dogYearFuture + ".");
 }
