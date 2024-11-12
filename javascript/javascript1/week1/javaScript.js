@@ -18,3 +18,23 @@ if (shouldShowResultInDogYears) {
 }
 
 //Housey pricey (A house price estimator)
+let wide;
+let deep;
+let high;
+let volumeInMeters= wide* deep* high;
+let gardenSizeInM;
+const housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+
+//Peter
+wide= 8;
+deep= 10;
+high= 10;
+gardenSizeInM2= 100;
+const peterHousePrice = 250000;
+
+let valuable;
+if (peterHousePrice <= housePrice) {
+    console.log("The price is okay.");
+} else {
+    console.log("The price is too high.");
+}
