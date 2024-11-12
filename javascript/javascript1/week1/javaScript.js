@@ -59,4 +59,4 @@ const randomNumber1 = Math.floor(Math.random() * 10);
 const randomNumber2 = Math.floor(Math.random() * 10);
 const startupName = firstWords[randomNumber1] + secondWords[randomNumber2];
 const nameLength = startupName.length;
-console.log("The startup: " \""+ startupName+ \"" " contains" \"" + nameLength + \"""characters.");
+console.log("The startup: \"" + startupName + "\" contains \"" + nameLength + "\" characters.");
