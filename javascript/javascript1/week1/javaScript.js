@@ -45,7 +45,7 @@ high= 8;
 gardenSizeInM2= 70;
 const juliaHousePrice = 1000000;
 
-if (juliaHousePricePrice <= housePrice) {
+if (juliaHousePrice <= housePrice) {
     console.log("The price is okay.");
 } else {
     console.log("The price is too high.");
