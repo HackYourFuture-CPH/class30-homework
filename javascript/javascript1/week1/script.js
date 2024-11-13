@@ -30,3 +30,23 @@ if (shouldShowResultInDogYears) {
     `Your dog will be ${dogAgeInHumanYears} human years old in ${dogYearFuture}`,
   );
 }
+
+// Tasl : Housey pricey (A house price estimator)
+
+let peterPrice = 2500000;
+let juliaPrice = 1000000;
+
+let peterEstimatedPrice = 8 * 10 * 10 * 2.5 * 1000 + 100 * 300;
+let juliaEstimatedPrice = 5 * 8 * 11 * 2.5 * 1000 + 70 * 300;
+
+console.log(
+  peterPrice > peterEstimatedPrice
+    ? `Peter is paying too much. Estimated price: ${peterEstimatedPrice}, but he is paying: ${peterPrice}.`
+    : `Peter is paying too little. Estimated price: ${peterEstimatedPrice}, and he is paying: ${peterPrice}.`,
+);
+
+console.log(
+  juliaPrice > juliaEstimatedPrice
+    ? `Julia is paying too much. Estimated price: ${juliaEstimatedPrice}, but she is paying: ${juliaPrice}.`
+    : `Julia is paying too little. Estimated price: ${juliaEstimatedPrice}, and she is paying: ${juliaPrice}.`,
+);
