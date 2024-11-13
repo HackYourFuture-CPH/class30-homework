@@ -1,6 +1,6 @@
 //FCC account: @ruslanaonshchk
 
-// Task: Smart-ease : Age-ify (A future age calculator)
+// TASK: Smart-ease : Age-ify (A future age calculator)
 
 const yearOfBirth = 2001;
 const yearFuture = 2027;
@@ -8,7 +8,7 @@ const yearFuture = 2027;
 const age = yearFuture - yearOfBirth;
 console.log('You will be ' + age + ' years old in ' + yearFuture);
 
-// Task : Goodboy-Oldboy (A dog age calculator)
+// TASK : Goodboy-Oldboy (A dog age calculator)
 
 const dogYearOfBirth = 2019;
 let dogYearFuture = 2025;
@@ -31,7 +31,7 @@ if (shouldShowResultInDogYears) {
   );
 }
 
-// Tasl : Housey pricey (A house price estimator)
+// TASK : Housey pricey (A house price estimator)
 
 let peterPrice = 2500000;
 let juliaPrice = 1000000;
@@ -49,4 +49,44 @@ console.log(
   juliaPrice > juliaEstimatedPrice
     ? `Julia is paying too much. Estimated price: ${juliaEstimatedPrice}, but she is paying: ${juliaPrice}.`
     : `Julia is paying too little. Estimated price: ${juliaEstimatedPrice}, and she is paying: ${juliaPrice}.`,
+);
+
+// TASK : Ez Namey (Startup name generator) Optional
+
+const randomNumber = Math.floor(Math.random() * 10);
+
+const firstWords = [
+  'Easy',
+  'Awesome',
+  'Corpporate',
+  'New',
+  'Cool',
+  'Funny',
+  'Serious',
+  'Juzzy',
+  'Fuzzy',
+  'Fabious',
+];
+
+const secondWords = [
+  'Tech',
+  'Hub',
+  'Corporation',
+  'Innovation',
+  'Global',
+  'Industries',
+  'IT',
+  'Animals',
+  'Academy',
+  'Strangers',
+];
+
+const startupName = firstWords[randomNumber] + ' ' + secondWords[randomNumber];
+
+console.log(
+  'The startup: "' +
+    startupName +
+    '" contains ' +
+    startupName.length +
+    ' characters',
 );
