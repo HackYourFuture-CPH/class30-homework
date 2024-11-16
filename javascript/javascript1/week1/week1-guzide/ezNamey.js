@@ -24,7 +24,8 @@ let secondWords = [
 ];
 
 const randomNumber = Math.floor(Math.random() * 10);
-const startUpName = firstWords[randomNumber] + secondWords[randomNumber];
+const randomNumber2 = Math.floor(Math.random() * 10);
+const startUpName = firstWords[randomNumber] + secondWords[randomNumber2];
 const startUpNameLength = startUpName.length;
 
 console.log(
