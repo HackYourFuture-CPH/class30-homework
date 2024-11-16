@@ -1,6 +1,8 @@
 // Exercise 4 Ez Namey (Startup name generator)
 
-const randomNumber = Math.floor(Math.random() * 10);
+const randomNumber1 = Math.floor(Math.random() * 10);
+const randomNumber2 = Math.floor(Math.random() * 10);
+
 const firstWords = [
 	"Easy",
 	"Awesome",
@@ -26,7 +28,8 @@ const secondWords = [
 	"Prank",
 ];
 
-const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
+const startupName =
+	firstWords[randomNumber1] + " " + secondWords[randomNumber2];
 
 console.log(
 	'The startup: "' +
