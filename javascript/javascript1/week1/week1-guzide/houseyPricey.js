@@ -43,7 +43,7 @@ const juliaVolume = juliaHouse.width * juliaHouse.depth * juliaHouse.height;
 const juliaExpectedPrice =
   juliaVolume * 2.5 * 1000 + juliaHouse.gardenSizeInM2 * 300;
 
-if (juliaHouse.currentPrice > juliaExpectedPrice) {
+if (juliaHouse.currentPrice < juliaExpectedPrice) {
   console.log(
     "Hi " +
       juliaHouse.customername +
@@ -51,7 +51,15 @@ if (juliaHouse.currentPrice > juliaExpectedPrice) {
       juliaExpectedPrice +
       "kr"
   );
-} else
+} else if ((juliaHouse.currentPrice = juliaExpectedPrice)) {
+  console.log(
+    "Hi " +
+      juliaHouse.customername +
+      " you calculated exactly what is offered to you: " +
+      juliaExpectedPrice +
+      "kr"
+  );
+} else {
   console.log(
     "Hi " +
       juliaHouse.customername +
@@ -59,3 +67,4 @@ if (juliaHouse.currentPrice > juliaExpectedPrice) {
       juliaExpectedPrice +
       "kr"
   );
+}
