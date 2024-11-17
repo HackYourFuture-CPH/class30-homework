@@ -10,16 +10,16 @@ console.log('You will be ' + age + ' years old in ' + yearFuture);
 
 // TASK : Goodboy-Oldboy (A dog age calculator)
 
-const dogYearOfBirth = 2019;
+let dogYearOfBirth = 2019;
 let dogYearFuture = 2025;
 const dogYear = 7;
 const shouldShowResultInDogYears = true;
 
 // Calculate the dog's age in human years
-let dogAgeInHumanYears = dogYearFuture - dogYearOfBirth;
+const dogAgeInHumanYears = dogYearFuture - dogYearOfBirth;
 
 // Calculate the dog's age in dog years
-let dogAgeInDogYears = dogAgeInHumanYears * dogYear;
+const dogAgeInDogYears = dogAgeInHumanYears * dogYear;
 
 if (shouldShowResultInDogYears) {
   console.log(
@@ -33,27 +33,45 @@ if (shouldShowResultInDogYears) {
 
 // TASK : Housey pricey (A house price estimator)
 
-let peterPrice = 2500000;
-let juliaPrice = 1000000;
+let houses = [
+  {
+    name: 'Peter',
+    width: 8,
+    depth: 10,
+    height: 10,
+    gardenSize: 100,
+    price: 2500000,
+  },
+  {
+    name: 'Julia',
+    width: 5,
+    depth: 11,
+    height: 8,
+    gardenSize: 70,
+    price: 1000000,
+  },
+];
 
-let peterEstimatedPrice = 8 * 10 * 10 * 2.5 * 1000 + 100 * 300;
-let juliaEstimatedPrice = 5 * 8 * 11 * 2.5 * 1000 + 70 * 300;
+houses.forEach(house => {
+  let estimatedPrice =
+    house.width * house.depth * house.height * 2.5 * 1000 +
+    house.gardenSize * 300;
 
-console.log(
-  peterPrice > peterEstimatedPrice
-    ? `Peter is paying too much. Estimated price: ${peterEstimatedPrice}, but he is paying: ${peterPrice}.`
-    : `Peter is paying too little. Estimated price: ${peterEstimatedPrice}, and he is paying: ${peterPrice}.`,
-);
-
-console.log(
-  juliaPrice > juliaEstimatedPrice
-    ? `Julia is paying too much. Estimated price: ${juliaEstimatedPrice}, but she is paying: ${juliaPrice}.`
-    : `Julia is paying too little. Estimated price: ${juliaEstimatedPrice}, and she is paying: ${juliaPrice}.`,
-);
+  if (house.price > estimatedPrice) {
+    console.log(
+      `${house.name} is paying too much. Estimated price: ${estimatedPrice}, but they are paying: ${house.price}.`,
+    );
+  } else {
+    console.log(
+      `${house.name} is paying too little. Estimated price: ${estimatedPrice}, and they are paying: ${house.price}.`,
+    );
+  }
+});
 
 // TASK : Ez Namey (Startup name generator) Optional
 
-const randomNumber = Math.floor(Math.random() * 10);
+const randomNumber1 = Math.floor(Math.random() * 10);
+const randomNumber2 = Math.floor(Math.random() * 10);
 
 const firstWords = [
   'Easy',
@@ -81,7 +99,8 @@ const secondWords = [
   'Strangers',
 ];
 
-const startupName = firstWords[randomNumber] + ' ' + secondWords[randomNumber];
+const startupName =
+  firstWords[randomNumber1] + ' ' + secondWords[randomNumber2];
 
 console.log(
   'The startup: "' +
