@@ -1,6 +1,15 @@
-    
-const house1 = 8 * 10 * 10 * 2.5 * 1000 + 100 * 300;
-const house2 = 5 * 11 * 8 * 2.5 * 1000 + 70 * 300;
+const height1 = 10;
+const width1 = 8;
+const depth1 = 10;
+const size1 = 100;
+const volume1 = width1 * depth1 * height1;
+const height2 = 8;
+const width2 = 5;
+const depth2 = 11;
+const size2 = 70;
+const volume2 = width2 * depth2 * height2;
+const house1 = volume1 * 2.5 * 1000 + size1  * 300;
+const house2 = volume2 * 2.5 * 1000 + size2 * 300;
 let comment; 
 if (house1 === 2500000) {
     comment = "Your house is the right price";}
