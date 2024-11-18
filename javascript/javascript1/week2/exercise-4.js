@@ -42,6 +42,7 @@ addStudentToClass("Erik");
 
 addStudentToClass("Erik");
 addStudentToClass("Queen");
+addStudentToClass("Anna");
 addStudentToClass("Queen");
 
 addStudentToClass(" ");
