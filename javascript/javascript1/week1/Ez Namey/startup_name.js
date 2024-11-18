@@ -24,9 +24,11 @@ const secondWords = [
   "Tech",
 ];
 
-const randomNumber = Math.floor(Math.random() * 10);
+const randomNumberOne = Math.floor(Math.random() * 10);
+const randomNumberTwo = Math.floor(Math.random() * 10);
 
-const startUpName = firstWords[randomNumber] + " " + secondWords[randomNumber];
+const startUpName =
+  firstWords[randomNumberOne] + " " + secondWords[randomNumberTwo];
 
 console.log(
   "The startup: " +
