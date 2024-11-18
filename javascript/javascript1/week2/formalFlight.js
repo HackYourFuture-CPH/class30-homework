@@ -1,3 +1,4 @@
+//Flight booking fullname function(Formal fullname)
 let firstName= prompt("What is your first name?");
 let lastName= prompt("What is your last name?");
 let useFormalName =prompt("Do you whant to adress formal? (yes or no)")
