@@ -11,10 +11,20 @@ const peterHouseExpectedPrice =
   peterHouseVolumeInMeters * 2.5 * 1000 + peterGardenSizeInM2 * 300;
 
 if (peterHouseActualPrice < peterHouseExpectedPrice) {
-  console.log("Peter house price " + peterHouseExpectedPrice + " is too much");
+  console.log(
+    "Peter's estimated house price " +
+      peterHouseExpectedPrice +
+      " is too much than the actual price " +
+      peterHouseActualPrice
+  );
+} else if (peterHouseActualPrice === peterHouseExpectedPrice) {
+  console.log("Peter is paying exactly the same amount as offered");
 } else {
   console.log(
-    "Peter house price " + peterHouseExpectedPrice + " is too little"
+    "Peter's estimated house price " +
+      peterHouseExpectedPrice +
+      " is too little than the actual price " +
+      peterHouseActualPrice
   );
 }
 
@@ -31,9 +41,19 @@ const juliaHouseExpectedPrice =
   juliaHouseVolumeInMeters * 2.5 * 1000 + juliaGardenSizeInM2 * 300;
 
 if (juliaHouseActualPrice < juliaHouseExpectedPrice) {
-  console.log("Julia house price " + juliaHouseExpectedPrice + " is too much");
+  console.log(
+    "Julia's estimated house price " +
+      juliaHouseExpectedPrice +
+      " is too much than the actual price " +
+      juliaHouseActualPrice
+  );
+} else if (juliaHouseActualPrice === juliaHouseExpectedPrice) {
+  console.log("Julia is paying exactly the same amount as offered");
 } else {
   console.log(
-    "Julia house price " + juliaHouseExpectedPrice + " is too little"
+    "Julia's estimated house price " +
+      juliaHouseExpectedPrice +
+      " is too little than the actual price " +
+      juliaHouseActualPrice
   );
 }
