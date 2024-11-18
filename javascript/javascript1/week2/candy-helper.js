@@ -18,11 +18,19 @@ const amountToSpend = Math.random() * 100;
 
 function canBuyNewCandy(boughtCandyPrices){
   let total = 0;
+  let i = 0;
+  /*
   for (let i=0 ; i < boughtCandyPrices.length; i++){
     total += boughtCandyPrices[i];
   }
+  */
+  while ( i < boughtCandyPrices.length){
+    total += boughtCandyPrices[i];
+    i++;
+  }
   return total;
 }
+
 
 let total = canBuyNewCandy(boughtCandyPrices);
 if (total === 0) 
