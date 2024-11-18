@@ -12,7 +12,7 @@ function getEventWeekday(days) {
 	];
 	const numberOfEventDay = (new Date().getDay() + days) % 7;
 
-	return weekdays[numberOfEventDay];
+	return `Event will be on: ${weekdays[numberOfEventDay]}` 
 }
 
 console.log(getEventWeekday(7));
