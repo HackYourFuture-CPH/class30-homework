@@ -11,7 +11,7 @@ function addStudentToClass(studentName) {
    }
    
    else if (class07Students.length >= 6)
-     console.log("Cannot add more students to class 07");
+     console.log(`Cannot add more students to class 07`);
    
    else if (class07Students.includes(studentName)){
     console.log(`Student ${studentName} is already in the class`);

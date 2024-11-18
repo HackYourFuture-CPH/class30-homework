@@ -6,5 +6,8 @@ function dressForTheWeather (temperature){
 }
 
 const clothesToWear = dressForTheWeather(18);
-
 console.log(clothesToWear);
+
+//Here I used prompt for more practice :)
+//const temperature = parseInt(prompt('Enter the temperature in °C'))
+//console.log(dressForTheWeather(temperature));

@@ -9,3 +9,7 @@ function getEventWeekday (daysToEvent){
 
 console.log(getEventWeekday(5));
 console.log(getEventWeekday(9));
+
+//Here I used prompt for more practice :)
+//const daysToEvent = parseInt(prompt('How many days until the event?'))
+//console.log(getEventWeekday (daysToEvent));
