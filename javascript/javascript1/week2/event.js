@@ -7,4 +7,4 @@ function getEventWeekday(daysFromToday,today){
     const eventDayIndex = (todayIndex + daysFromToday) % 7;
     return weekdays[eventDayIndex];
 }
-console.log(getEventWeekday(daysFromToday,today));
+console.log(" on" + getEventWeekday(daysFromToday,today));
