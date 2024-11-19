@@ -1,21 +1,20 @@
 //Age calculator
 
-let yearOfBirth = 1995
-let yearFuture = 2027
-let age = yearFuture - yearOfBirth
+const yearOfBirth = 1995
+const yearFuture = 2027
+const age = yearFuture - yearOfBirth
 console.log("You will be " + age + " years old in " + yearFuture)
 
 //Goodboy-oldboy
 
-let dogYearOfbirth = 2018;
-let dogYearFuture = 2027;
-let dogYear = yearFuture - yearOfBirth;
-let shouldShowResultInDogYears = true;
+const dogYearOfbirth = 2018;
+const dogYearFuture = 2027;
+const dogYear = yearFuture - yearOfBirth;
+const shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears) {
-    let dogInDogYears = dogYear * 7;
-    console.log("Your dog will be " + dogInDogYears + " dog years old in 2027");
-} else {
+   const dogInDogYears = dogYear * 7;
+    console.log("Your dog will be " + dogInDogYears + " dog years old in 2027");// or console.log("Your dog will be " + dogYear * 7+ " dog years old in 2027");} else {
     console.log("Your dog will be" + dogYear + "human years old in 2027");
 }
 
@@ -58,11 +57,11 @@ if (estimateJuliaHouse < juliaHouse) {
 }
 
 //Ez Namey (Startup name generator) 
-let firstWords = ["The", "Humble", "Group", "Aventure", "Dream"] 
-let secondWords = ["Develop", "Create", "Build", "New", "Smart"]
+const firstWords = ["The", "Humble", "Group", "Aventure", "Dream"] 
+const secondWords = ["Develop", "Create", "Build", "New", "Smart"]
 
 function randomNumber() {
-    return Math.floor(Math.random() * 5);
-}
+    return Math.floor(Math.random() * 5); // or const randomNumber = Math.floor(Math.random() * 10);}
+
 let startupName = firstWords[randomNumber()] + "  " + secondWords[randomNumber()];
 console.log("The Startup: " + startupName + " contains " + startupName.length + " characters");
