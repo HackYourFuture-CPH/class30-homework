@@ -32,7 +32,3 @@ function addStudentToClass(studentName) {
        console.log(`Student ${studentName} added to the class.`);
 
 }
-
-function getNumberOfStudents() {
-  // You write code here
-}
