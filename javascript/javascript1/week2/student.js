@@ -34,6 +34,10 @@ function addStudentToClass(studentName) {
 
 }
 
+function getNumberOfStudents() {
+    return class07Students.length; // return the number of students
+}
+
 addStudentToClass("Parisa");
 addStudentToClass("Parisa");
 addStudentToClass("Milad");
@@ -46,4 +50,6 @@ addStudentToClass("Jens");
 addStudentToClass("William");
 addStudentToClass("Ann");
 addStudentToClass("Queen");
+
+console.log(`Number of students: ${getNumberOfStudents()}`);
 console.log(class07Students);
