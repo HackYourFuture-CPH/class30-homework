@@ -63,5 +63,5 @@ const secondWords = ["Develop", "Create", "Build", "New", "Smart"]
 function randomNumber() {
     return Math.floor(Math.random() * 5); // or const randomNumber = Math.floor(Math.random() * 10);}
 
-let startupName = firstWords[randomNumber()] + "  " + secondWords[randomNumber()];
+const startupName = firstWords[randomNumber()] + "  " + secondWords[randomNumber()];
 console.log("The Startup: " + startupName + " contains " + startupName.length + " characters");
