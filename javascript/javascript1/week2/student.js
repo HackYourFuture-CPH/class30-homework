@@ -6,6 +6,7 @@ function addStudentToClass(studentName) {
     // Check if the student is already in the class
     if (class07Students.includes(studentName)) {
         console.log(`Student ${studentName} is already in the class`);
+        return;
     }
 
      // Check if the class is full
@@ -22,7 +23,7 @@ function addStudentToClass(studentName) {
     }
 
     // Check if the student name is an empty string
-    if (studentName === "") {
+    if (!studentName || studentName.trim() === "") {
         console.log("Cannot add an empty name to the class");
         return;
     }
@@ -32,3 +33,6 @@ function addStudentToClass(studentName) {
        console.log(`Student ${studentName} added to the class.`);
 
 }
+
+addStudentToClass(studentName);
+console.log(class07Students);
