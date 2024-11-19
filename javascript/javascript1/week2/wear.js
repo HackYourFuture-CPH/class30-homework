@@ -1,5 +1,5 @@
 //Weather wear
-let tempurture= prompt("What is the tempurture?");
+let tempurture= prompt("What is the temperature?");
 
 function decideClothes(temperature) {
     if (temperature >= 25) {
