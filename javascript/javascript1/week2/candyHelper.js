@@ -1,4 +1,6 @@
 //Candy helper optional
+const candyType = prompt("Which kind of candy do you want?");
+const weight= prompt("How much candy do you want?");
 
 const boughtCandyPrices = [];
 
@@ -38,11 +40,5 @@ function canBuyMoreCandy() {
         return false;
     }
 }
-
-// Example Usage
-addCandy("sweet", 20);       // Adds 20 grams of sweet
-addCandy("chocolate", 50);   // Adds 50 grams of chocolate
-addCandy("toffee", 30);      // Adds 30 grams of toffee
-addCandy("chewing-gum", 100); // Adds 100 grams of chewing gum
 
 canBuyMoreCandy();           // Checks if the user can buy more
