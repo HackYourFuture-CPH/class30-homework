@@ -23,7 +23,7 @@ function addStudentToClass(studentName) {
     }
 
      // Check if the class is full
-    if (class07Students.length>=6){
+    if (class07Students.length>=7){
       console.log ("Cannot add more students to class 07");
       return;
     }
