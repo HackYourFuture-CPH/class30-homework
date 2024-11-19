@@ -1,6 +1,4 @@
 //Candy helper optional
-const candyType = prompt("Which kind of candy do you want?");
-const weight= prompt("How much candy do you want?");
 
 const boughtCandyPrices = [];
 
@@ -23,6 +21,7 @@ function addCandy(candyType, weight) {
 
 const amountToSpend = Math.random() * 100;
 
+
 function canBuyMoreCandy() {
     let totalCost = 0;
 
@@ -41,4 +40,9 @@ function canBuyMoreCandy() {
     }
 }
 
-canBuyMoreCandy();           // Checks if the user can buy more
+addCandy("sweet", 30);       
+addCandy("chocolate", 50);   
+addCandy("toffee", 60);     
+addCandy("chewing-gum", 200);
+
+canBuyMoreCandy();
