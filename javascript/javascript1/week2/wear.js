@@ -1,20 +1,16 @@
 //Weather wear
-let tempurture= propmt("What is the tempurture?");
+let tempurture= prompt("What is the tempurture?");
 
-function decideClothes(tempurture,clothes){
-    if (tempurture>= 23);{
-        return clothes="T-shirt and Shorts";
-    }
-    else if (tempurture<23 && tempurture>=18){
-        return clothes="Sweater and Jeans";
-    }
-    else if (tempurture<18 && tempurture>= 10){
-        return clothes="Light jakket";
-    }
-    else{
-        return clothes="winter jakket";
+function decideClothes(temperature) {
+    if (temperature >= 25) {
+        return "T-shirt and Shorts";
+    } else if (temperature < 25 && temperature >= 15) {
+        return "A light sweater and jeans";
+    } else if (temperature < 15 && temperature >= 5) {
+        return "A jacket and warm pants";
+    } else {
+        return "A heavy coat, scarf, and gloves";
     }
 }
-
-const clothesToWear = decideClothes(tempurture,clothes);
+const clothesToWear = decideClothes(tempurture);
 console.log(clothesToWear);
