@@ -34,3 +34,26 @@ console.log(fullname2);
 console.log(fullname3);
 console.log(fullname4);
 console.log(fullname5);
+
+//TASK : Event application
+
+function getEventWeekday(daysFromToday) {
+  const today = new Date();
+  const weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
+  const todayIndex = today.getDay();
+  const eventDayIndex = (todayIndex + daysFromToday) % 7;
+
+  return weekdays[eventDayIndex];
+}
+
+console.log(getEventWeekday(9));
+console.log(getEventWeekday(2));
