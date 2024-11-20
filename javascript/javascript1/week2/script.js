@@ -56,4 +56,23 @@ function getEventWeekday(daysFromToday) {
 }
 
 console.log(getEventWeekday(9));
-console.log(getEventWeekday(2));
+console.log(getEventWeekday(3));
+
+// TASK : Weather wear
+
+function whatToWear(temp) {
+  if (temp >= 25) {
+    return 'shorts and T-shirt';
+  } else if (temp >= 18) {
+    return 'jeans and longsleve';
+  } else if (temp >= 10) {
+    return 'jeans and sweter';
+  } else if (temp >= 0) {
+    return 'warm trausers, blaser and scarf';
+  } else {
+    return 'I have nothing to wear!';
+  }
+}
+
+const clothesToWear = whatToWear(22);
+console.log(clothesToWear);
