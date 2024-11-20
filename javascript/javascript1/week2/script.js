@@ -76,3 +76,43 @@ function whatToWear(temp) {
 
 const clothesToWear = whatToWear(22);
 console.log(clothesToWear);
+
+// TASK : Student manager
+
+const class07Students = [];
+function addStudentToClass(studentName) {
+  if (!studentName) {
+    console.log('You cannot add an empty student name.');
+    return;
+  }
+  if (class07Students.includes(studentName)) {
+    console.log(`Student ${studentName} is already in the class.`);
+    return;
+  }
+  if (studentName === 'Queen' || class07Students.length < 6) {
+    class07Students.push(studentName);
+    console.log(`${studentName} has been added to the class.`);
+  } else {
+    console.log('Cannot add more students to class.');
+  }
+}
+
+function getNumberOfStudents() {
+  return class07Students.length;
+}
+
+addStudentToClass('Ruslana');
+addStudentToClass('Andrii');
+addStudentToClass('Ayman');
+addStudentToClass('Farzaneh');
+addStudentToClass('Soheib');
+addStudentToClass('Parisa');
+addStudentToClass('Julie');
+
+addStudentToClass('Ruslana');
+
+addStudentToClass('Queen');
+
+addStudentToClass('');
+
+console.log(`Total students in the class: ${getNumberOfStudents()}`);
