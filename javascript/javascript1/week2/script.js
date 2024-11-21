@@ -116,3 +116,58 @@ addStudentToClass('Queen');
 addStudentToClass('');
 
 console.log(`Total students in the class: ${getNumberOfStudents()}`);
+
+// OPTIONAL TASK : Candy helper
+
+const boughtCandyPrices = [];
+
+function addCandy(candyType, weight) {
+  const candyPrices = {
+    sweet: 0.5,
+    chocolate: 0.7,
+    toffee: 1.1,
+    'chewing-gum': 0.03,
+  };
+
+  if (candyType in candyPrices) {
+    const price = candyPrices[candyType] * weight;
+    boughtCandyPrices.push(price);
+  } else {
+    console.log('Invalid candy type!');
+  }
+}
+
+const amountToSpend = Math.random() * 100;
+
+function canBuyMoreCandy() {
+  let totalPrice = 0;
+
+  for (let price of boughtCandyPrices) {
+    totalPrice += price;
+  }
+
+  // using while loop
+  /*
+    let i = 0;
+    while (i < boughtCandyPrices.length) {
+        totalPrice += boughtCandyPrices[i];
+        i++;
+    }
+    */
+
+  if (totalPrice < amountToSpend) {
+    console.log('You can buy more!');
+    return true;
+  } else {
+    console.log("That's enough candy for you!");
+    return false;
+  }
+}
+
+addCandy('sweet', 20);
+addCandy('chocolate', 15);
+addCandy('toffee', 10);
+addCandy('chewing-gum', 50);
+console.log('Bought Candy Prices:', boughtCandyPrices);
+
+canBuyMoreCandy();
