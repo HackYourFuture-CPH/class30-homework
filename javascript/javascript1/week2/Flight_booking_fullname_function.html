@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <style>
+    div{
+    
+      margin: 10px;
+      padding-top: 40px;
+      width: 500px;
+
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="fname">Please enter your firstname:</label>
+  <input type="text" name="fname" id="fname">
+  </div>
+  <div>
+    <label for="lname">Please enter your lsatname:</label>
+  <input type="text" name="lname" id="lname">
+  </div>
+  <div><label for=""> Please print my name in formal form</label>
+      <input type="checkbox" id="add-lord">
+  </div>
+  <div>
+  <input type="reset" value="clear">
+  </div>
+  
+  <div>
+    <button  onclick="
+    let fName=document.getElementById(`fname`).value;
+    let lName=document.getElementById(`lname`).value;
+    let titleLord=document.getElementById(`add-lord`).checked;
+    getFullname(fName,lName,titleLord);
+
+      ">Print my ticket</button>
+  </div>
+  <div>
+    <textarea name="" id="fullname"  readonly> </textarea>
+  </div>
+  
+  <script>
+    function getFullname(firstname,surName,addLord){
+      let fullname=``;
+      if(addLord){
+         fullname= `Lord`+` `+firstname+` `+surName;
+      }
+      else{ fullname= firstname+` `+surName;}
+      document.getElementById(`fullname`).value=fullname
+    
+  }
+  </script>
+</body>
+</html>
