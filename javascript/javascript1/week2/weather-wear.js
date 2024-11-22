@@ -1,8 +1,13 @@
 function dressForTheWeather (temperature){
-  return temperature > -10 && temperature <= 10 ? 'Wear a Jacket, Hat and Gloves' :
-         temperature > 10 && temperature <= 20 ? 'Wear Pants and Long Sleeves':
-         temperature > 20 && temperature <= 40 ? 'Wear Shorts and a T-Shirt':
-         'Stay Home! The weather is extreme!'
+  if (temperature > -10 && temperature <= 10) {
+    return 'Wear a Jacket, Hat and Gloves';
+  } else if (temperature > 10 && temperature <= 20) {
+    return 'Wear Pants and Long Sleeves';
+  } else if (temperature > 20 && temperature <= 40) {
+    return 'Wear Shorts and a T-Shirt';
+  } else {
+    return 'Stay Home! The weather is extreme!';
+  }
 }
 
 const clothesToWear = dressForTheWeather(18);
