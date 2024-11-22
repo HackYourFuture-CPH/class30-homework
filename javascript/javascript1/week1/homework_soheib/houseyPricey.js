@@ -1,4 +1,4 @@
-let peterHouse = {
+const peterHouse = {
     width: 8,
     depth: 10,
     height: 10,
@@ -6,7 +6,7 @@ let peterHouse = {
     price: 2500000
 };
 
-let juliaHouse = {
+const juliaHouse = {
     width: 5,
     depth: 11,
     height: 8,
@@ -14,23 +14,22 @@ let juliaHouse = {
     price: 1000000
 };
 
-function volumeCalc(house){
-    let volume = house.depth * house.width * house.height
-    return volume;
+function calculateVolume(house){
+    return house.depth * house.width * house.height
 }
 
-function houseValueCalc(house){
-    let houseValue = volumeCalc(house) * 2.5 * 1000 + house.garden * 300;
-    return houseValue
+function calculateHouseValue(house){
+    return Math.floor(calculateVolume(house) * 2.5 * 1000 + house.garden * 300);
 }
 
 function compareValue(house) {
-    if(houseValueCalc(house) > house.price ) {
-        let diff = Math.floor(houseValueCalc(house)) - house.price; 
-        return console.log(`Ouch! This person is paying ${diff} too much for the house :(`)
-    } else if (houseValueCalc < house.price) {
-        diff = house.price - Math.floor(houseValueCalc(house))
-        return console.log(`This person got a good deal, and saved ${diff} on the price of the house`)
+    const houseValue = calculateHouseValue(house);
+    const priceDifference = Math.abs(house.price - houseValue);
+
+    if(houseValue > house.price ) { 
+        return console.log(`Ouch! This person is paying ${priceDifference}kr. too much for the house :(`)
+    } else if (houseValue < house.price) {
+        return console.log(`This person got a good deal, and saved ${priceDifference}kr. on the price of the house`)
     } else {
         console.log(`Bingo! you've paid the right price`)
     }
