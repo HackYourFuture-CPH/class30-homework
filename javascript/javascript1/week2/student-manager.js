@@ -2,7 +2,7 @@ const class07Students = [];
 
 function addStudentToClass(studentName) {
    
-  if (studentName === 'Queen Margaret'|| studentName === 'Queen margaret' || studentName === 'queen margaret' || studentName === 'queen Margaret'){
+  if (studentName.toLowerCase === 'Queen'){
     class07Students.push(studentName);
    }
   
