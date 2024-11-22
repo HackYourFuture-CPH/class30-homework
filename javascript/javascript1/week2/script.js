@@ -75,6 +75,10 @@ addStudentToClass("Maria");
 addStudentToClass("Maria");
 addStudentToClass("Damoa");
 addStudentToClass("Stefany");
-addStudentToClass("Juan"); // Exceeds limit
+addStudentToClass("Benjamin");
+
+
+addStudentToClass("Queen"); // Exceeds limit
 
 console.log("Total students in the class:" + getNumberOfStudents());
+//Candy helper optional
