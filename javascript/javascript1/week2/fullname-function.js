@@ -1,8 +1,17 @@
 function getFullname(firstname ,surname,  gender ='', useFormalName = true ){
+  if (firstname === '' || surname === '') {
+    return 'Please provide both a first name and a surname.';
+  } 
+
+  if (useFormalName === true && gender === 'male') {
+    return 'Lord ' + firstname + ' ' + surname;
+  } 
   
-  return firstname === '' || surname === '' ? 'Please provide both a first name and a surname.' :
-         useFormalName === true && gender === 'male' ?  'Lord '+ firstname+' '+ surname :  
-         useFormalName === true && gender === 'female' ?  'lady '+ firstname+' '+ surname : firstname+' '+ surname;
+  if (useFormalName === true && gender === 'female') {
+    return 'Lady ' + firstname + ' ' + surname;
+  }
+
+  return firstname + ' ' + surname;
 }
 
 //test cases
