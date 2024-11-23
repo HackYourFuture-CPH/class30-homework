@@ -1,20 +1,23 @@
 const class07Students = [];
 function addStudentToClass(studentName) {
-    if(typeof(studentName)==="undefined" || studentName.length == 0){
+    const lettersOnly = /^[a-zA-Z]+$/;
+
+    if(typeof studentName !== 'string' || studentName === '' || !lettersOnly.test(studentName)){  //here as in the booking application, I have added a name accuracy check
         return(console.log("Name is not correct!"));
+    }
+
+    if(getNumberOfStudents() === 6 && studentName !== "Queen"){
+        return(console.log("Cannot add more students to class 07")); 
     }
 
     for (let i = 0; i < getNumberOfStudents(); i++) {
         if(class07Students[i]==studentName){
             return(console.log(`Student ${studentName} is already in the class.`));
         }
+    // I want to output a message to the console that the name is already there, and for the function to stop at this point, so I use return and console.log
     }
 
-    if(getNumberOfStudents() == 6 && studentName!=="Queen"){
-        return(console.log("Cannot add more students to class 07"));
-    }
-
-    if(studentName==="Queen"){
+    if(studentName === "Queen"){
         if(getNumberOfStudents() == 6){
             class07Students.shift();
             class07Students.unshift("Queen");
@@ -24,12 +27,10 @@ function addStudentToClass(studentName) {
             return (console.log("Queen added"));
         }
     }
+    //I'm just sticking to the rule that a class can't be bigger than 6, so I did it this way :)
 
-    if(typeof(studentName)==="string"){
-        class07Students.push(studentName);
-        return(console.log(`${studentName} added`));
-    }
-    
+    class07Students.push(studentName);
+    return(console.log(`${studentName} added`));
 }
 
 function getNumberOfStudents() {
