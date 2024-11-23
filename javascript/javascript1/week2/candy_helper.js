@@ -1,3 +1,14 @@
+let boughtCandyPrices = [];
+
+const amountToSpend = Math.random() * 100;
+console.log(`You can spend up to: ${amountToSpend.toFixed(2)}`);
+
+addCandy("sweet", 20);
+addCandy("chocolate", 30);
+addCandy("toffee", 50);
+
+canBuyMoreCandy();
+
 function addCandy(candyType, weight) {
     let pricePerGram = 0;;
 
@@ -43,15 +54,3 @@ function canBuyMoreCandy() {
     }
 }
 
-let boughtCandyPrices = [];
-
-const amountToSpend = Math.random() * 100;
-console.log(`You can spend up to: ${amountToSpend.toFixed(2)}`);
-
-
-
-addCandy("sweet", 20);
-addCandy("chocolate", 30);
-addCandy("toffee", 50);
-
-canBuyMoreCandy();
