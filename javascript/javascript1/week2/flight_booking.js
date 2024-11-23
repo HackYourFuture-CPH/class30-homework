@@ -1,12 +1,14 @@
 function getFullname(firstname, surname, useFormalName = false){   // I added false as the default boolean value, if we don't have false or true as an argument
-    if(typeof(firstname) === "string" && typeof(surname) === "string"){
+    const lettersOnly = /^[a-zA-Z]+$/;
+    
+    if(typeof(firstname) === "string" && typeof(surname) === "string" && lettersOnly.test(firstname) && lettersOnly.test(surname)){
         if(useFormalName){
-            return ("Lord " + firstname + " " + surname);
+            return "Lord " + firstname + " " + surname;
         } else{
-            return (firstname + " " + surname);
+            return firstname + " " + surname;
         }
     } else{
-        return ("Firstname or surname are not correct!");
+        return "Firstname or surname are not correct!";
     }
 }
 
