@@ -1,19 +1,27 @@
 function getEventWeekday(numberDay){
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const today = new Date();
     let i = today.getDay();
-    while (numberDay!=0) {
+
+    let countOfDays = numberDay%7;
+
+    console.log(countOfDays);
+
+    if(countOfDays === 0){
+        return "Event will be on " + days[i];
+    }
+
+    while (countOfDays!=0) {
         if(i==6){
             i=0;
-            numberDay--;
+            countOfDays--;
             continue;
         }
         i++;
-        numberDay--;
+        countOfDays--;
     }
-    return("Event will be on " + days[i]);
+    return "Event will be on " + days[i];
 }
 
-const today = new Date();
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-console.log(getEventWeekday(31));
+console.log(getEventWeekday(0));
 
