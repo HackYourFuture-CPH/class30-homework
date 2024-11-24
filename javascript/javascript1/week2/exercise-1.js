@@ -13,7 +13,7 @@ function getFullName(firstname, surname, useFormalName = false, gender) {
 		? `Lord ${firstname} ${surname}`
 		: useFormalName && gender === "female"
 		? `Lady ${firstname} ${surname}`
-		: "";
+		: `${firstname} ${surname}`;
 }
 
 const fullName1 = getFullName("Andrii", "Pavliuk", true, "male");
@@ -27,5 +27,5 @@ console.log(fullName3);
 console.log(fullName4);
 
 // In this task I've made 4 variables just to describe different cases of using incl. gender
-// I've defined only 2 possible kinds of gender. 
+// I've defined only 2 possible kinds of gender.
 // Meaning is at they comes only in these names (like value from some input)
