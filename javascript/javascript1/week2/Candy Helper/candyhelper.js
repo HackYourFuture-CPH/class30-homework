@@ -9,6 +9,11 @@ function addCandy(candyType, weight) {
     chewingGum: 0.03,
   };
 
+  if (!Object.keys(candyPriceTable).includes(candyType)) {
+    console.error(`Error: "${candyType}" is not a valid candy type.`);
+    return;
+  }
+
   const totalPrice = candyPriceTable[candyType] * weight;
   boughtCandyPrices.push(totalPrice);
 }
@@ -17,6 +22,7 @@ addCandy("sweet", 20);
 addCandy("chocolate", 30);
 addCandy("toffee", 10);
 addCandy("chewingGum", 15);
+addCandy("UnknownCandy", 3);
 console.log(boughtCandyPrices);
 
 function canBuyMoreCandy(boughtCandy) {
