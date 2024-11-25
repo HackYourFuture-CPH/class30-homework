@@ -3,15 +3,12 @@
 //Save a note
 
 const notes=[]
-let note={
-    content: "Pick up groceries", 
-    id:1
-}
-let note={
-    content:" Do laundry", 
-    id:1
-}
+
 function saveNote( content, id){
+    const note = { content, id };
    notes.push(note);
 }
+saveNote( "Pick up groceries", 1);
+saveNote( "Do laundry", 2);
+
 console.log(notes);
