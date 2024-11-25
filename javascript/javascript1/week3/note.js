@@ -12,3 +12,13 @@ saveNote( "Pick up groceries", 1);
 saveNote( "Do laundry", 2);
 
 console.log(notes);
+
+//Get a note
+
+function getNote(id) {
+    const findNote = notes.find((note) => note.id === id);
+    return findNote || `Note with id ${id} not found`;
+  }
+  
+  const firstNote = getNote(1);
+  console.log(firstNote);
