@@ -1,6 +1,6 @@
 const class07Students = [];
 function addStudentToClass(studentName) {
-  if (studentName === "Queen" || studentName === "queen") {
+  if (studentName.toLowerCase() === "queen") {
     class07Students.push(studentName);
   } else if (studentName === "") {
     console.log("Please enter your name");
