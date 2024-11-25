@@ -32,3 +32,15 @@ function getNote(id) {
   }
   
   logOutNotesFormatted();
+
+  //Set Reminders for Notes
+
+  function setReminder(id, reminderTime) {
+    const note = notes.find((note) => note.id === id);
+    if (!note) {
+      console.log(`Note with id: ${id} not found.`);
+      return;
+    }
+    note.reminder = new Date(reminderTime); // Store the reminder as a Date object
+    console.log(`Reminder set for note with id: ${id} on ${note.reminder}`);
+  }
