@@ -17,7 +17,7 @@ console.log(notes);
 
 function getNote(id) {
     const findNote = notes.find((note) => note.id === id);
-    return findNote || `Note with id ${id} not found`;
+    return findNote;
   }
   
   const firstNote = getNote(1);
