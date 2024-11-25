@@ -22,3 +22,13 @@ function getNote(id) {
   
   const firstNote = getNote(1);
   console.log(firstNote);
+
+  //Log out notes
+
+  function logOutNotesFormatted() {
+    notes.forEach((note) => {
+      console.log(`The note with id: ${note.id}, has the following note text: ${note.content}`);
+    });
+  }
+  
+  logOutNotesFormatted();
