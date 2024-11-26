@@ -4,7 +4,8 @@ const activities = [];
 const usageLimit = 75;
 
 function addActivity(date, activity, duration) {
-	activities.push({ date, activity, duration });
+	const actualDate = new Date().toLocaleDateString("dk-DK");
+	activities.push({ date: actualDate, activity, duration });
 }
 
 function showStatus(arr = activities) {
@@ -19,9 +20,9 @@ function showStatus(arr = activities) {
 		: console.log("You may continue to use a bit");
 }
 
-addActivity("23/7-18", "Youtube", 30);
-addActivity("25/7-18", "Facebook", 40);
-addActivity("26/7-18", "Facebook", 25);
+addActivity("Youtube", 30);
+addActivity("Facebook", 40);
+addActivity("Facebook", 25);
 
 console.log(activities);
 showStatus(activities);
