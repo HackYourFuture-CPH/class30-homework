@@ -13,7 +13,7 @@ const names = [
   // Write some code here
 
   function removeNameFromArray(name, arr=names){
-    indexOfName = arr.indexOf(name);
+    const indexOfName = arr.indexOf(name);
     return arr.splice(indexOfName, 1)
   }
 
