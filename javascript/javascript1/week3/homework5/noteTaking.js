@@ -20,3 +20,11 @@ function getNote(id){
 
 const firstNote = getNote(1);
 console.log(firstNote);
+
+function logOutNotesFormatted() {
+    for (let note of notes) {
+        console.log(`The note with id: ${note.id}, has the following note text: ${note.content} `)
+    }
+  }
+  
+  logOutNotesFormatted();
