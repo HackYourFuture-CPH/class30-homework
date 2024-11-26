@@ -1,0 +1,84 @@
+//Item array removal
+const names = [
+  "Peter",
+  "Ahmad",
+  "Yana",
+  "kristina",
+  "Rasmus",
+  "Samuel",
+  "katrine",
+  "Tala",
+];
+const nameToRemove = "Ahmad";
+
+// Write some code here
+let removeElement = names.indexOf(nameToRemove);
+names.splice(removeElement, 1);
+// Code done
+
+console.log(names);
+console.log("-----------------------------------------");
+
+//When will we be there??
+const travelInformation = {
+  speed: 50,
+  destinationDistance: 432,
+};
+function travelDuration(travelinfo) {
+  const rawTravelDuration = travelinfo.destinationDistance / travelinfo.speed;
+  const rawdecimalMinutes = rawTravelDuration - Math.floor(rawTravelDuration);
+  const decimalMinutes = parseFloat(rawdecimalMinutes.toPrecision(3));
+  const minutes = decimalMinutes * 60;
+  const integerMinutes = Math.floor(minutes);
+  const hours = rawTravelDuration - rawdecimalMinutes;
+  return hours + " hours and " + integerMinutes + " minutes";
+}
+const travelTime = travelDuration(travelInformation);
+console.log(travelTime); // 8 hours and 38 minutes
+console.log("-----------------------------------------");
+
+//Series duration of my life
+
+const seriesDurations = [
+  {
+    title: "The Good Place",
+    days: 5,
+    hours: 11,
+    minutes: 0,
+  },
+  {
+    title: "Outlander",
+    days: 3,
+    hours: 19,
+    minutes: 0,
+  },
+  {
+    title: "Dark",
+    days: 4,
+    hours: 16,
+    minutes: 40,
+  },
+];
+
+function logOutSeriesText(seriesDurations) {
+  // write code here
+  const lifeSpanMinutes = 80 * 365 * 24 * 60;
+  let totalPercentage = 0;
+
+  for (let i = 0; i < seriesDurations.length; i++) {
+    const eachSerie = seriesDurations[i];
+    const seriesMinutes =
+      eachSerie.days * 24 * 60 + eachSerie.hours * 60 + eachSerie.minutes;
+    const percentagePerSerie = (seriesMinutes * 100) / lifeSpanMinutes;
+    totalPercentage += percentagePerSerie;
+    console.log(
+      eachSerie.title + "took " + percentagePerSerie.toFixed(3) + "% of my life"
+    );
+  }
+
+  console.log(
+    "\nIn total that is " + totalPercentage.toFixed(3) + "% of my life."
+  );
+}
+
+logOutSeriesText(seriesDurations);
