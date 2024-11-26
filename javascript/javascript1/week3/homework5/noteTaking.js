@@ -28,3 +28,16 @@ function logOutNotesFormatted() {
   }
   
   logOutNotesFormatted();
+
+  function deleteNote(id){
+    for (let i = 0; i< notes.length; i++){
+        if(notes[i].id === id) {
+         const showNote = console.log(`the note with id ${id} and following content: ${notes[i].content} / has been deleted`);
+         notes.splice(notes[i], 1)
+         return showNote;
+        }
+     }
+     return alert('Invalid id, try again with an existing id value')
+  }
+
+  deleteNote(2)
