@@ -4,10 +4,10 @@ const travelInformation = {
   };
   
   function getTripDuration(obj){
-     durationInt = Math.floor(obj.destinationDistance / obj.speed *60);
-     durationHrs = Math.floor(durationInt/60);
-     durationMn = Math.floor(durationInt%60);
-     durationInfo = `${durationHrs}hours and ${durationMn}minutes`
+     const durationInt = Math.floor(obj.destinationDistance / obj.speed *60);
+     const durationHrs = Math.floor(durationInt/60);
+     const durationMn = Math.floor(durationInt%60);
+     let durationInfo = `${durationHrs}hours and ${durationMn}minutes`
      return obj.duration = durationInfo
   }
 
