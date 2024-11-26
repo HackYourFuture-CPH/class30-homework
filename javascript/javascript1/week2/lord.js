@@ -1,18 +1,26 @@
-function getFullname(firstname, surname, useFormalName) {
+
+
+function getFullname(firstname, surname, useFormalName, isFemale) {
     if (!firstname || !surname) {
         return "Please provide both firstname and surname.";
     }
+    
     if (useFormalName) {
-        return `Lord ${firstname} ${surname}`;
-    } else {
-        return `${firstname} ${surname}`;
+        if (isFemale) {
+            return `Lady ${firstname} ${surname}`;
+        } else {
+            return `Lord ${firstname} ${surname}`;
+        }
     }
+    
+    return `${firstname} ${surname}`;
 }
-const fullname1 = getFullname("Benjamin", "Hughes", true); 
-const fullname2 = getFullname("Sophia", "Smith", false);  
 
-console.log(fullname1);
-console.log(fullname2);
+
+console.log(getFullname("John", "Doe", true, false)); //  Lord John Doe
+console.log(getFullname("Jane", "Doe", true, true));  //  Lady Jane Doe
+console.log(getFullname("Alex", "Smith", false));     //  Alex Smith
+console.log(getFullname("", "Smith", true, false));   //  Please provide both firstname and surname.
 
 
 
@@ -43,32 +51,32 @@ console.log(whatToWear(18));
 
 const class07Students = [];
 function addStudentToClass(studentName) {
-    if (!studentName) {
-        console.log("You cannot add an empty name.");
-        return;
-    }
-    if (class07Students.includes(studentName)) {
-        console.log(`Student ${studentName} is already in the class.`);
-        return;
-    }
-    if (studentName === "Queen" || class07Students.length < 6) {
-        class07Students.push(studentName);
-    } else {
-        console.log("Cannot add more students to class 07.");
-    }
+  if (!studentName || studentName.trim() === "") {
+    return "You cannot add an empty name.";
+  }
+  if (class07Students.includes(studentName)) {
+    return `Student ${studentName} is already in the class.`;
+  }
+  if (studentName === "Queen" || class07Students.length < 6) {
+    class07Students.push(studentName);
+    return `Student ${studentName} added successfully.`;
+  }
+  return "Cannot add more students to class 07.";
 }
 
 function getNumberOfStudents() {
-    return class07Students.length;
+  return class07Students.length;
 }
-
-addStudentToClass("Benjamin");
-addStudentToClass("Sophia");
-addStudentToClass("Queen");
-addStudentToClass("Oliver");
-addStudentToClass("Ava");
-addStudentToClass("Emma");
-addStudentToClass("Liam"); 
+console.log(addStudentToClass(""));         // You cannot add an empty name.
+console.log(addStudentToClass("   "));      // You cannot add an empty name.
+console.log(addStudentToClass("Benjamin")); // Student Benjamin added successfully.
+console.log(addStudentToClass("Sophia"));   // Student Sophia added successfully.
+console.log(addStudentToClass("Queen"));    // Student Queen added successfully.
+console.log(addStudentToClass("Oliver"));   // Student Oliver added successfully.
+console.log(addStudentToClass("Ava"));      // Student Ava added successfully.
+console.log(addStudentToClass("Emma"));     // Student Emma added successfully.
+console.log(addStudentToClass("Liam"));     // Cannot add more students to class 07.
+console.log(addStudentToClass("Sophia"));   // Student Sophia is already in the class.
 
 console.log(`Number of students: ${getNumberOfStudents()}`);
 
