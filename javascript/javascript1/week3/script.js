@@ -19,7 +19,7 @@ if (indexToRemove !== 1) {
 
 console.log(names);
 
-//TASK: When will we be there??
+//TASK1 : When will we be there??
 
 const travelInformation = {
   speed: 50,
@@ -35,3 +35,56 @@ function calculateTravelTime(info) {
 
 const travelTime = calculateTravelTime(travelInformation);
 console.log(travelTime);
+
+//TASK2 : Series duration of my life
+const seriesDurations = [
+  {
+    title: 'Game of thrones',
+    days: 2,
+    hours: 20,
+    minutes: 8,
+  },
+  {
+    title: 'How to get away with murder',
+    days: 2,
+    hours: 16,
+    minutes: 30,
+  },
+  {
+    title: 'See',
+    days: 0,
+    hours: 21,
+    minutes: 12,
+  },
+  {
+    title: 'Peacky Blinders',
+    days: 1,
+    hours: 9,
+    minutes: 36,
+  },
+  {
+    title: 'Gossip girl',
+    days: 3,
+    hours: 12,
+    minutes: 42,
+  },
+];
+
+function logOutSeriesText() {
+  let averageLifespan = 80;
+  const averageLiveMinutes = averageLifespan * 365.25 * 24 * 60;
+  let totalPercentage = 0;
+
+  seriesDurations.forEach(series => {
+    const totalMinutes =
+      (series.days * 24 * 60) + (series.hours * 24) + series.minutes;
+      const lifePercentage = (totalMinutes / averageLiveMinutes) * 100;
+      console.log(
+        `${series.title} took ${lifePercentage.toFixed(3)}% of my life`,
+      );
+    totalPercentage += lifePercentage;
+  });
+  console.log(`In total that is ${totalPercentage.toFixed(3)}% of my life`);
+}
+
+logOutSeriesText();
