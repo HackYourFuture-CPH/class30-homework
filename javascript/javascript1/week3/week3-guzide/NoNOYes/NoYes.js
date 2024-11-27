@@ -52,3 +52,20 @@ function logOutNotesFormatted() {
 }
 
 logOutNotesFormatted();
+
+//new feature: Remove Note
+
+function removeNote(content) {
+  for (let i = 0; i < notes.length; i++) {
+    if (notes[i].content === content) {
+      const deletedNote = notes.splice(i, 1)[0];
+      return console.log(
+        "The note with content: " + deletedNote.content + " is deleted."
+      );
+    }
+  }
+  console.log("Error: Note with content " + content + " not found.");
+}
+
+removeNote("Do laundry");
+removeNote("Find note");
