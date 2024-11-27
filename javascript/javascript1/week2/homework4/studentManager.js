@@ -8,7 +8,7 @@ function addStudentToClass(studentName) {
         return `${studentName} is already in the class.`;
       }
     
-      if (class07Students.length >= 7 && studentName !== 'Margarethe') {
+      if (class07Students.length >= 7 && (studentName !== 'Margarethe' && studentName !== 'Mary')) {
         return `Cannot add more students to class 07. You cannot add ${studentName}.`;
       }
     
@@ -35,6 +35,7 @@ addStudentToClass('Stilgar')
 addStudentToClass('Gurney')
 addStudentToClass('Harkonen')
 addStudentToClass('Margarethe')
+addStudentToClass('Mary')
 getNumberOfStudents()
 */
 
