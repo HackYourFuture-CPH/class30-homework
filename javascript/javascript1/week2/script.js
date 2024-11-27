@@ -8,10 +8,10 @@ function getFullName(firstName, surname, useFormalName = true, gender = "") {
         } else if (gender === "female") {
             return "lady " + firstName + surname;
         }
-    }
+    }else{
     return firstName + surname;
 }
-
+}
 
 console.log(getFullName("Benjamin ", "Hughes", true, "male"))
 console.log(getFullName("Benjamin ", "Hughes", false))
@@ -22,8 +22,8 @@ console.log(getFullName("Stefany", " Romero", true, "female"))
 
 function getEventWeekday(daysFromToday) {
 
-    const weekDays = [, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const today = new Date().getDate();
+    const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const today = new Date().getDay();
     const eventDay = (today + daysFromToday) % 7;
     return weekDays[eventDay];
 
@@ -33,17 +33,17 @@ console.log(getEventWeekday(2));
 
 //Weather wear
 
-function clothesTowear(temperature) {
+function clothesToWear(temperature) {
 
     if (temperature >= 15) {
-        return "temperature is " + temperature + " C: you sholud wear" + "Jacket and pants"
+        return "temperature is " + temperature + " C: you sholud wear " + "Jacket and pants"
     } else {
-        return "temperature is " + temperature + " C: you sholud wear" + "shorts and t shirt"
+        return "temperature is " + temperature + " C: you sholud wear " + "shorts and t shirt"
     }
 }
 
-console.log(clothesTowear(18));
-console.log(clothesTowear(12));
+console.log(clothesToWear(18));
+console.log(clothesToWear(12));
 
 //Student Manager
 
@@ -81,4 +81,5 @@ addStudentToClass("Benjamin");
 addStudentToClass("Queen"); // Exceeds limit
 
 console.log("Total students in the class:" + getNumberOfStudents());
+
 //Candy helper optional
