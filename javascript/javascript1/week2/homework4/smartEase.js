@@ -1,7 +1,6 @@
 
 function getFullnameV1(firstName, surname){
-  let fullName = `${firstName} ${surname}`
-  return fullName;
+    return `${firstName} ${surname}`;
 }
 
 const fullName1 = getFullnameV1('Mark', 'Corrigan');
@@ -9,21 +8,15 @@ const fullName2 = getFullnameV1('Jeremy', 'Usbourne');
 console.log(fullName1);
 console.log(fullName2);
 
-function getFullnameV2(firstName, surname, useFormalName=true, gender) {
-    if((useFormalName === undefined || useFormalName === false) && (gender === undefined || gender === 'other')){
+function getFullnameV2(firstName, surname, useFormalName=true, gender ='other') {
+    if( !useFormalName && gender === 'other'){
         return getFullnameV1(firstName, surname)
     }
-    else if(useFormalName === true){
-        if (gender === 'male'){
-            let fullFormalName = 'Mr. ' + getFullnameV1(firstName, surname);
-            return fullFormalName;
-        }else if(gender === 'female'){
-            let fullFormalName = 'Mrs. ' + getFullnameV1(firstName, surname);
-            return fullFormalName;
-        }
-    }
+    const prefix = gender === 'male' ? 'Mr.' : gender === 'female' ? 'Mrs.' : '';
+    return `${prefix}   ${getFullnameV1(firstName, surname)}`;
   
 }
 console.log(getFullnameV2('Mark', 'Corrigan', true, 'male'));
 console.log(getFullnameV2('Jeremy', 'Usbourne'));
 console.log(getFullnameV2('Sophie', 'Chapman', true, 'female'));
+console.log(getFullnameV2('Super', 'Hans', true, 'other'));
