@@ -9,13 +9,19 @@ console.log(fullName1);
 console.log(fullName2);
 
 function getFullnameV2(firstName, surname, useFormalName=true, gender ='other') {
-    if( !useFormalName && gender === 'other'){
+    if(!useFormalName || gender === 'other'){
         return `${firstName} ${surname}`;
     }
-    const prefix = gender === 'male' ? 'Mr.' : gender === 'female' ? 'Mrs.' : '';
+    let prefix = '';
+    if (gender === 'male'){
+        prefix = 'Mr.'
+    } else if (gender === 'female'){
+        prefix = 'Mrs.'
+    } 
     return `${prefix} ${firstName} ${surname}`;
   
 }
+
 console.log(getFullnameV2('Mark', 'Corrigan', true, 'male'));
 console.log(getFullnameV2('Jeremy', 'Usbourne'));
 console.log(getFullnameV2('Sophie', 'Chapman', true, 'female'));
