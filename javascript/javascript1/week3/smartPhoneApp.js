@@ -84,7 +84,7 @@ const activities = [];
 function addActivity(activityContent, activityDurationMin, activityDateInput) { 
     const activityDate = activityDateInput || new Date().toLocaleDateString("en-US"); // input a specify day or automatically today's date
     let activityInfo = {
-        date: activityDate,
+        date: new Date(activityDate).toLocaleDateString("en-US"),
         activity: activityContent,
         duration: activityDurationMin,
     };
