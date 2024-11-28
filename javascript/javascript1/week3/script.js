@@ -88,3 +88,46 @@ function logOutSeriesText() {
 }
 
 logOutSeriesText();
+
+// TASK : Smart-ease - Back to the basics!; NOnoN0nOYes 
+const notes = [];
+
+function saveNote(content, id) {
+  if (typeof content === 'string' && typeof id === 'number') {
+    notes.push({ content, id });
+  } else {
+    console.error("Invalid input: 'content' must be a string and 'id' must be a number.");
+  }
+}
+
+function getNote(id) {
+  if (typeof id !== 'number') {
+    console.error("Error: The id must be a number.");
+    return;
+  }
+
+  for (let note of notes) {
+    if (note.id === id) {
+      return note;
+    }
+  }
+  console.error("Note not found for the given id.");
+}
+
+function logOutNotesFormatted() {
+  if (notes.length === 0) {
+    console.log("No notes available.");
+    return;
+  }
+
+  for (let note of notes) {
+    console.log(`The note with id: ${note.id}, has the following note text: ${note.content}`);
+  }
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+
+console.log(getNote(1)); 
+logOutNotesFormatted();
+
