@@ -1,10 +1,16 @@
-
-function getEventWeekDay(num){
-
-    const todaysDate = new Date();
-    const findDay = (todaysDate.getDay() + num) % 7;
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    return days[findDay];
+function getEventWeekDay(num) {
+  const todaysDate = new Date();
+  const findDay = (todaysDate.getDay() + num) % 7;
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[findDay];
 }
 
-console.log(getEventWeekDay(1))
+console.log(getEventWeekDay(1));
