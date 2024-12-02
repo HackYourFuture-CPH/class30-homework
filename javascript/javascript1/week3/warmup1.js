@@ -17,6 +17,6 @@ function removeName(arr,name){
   return arr;
   }
   
-removeName(names,"Ahmad")
+removeName(names,nameToRemove);
   
 console.log(names); 

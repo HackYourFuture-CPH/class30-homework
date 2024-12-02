@@ -20,20 +20,13 @@ const seriesDurations = [
 ];
 const myAge = 29;
 
-function calculateLifeSpentOnSeries(seriesArray, age){
+function calculateLifeSpentOnSeries(seriesArray, age) {
   const ageInHour = age * 365.25 * 24;
-  const result = [];
-
-  for (let i = 0; i<seriesArray.length; i++){
+  for (let i = 0; i < seriesArray.length; i++) {
     const seriesInHour = seriesArray[i].days * 24 + seriesArray[i].hours;
-    const percentage = (seriesInHour / ageInHour *100).toFixed(4);
-    result.push(`${seriesArray[i].title} took ${percentage}% of my life`)
+    const percentage = (seriesInHour / ageInHour * 100).toFixed(4);
+    console.log(`${seriesArray[i].title} took ${percentage}% of my life`);
   }
-  return result
 }
 
-const lifeSpent = calculateLifeSpentOnSeries(seriesDurations, myAge);
-
-for (let i=0; i<lifeSpent.length; i++){
-  console.log(lifeSpent[i]);
-}
+calculateLifeSpentOnSeries(seriesDurations, myAge);

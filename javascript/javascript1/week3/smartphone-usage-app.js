@@ -13,11 +13,13 @@ addActivity("Instagram", 30);
 console.log(activities);
 
 //Show status and usage limit
-const quantity = activities.length;
+
 const limitation = 180;
-let totalDuration = 0 ;
 
 function showStatus(){
+  const quantity = activities.length;
+  let totalDuration = 0 ;
+  
   if (quantity !== 0){
     for(let i = 0; i < activities.length; i++){
       totalDuration += activities[i].duration; 

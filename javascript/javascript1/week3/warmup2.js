@@ -4,10 +4,12 @@ const travelInformation = {
 };
 
 function travelDuration(info){
-  const time = info.destinationDistance / info.speed;
-  const hour = Math.floor (time);
-  const min = Math.trunc((time - hour)*60);
-  return `${hour} hours and ${min} minutes`
+  const totalHours = info.destinationDistance / info.speed;
+  const hour = Math.floor (totalHours);
+  const timeInMinutes = Math.trunc((totalHours - hour)*60);
+  if (hour === 0 )
+    return `${timeInMinutes} minutes`
+  else return `${hour} hours and ${timeInMinutes} minutes`
 }
 
 const travelTime = travelDuration(travelInformation);

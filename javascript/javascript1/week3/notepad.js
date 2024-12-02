@@ -2,7 +2,7 @@
 const notes = [];
 
 function saveNote(content, id) {
-  notes.push({content :content, id: id})
+  notes.push({content :content, id: id, completed:false})
 }
 
 saveNote("Pick up groceries", 1);
@@ -48,14 +48,15 @@ markTaskCompleted(2)
 console.log(notes)
 
 //Checking if a task is completed or not
-function checkTaskCompleted(content){
-  let result = '';
-  for(let i = 0; i < notes.length ;i++){
-    if(notes[i].content === content && notes[i].completed ===true ){
-      console.log(`The task: "${notes[i].content}" with id: ${notes[i].id} is completed.`);
-      
-    }else if(notes[i].content === content && notes[i].completed === undefined ){
-       console.log(`The task: "${notes[i].content}" with id: ${notes[i].id} is NOT completed!`);
+
+function checkTaskCompleted(content) {
+  for (let i = 0; i < notes.length; i++) {
+    if (notes[i].content === content) {
+      if (notes[i].completed) {
+        console.log(`The task: "${notes[i].content}" with id: ${notes[i].id} is completed.`);
+      } else {
+        console.log(`The task: "${notes[i].content}" with id: ${notes[i].id} is NOT completed!`);
+      }
     }
   }
 }
