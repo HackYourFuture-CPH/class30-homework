@@ -21,6 +21,21 @@ console.log(names);
 
 //TASK1 : When will we be there??
 
+// const travelInformation = {
+//   speed: 50,
+//   destinationDistance: 432,
+// };
+
+// function calculateTravelTime(info) {
+//   const totalHours = info.destinationDistance / info.speed;
+//   const hours = Math.floor(totalHours);
+//   const minutes = Math.round((totalHours - hours) * 60);
+//   return `${hours} hours and ${minutes} minutes`;
+// }
+
+// const travelTime = calculateTravelTime(travelInformation);
+// console.log(travelTime);
+
 const travelInformation = {
   speed: 50,
   destinationDistance: 432,
@@ -30,11 +45,22 @@ function calculateTravelTime(info) {
   const totalHours = info.destinationDistance / info.speed;
   const hours = Math.floor(totalHours);
   const minutes = Math.round((totalHours - hours) * 60);
-  return `${hours} hours and ${minutes} minutes`;
+
+  const hourText = hours === 1 ? '1 hour' : `${hours} hours`;
+  const minuteText = minutes === 1 ? '1 minute' : `${minutes} minutes`;
+
+  if (hours > 0 && minutes > 0) {
+    return `${hourText} and ${minuteText}`;
+  } else if (hours > 0) {
+    return `${hourText}`;
+  } else {
+    return `${minuteText}`;
+  }
 }
 
 const travelTime = calculateTravelTime(travelInformation);
 console.log(travelTime);
+
 
 //TASK2 : Series duration of my life
 const seriesDurations = [
