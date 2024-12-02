@@ -1,6 +1,6 @@
 //ITEM ARRAY REMOVAL
 
-const names = [
+/*const names = [
   "Peter",
   "Ahmad",
   "Yana",
@@ -20,11 +20,11 @@ for (let i = 0; i < names.length; i++) {
   }
 }
 
-console.log(names);
+console.log(names);*/
 
 //WHEN WILL WE BE THERE?
 
-/*const travelInformation = {
+const travelInformation = {
   speed: 50,
   destinationDistance: 432,
 };
@@ -33,8 +33,18 @@ function calculateTime(speed, destinationDistance) {
   let time = destinationDistance / speed;
   const hours = Math.floor(time);
   const minutes = Math.round((time % 1) * 60);
-  return `${hours} hours ${minutes} minutes`;
+  const seconds = Math.round(((time * 60) % 1) * 60);
+
+  if (hours === 0 && minutes === 0 && seconds > 0) {
+    return `${seconds}  seconds`;
+  }
+
+  const hourText = hours === 1 ? "hour" : "hours";
+  const minuteText = minutes === 1 ? "minute" : "minutes";
+
+  return `${hours} ${hourText} ${minutes} ${minuteText} `;
 }
+
 const travelTime = calculateTime(
   travelInformation.speed,
   travelInformation.destinationDistance
@@ -43,7 +53,7 @@ console.log(travelTime);
 
 //SERIES DURATION OF MY LIFE
 
-const seriesDurations = [
+/*const seriesDurations = [
   {
     title: "Game of Thrones",
     days: 3,
