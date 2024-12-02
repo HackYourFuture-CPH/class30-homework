@@ -1,4 +1,5 @@
 let activities = [];
+let mostTimeSpentActivity = null;
 
 function addActivity(activity, duration) {
   if (typeof duration !== "number") {
@@ -12,6 +13,10 @@ function addActivity(activity, duration) {
     duration: duration,
   };
   activities.push(activityRecord);
+
+  if (!mostTimeSpentActivity || duration > mostTimeSpentActivity.duration) {
+    mostTimeSpentActivity = activityRecord;
+  }
 }
 
 addActivity("Youtube", 30);
@@ -47,15 +52,15 @@ console.log(showStatus());
 console.log(activities);
 
 function getMostTimeSpentActivity() {
-  let maxDuration = 0;
-  let mostTimeSpentActivity = null;
-  for (let i = 0; i < activities.length; i++) {
-    if (activities[i].duration > maxDuration) {
-      maxDuration = activities[i].duration;
-      mostTimeSpentActivity = activities[i];
-    }
+  if (!mostTimeSpentActivity) {
+    return "No activities to analyze.";
   }
-  return `You spent the most time on "${mostTimeSpentActivity.activity}" with a duration of ${maxDuration} minutes.`;
+  return `You spent the most time on "${mostTimeSpentActivity.activity}" with a duration of ${mostTimeSpentActivity.duration} minutes.`;
 }
 
+console.log(getMostTimeSpentActivity());
+
+addActivity("Youtube", 10);
+console.log(showStatus());
+console.log(activities);
 console.log(getMostTimeSpentActivity());
