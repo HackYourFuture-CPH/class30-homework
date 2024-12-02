@@ -13,8 +13,10 @@ const names = [
 const nameToRemove = "Ahmad";
 
 for (let i = 0; i < names.length; i++) {
-  if (names[i] === nameToRemove) {
-    names.splice(i, 1);
+  const index = names.indexOf(nameToRemove);
+  if (index !== -1) {
+    names.splice(index, 1);
+    break;
   }
 }
 
@@ -22,7 +24,7 @@ console.log(names);
 
 //WHEN WILL WE BE THERE?
 
-const travelInformation = {
+/*const travelInformation = {
   speed: 50,
   destinationDistance: 432,
 };
@@ -80,4 +82,4 @@ function logOutSeriesText() {
   console.log(`In total that is ${totalPercentage.toFixed(3)}% of my life`);
 }
 
-logOutSeriesText();
+logOutSeriesText();*/
