@@ -1,12 +1,12 @@
 function getReply(command){
-  let name ='';
+  let name ;
   const todo = [];
 
 
-  if(command.startsWith('Hello my name is')  && name==='' ){
+  if(command.startsWith('Hello my name is')  && name===null ){
     name =command.split(' ').slice(4).join;
     return `Nice to meet you ${name}`
-  }else if(command.startsWith('Hello my name is')  && name!=='')  
+  }else if(command.startsWith('Hello my name is')  && name!==null)  
     return `I already know you, ${name}!`
 
 
@@ -17,14 +17,14 @@ function getReply(command){
 
     
   if(command.startsWith('Add') && command.include('to my todo')){
-    const task = command.split(' ').slice(1, command.split(" ").length - 3).join('');
+    const task = command.split(' ').slice(1, command.split(' ').length - 3).join('');
     todo.push(task);
     return todo
   }
 
 
   if(command.startsWith('Remove') && command.include('from my todo')){
-    const task = command.split(' ').slice(1, command.split(" ").length - 3).join('');
+    const task = command.split(' ').slice(1, command.split(' ').length - 3).join('');
     removeItem(todo, task);
   }
 
@@ -39,7 +39,11 @@ function getReply(command){
     findToday();
   }
     
-
+  if (command.startsWith('What is ')){
+    const numericalPart = command.split(' ').slice(2,command.split(' ').length-1).join;
+    const numInt = parseInt(numericalPart);
+    return numInt;
+  }
 
 }
 
