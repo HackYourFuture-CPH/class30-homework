@@ -34,3 +34,51 @@ function fizzBuzz() {
 }
 
 fizzBuzz();
+fizzBuzz(4, 12);
+
+//TASK : A sentiment analyzer
+const positiveWords = [
+  'love',
+  'awesome',
+  'incredible',
+  'amazing',
+  'great',
+  'fantastic',
+  'happy',
+  'stunning',
+];
+
+const negativeWords = [
+  'hate',
+  'boring',
+  'bad',
+  'terrible',
+  'awful',
+  'horrible',
+  'sad',
+  'angry',
+];
+
+function getSentimentScore(sentence) {
+  const words = sentence.toLowerCase().split(/\s+/);
+  
+  const result = {
+    score: 0,
+    positiveWords: [],
+    negativeWords: []
+  };
+
+  for (const word of words) {
+    if (positiveWords.includes(word)) {
+      result.score += 1;
+      result.positiveWords.push(word);
+    } else if (negativeWords.includes(word)) {
+      result.score -= 1;
+      result.negativeWords.push(word);
+    }
+  }
+  return result;
+}
+
+const sentimentScoreObject = getSentimentScore('I am mega super awesome happy');
+console.log(sentimentScoreObject);
