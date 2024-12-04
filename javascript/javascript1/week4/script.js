@@ -38,6 +38,10 @@ function getReply(command) {
 		if (command.startsWith("Set an alarm")) {
 			return setAlarm(command);
 		}
+
+		if (command.startsWith("Convert")) {
+			return convertCurrency(command);
+		}
 	}
 }
 
@@ -133,6 +137,42 @@ function setAlarm(command) {
 	return `Your mom will wake you up at ${time} 🤣🙌`;
 }
 
+function convertCurrency(cmd) {
+	const arrayFromCommand = cmd.split(" ");
+	const inputAmmount = Number(arrayFromCommand[1]);
+	let outputAmmount = 0;
+	const inputCurrency = arrayFromCommand[2];
+	const outputCurrency = arrayFromCommand[arrayFromCommand.length - 1];
+
+	if (inputCurrency === "EUR" && outputCurrency === "DKK") {
+		outputAmmount = inputAmmount * 7.4577;
+	}
+
+	if (inputCurrency === "DKK" && outputCurrency === "EUR") {
+		outputAmmount = inputAmmount / 7.4577;
+	}
+
+	if (inputCurrency === "USD" && outputCurrency === "DKK") {
+		outputAmmount = inputAmmount * 7.108;
+	}
+
+	if (inputCurrency === "DKK" && outputCurrency === "USD") {
+		outputAmmount = inputAmmount / 7.108;
+	}
+
+	if (inputCurrency === "GBP" && outputCurrency === "DKK") {
+		outputAmmount = inputAmmount * 9.0036;
+	}
+
+	if (inputCurrency === "DKK" && outputCurrency === "GBP") {
+		outputAmmount = inputAmmount / 9.0036;
+	}
+
+	return `${inputAmmount} ${inputCurrency} equils to ${outputAmmount.toFixed(
+		2
+	)} ${outputCurrency}`;
+}
+
 console.log(getReply("Hello my name is Benjamin"));
 console.log(getReply("What is my name?"));
 console.log(getReply("Add fishing to my todo"));
@@ -144,4 +184,10 @@ console.log(getReply("What day is today?"));
 console.log(getReply("What is 48 / 4"));
 console.log(getReply("Set a timer for 4 minutes"));
 console.log(getReply("Set an alarm for 7:30 AM"));
+console.log(getReply("Convert 7 EUR to DKK"));
+console.log(getReply("Convert 75 DKK to EUR"));
+console.log(getReply("Convert 80 USD to DKK"));
+console.log(getReply("Convert 100 DKK to USD"));
+console.log(getReply("Convert 75 GBP to DKK"));
+console.log(getReply("Convert 1000 DKK to GBP"));
 console.log(todos);
