@@ -130,3 +130,21 @@ function getCharacterFrequencies(input) {
 }
 
 console.log(getCharacterFrequencies('happy'));
+
+//TASK : Palindromic substring
+function longestPalindromicSubstring(string) {
+  let longest = "";
+  for (let i = 0; i < string.length; i++){
+    for (let j = i; j < string.length; j++){
+      const substring = string.slice(i, j + 1);
+      if (isPalindrome(substring) && substring.length > longest.length) {
+        longest = substring;
+      }
+    }
+  }
+  return longest;
+}
+
+function isPalindrome(str) {
+  return str === str.split('').reverse().join('');
+}
