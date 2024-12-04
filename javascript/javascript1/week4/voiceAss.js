@@ -40,46 +40,45 @@ function getReply(comand){
     // Time
     let currentTime = new Date().toLocaleTimeString();
 
-    if (comand.toLowerCase() === 'Hello, my name is Benjamin.') {
+    if (comand === 'Hello, my name is Benjamin.') {
         return `Nice to meet you, ${name}`;
     } 
     
-    else if (comand.toLowerCase() === 'What is my name?') {
+    else if (comand === 'What is my name?') {
         return `Your name is ${name}`;
     }
     
-    else if (comand.toLowerCase() === 'Add fishing to my todo') {
+    else if (comand === 'Add fishing to my todo') {
     return `${toDo} added to your todo.` ;
 }
 
-else if (comand.toLowerCase() === 'Add singing in the shower to my todo') {
+else if (comand === 'Add singing in the shower to my todo') {
     return list ;
 }
 
-else if (comand.toLowerCase() === 'Remove fishing from my todo') {
+else if (comand === 'Remove fishing from my todo') {
     return `Removed ${toDo} from your todo.` ;
 }
 
-else if (comand.toLowerCase() === 'What is on my todo?') {
+else if (comand === 'What is on my todo?') {
     return list ;
 }
 
-else if (comand.toLowerCase() === 'What day is it today?') {
+else if (comand === 'What day is it today?') {
     return humanReadable;
 }
 
-else if (comand.toLowerCase() ==='What is 3+3'){
+else if (comand ==='What is 3+3'){
     return result;
 }
 
-else if (comand.toLowerCase() === 'set a timer for 4 miutes') {
+else if (comand === 'Set a timer for 4 minutes') {
     return `Timer set for ${timer}.` ;
 }
 
-else if (comand.toLowerCase() === 'what time is it?') {
+else if (comand === 'What time is it?') {
     return `The current time is ${currentTime}.`;
 }
-else  return "I didn't understand the command.";
 
 }
 
@@ -91,5 +90,5 @@ console.log(getReply('Remove fishing from my todo'));
 console.log(getReply('What is on my todo?'));
 console.log(getReply('What day is it today?'));
 console.log(getReply('What is 3+3'));
-console.log(getReply('set a timer for 4 miutes'));
-console.log(getReply('what time is it?'));
+console.log(getReply('Set a timer for 4 minutes'));
+console.log(getReply('What time is it?'));
