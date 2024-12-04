@@ -10,7 +10,7 @@ function addActivity(activity, duration) {
     console.log(`Activity ${activity} with date ${date} with duration of ${duration} has been added.`)
 }
 function showStatus(arr) {
-    if (arr === undefined || arr.length == 0) {
+    if (arr === undefined || arr.length === 0) {
         console.log("Add some activities before calling showStatus")
     } else {
         let activitiesInfo = ""

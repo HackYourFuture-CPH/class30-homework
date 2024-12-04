@@ -12,8 +12,7 @@ saveNote("Pick up groceries", 1);
 saveNote("Do laundry", 2);
 
 function getNote(id) {
-    const note = notes.find(item => item.id === id)
-    return note;
+    return notes.find(item => item.id === id);
 }
 
 const firstNote = getNote(1);
@@ -27,7 +26,7 @@ function logOutNotesFormatted() {
     console.log(allNotes);
 }
 function deleteNote(id) {
-    let noteToDelete = notes.find(item => item.id === id);
+    let noteToDelete = notes.includes(id)
     let indexToDelte = notes.indexOf(noteToDelete);
     notes.splice(indexToDelte, 1);
     console.log(`notes with this id: ${id} has been deleted`, notes)
