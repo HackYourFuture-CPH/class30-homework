@@ -82,3 +82,25 @@ function getSentimentScore(sentence) {
 
 const sentimentScoreObject = getSentimentScore('I am mega super awesome happy');
 console.log(sentimentScoreObject);
+
+//TASK : Credit card number formatter
+function formatCreditCardNumber(input) {
+  if (typeof input !== 'number' || isNaN(input)) {
+    return { error: 'Invalid input: input must be a number' };
+  }
+
+  const inputStr = input.toString();
+
+  const formatted = inputStr.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+  return {
+    original: input,
+    formatted: formatted
+  };
+}
+
+const formattedCreditCardObject = formatCreditCardNumber(123456789);
+console.log(formattedCreditCardObject);
+
+const invalidInputTest = formatCreditCardNumber("NotNumber");
+console.log(invalidInputTest);
