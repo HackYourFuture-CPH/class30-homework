@@ -47,14 +47,22 @@ function getReply(command){
 function greeting(command){
   if(name === ''){
     name =command.split(' ').slice(4).join(' ');
+    name = capitalizedFirstLetter(name)
     return `Nice to meet you ${name}`}
-  else if(name !== '' && name===command.split(' ').slice(4).join(' ') )
+  else if(name !== '' && name === capitalizedFirstLetter(command.split(' ').slice(4).join(' ')) )
     return `Hi agian, ${name}! Nice to meet you!`
   else if(name !== '' && name!==command.split(' ').slice(4).join(' ')){
     name=command.split(' ').slice(4).join(' ');
+    name = capitalizedFirstLetter(name)
     return `Nice to meet you ${name}`}
 }
 
+function capitalizedFirstLetter(str){
+  const firstLetter = str.charAt(0);
+  const firstLetterCap = firstLetter.toUpperCase()
+  const remainingLetters = str.slice(1);
+  return firstLetterCap + remainingLetters
+}
 
 function whatIsName(){
   if(name !== '')
