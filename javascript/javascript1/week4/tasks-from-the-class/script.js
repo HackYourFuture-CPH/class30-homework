@@ -104,3 +104,29 @@ console.log(formattedCreditCardObject);
 
 const invalidInputTest = formatCreditCardNumber("NotNumber");
 console.log(invalidInputTest);
+
+//TASK : Character frequencies
+
+function getCharacterFrequencies(input) {
+  const frequencyMap = {};
+
+  for (const char of input) {
+    if (frequencyMap[char]) {
+      frequencyMap[char]++;
+    } else {
+      frequencyMap[char] = 1;
+    }
+  }
+
+  const characters = Object.entries(frequencyMap).map(([character, count]) => ({
+    character,
+    count,
+  }));
+
+  return {
+    characters,
+    length: input.length,
+  };
+}
+
+console.log(getCharacterFrequencies('happy'));
