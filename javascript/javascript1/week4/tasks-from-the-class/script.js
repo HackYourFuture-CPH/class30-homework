@@ -148,3 +148,40 @@ function longestPalindromicSubstring(string) {
 function isPalindrome(str) {
   return str === str.split('').reverse().join('');
 }
+
+//TASK : Credit card info
+function getCardInfo(cardNumber) {
+  const cardStr = cardNumber.toString();
+
+  switch (true) {
+    case /^4\d{12}(\d{3})?$/.test(cardStr):
+      return 'visa';
+
+    case /^5[1-5]\d{14}$/.test(cardStr):
+    case /^2(2[2-9][1-9]|2[3-9]\d|[3-6]\d{2}|7[01]\d|720)\d{12}$/.test(cardStr):
+      return 'mastercard';
+
+    case /^3[47]\d{13}$/.test(cardStr):
+      return 'amex';
+
+    case /^6(011|5\d{2}|4[4-9]\d|22[1-9]|22[2-9])\d{12}$/.test(cardStr):
+      return 'discover';
+
+    case /^3(0[0-5]|[68]\d)\d{11}$/.test(cardStr):
+      return 'diners club';
+
+    case /^35(2[89]|[3-8]\d)\d{12}$/.test(cardStr):
+      return 'jcb';
+
+    default:
+      return 'unknown';
+  }
+}
+
+console.log(getCardInfo(4781321334789876)); 
+console.log(getCardInfo(5223456789012345)); 
+console.log(getCardInfo(371449635398431));  
+console.log(getCardInfo(6011123456789012)); 
+console.log(getCardInfo(3056930009020004)); 
+console.log(getCardInfo(3530111333300000)); 
+console.log(getCardInfo(1234567890123456)); 
