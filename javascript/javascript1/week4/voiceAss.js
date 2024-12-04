@@ -75,10 +75,12 @@ else if (comand.toLowerCase() ==='What is 3+3'){
 else if (comand.toLowerCase() === 'set a timer for 4 miutes') {
     return `Timer set for ${timer}.` ;
 }
-else (comand.toLowerCase() === "what time is it?") {
+
+else if (comand.toLowerCase() === 'what time is it?') {
     return `The current time is ${currentTime}.`;
 }
- 
+else  return "I didn't understand the command.";
+
 }
 
 console.log(getReply('Hello, my name is Benjamin.'));
@@ -90,3 +92,4 @@ console.log(getReply('What is on my todo?'));
 console.log(getReply('What day is it today?'));
 console.log(getReply('What is 3+3'));
 console.log(getReply('set a timer for 4 miutes'));
+console.log(getReply('what time is it?'));
