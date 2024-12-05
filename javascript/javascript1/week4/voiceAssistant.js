@@ -38,6 +38,15 @@ function removeFromTodoList(command){
 }
 
 
+function showOnTodoList(){
+    if(todoList.length === 0){
+        console.log("your todo list is empty");
+    }else{
+        console.log(`You have ${todoList.lenght} things to do ${todoList.join(" , ")}` )
+    }
+}
+
+
 
 
 
