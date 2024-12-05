@@ -26,7 +26,16 @@ function addTodoList(command){
     return `${todo} added to you todo`;
 }
 
+function removeFromTodoList(command){
+    let todo = command.slice(7, command.indexOf("from my todo"));
+    if (todoList.includes(todo)){
+        todoList.splice(todoList.indexOf(todo),1);
+        return `I have removed ${todo} from you todo list`;
 
+    }else {
+        return `${todo} doesnt exist in your todo list`;
+    }
+}
 
 
 
