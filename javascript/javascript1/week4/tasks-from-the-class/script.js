@@ -185,3 +185,96 @@ console.log(getCardInfo(6011123456789012));
 console.log(getCardInfo(3056930009020004)); 
 console.log(getCardInfo(3530111333300000)); 
 console.log(getCardInfo(1234567890123456)); 
+
+//TASK : Tic Tac Toe
+function ticTacToe() {
+  const position = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+  ];
+
+  function getRenderedGame(board) {
+    const border = '*'.repeat(7);
+    const rows = board.map(row => `*${row.join('*')}*`).join('\n');
+    return `${border}\n${rows}\n${border}`;
+  }
+
+  function getGameinfo(board) {
+    const checkWinner = player => {
+      if (board.some(row => row.every(cell => cell === player))) return true;
+      for (let col = 0; col < 3; col++) {
+        if (board.every(row => row[col] === player)) return true;
+      }
+      if (
+        (board[0][0] === player &&
+          board[1][1] === player &&
+          board[2][2] === player) ||
+        (board[0][2] === player &&
+          board[1][1] === player &&
+          board[2][0] === player)
+      )
+        return true;
+
+      return false;
+    };
+
+    const isFull = board.flat().every(cell => cell !== ' ');
+
+    const winner = checkWinner('x') ? 'x' : checkWinner('o') ? 'o' : undefined;
+    const loser = winner ? (winner === 'x' ? 'o' : 'x') : undefined;
+
+    return {
+      winner,
+      loser,
+      hasEnded: !!winner || isFull,
+      nextPlayer:
+        !winner && !isFull
+          ? board.flat().filter(cell => cell !== ' ').length % 2 === 0
+            ? 'x'
+            : 'o'
+          : undefined,
+    };
+  }
+
+  function playGame() {
+    let gameInfo = getGameinfo(position);
+
+    while (!gameInfo.hasEnded) {
+      console.clear();
+      console.log(getRenderedGame(position));
+      console.log(`Next player: ${gameInfo.nextPlayer}`);
+
+      const row = parseInt(prompt('Enter row (0, 1, or 2):'), 10);
+      const col = parseInt(prompt('Enter column (0, 1, or 2):'), 10);
+
+      if (
+        !Number.isInteger(row) ||
+        !Number.isInteger(col) ||
+        row < 0 ||
+        row > 2 ||
+        col < 0 ||
+        col > 2 ||
+        position[row][col] !== ' '
+      ) {
+        console.log('Invalid move! Try again.');
+        continue;
+      }
+
+      position[row][col] = gameInfo.nextPlayer;
+      gameInfo = getGameinfo(position);
+    }
+
+    console.clear();
+    console.log(getRenderedGame(position));
+    if (gameInfo.winner) {
+      console.log(`Winner: ${gameInfo.winner}`);
+    } else {
+      console.log("It's a tie!");
+    }
+  }
+
+  playGame();
+}
+
+ticTacToe();
