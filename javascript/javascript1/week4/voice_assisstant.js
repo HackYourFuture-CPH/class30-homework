@@ -122,7 +122,7 @@ function getReply(command) {
     }
   }
 
-  //!------------ Eigth scenario Simple Calculator----------!
+  //!------------ Eigth scenario Set Timer----------!
 
   if (command.toLowerCase().includes("set a timer for")) {
     const timerInMinutes = parseInt(command.split(" ")[4]);
@@ -131,6 +131,22 @@ function getReply(command) {
     }, timerInMinutes * 60 * 1000);
 
     console.log(`Timer is set for ${timerInMinutes} minutes`);
+  }
+
+  //!------------ Additional scenario----------!
+  if (command.toLowerCase().includes("what day is today")) {
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    const today = new Date().getDay();
+    console.log(`Today is ${days[today]}.`);
+    return;
   }
 
   return;
@@ -149,4 +165,5 @@ getReply("What is on my todo?");
 getReply("What day is it today?");
 getReply("What is 3 + 3?");
 getReply("What is 4 * 12?");
-getReply("Set a timer for 2 minutes");
+getReply("Set a timer for 1 minutes");
+getReply("What day is today?");
