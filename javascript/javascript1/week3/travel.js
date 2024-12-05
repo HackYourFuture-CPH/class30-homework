@@ -10,12 +10,7 @@ function calculateTravelTime(travelInfo) {
     return "Error: Speed must be greater than 0";
   }
 
-  const totalTimeInHours = destinationDistance / speed; // زمان به ساعت
-  const hours = Math.floor(totalTimeInHours); // بخش ساعت
-  const minutes = Math.round((totalTimeInHours - hours) * 60); // بخش دقیقه
-
-  return `${hours} hours and ${minutes} minutes`;
+  const totalTimeInHours = destinationDistance / speed;
+  const totalTimeInMinutes = totalTimeInHours * 60; // Time in minutes
+  return totalTimeInMinutes;
 }
-
-const travelTime = calculateTravelTime(travelInformation);
-console.log(travelTime); // خروجی: 8 hours and 38 minutes
