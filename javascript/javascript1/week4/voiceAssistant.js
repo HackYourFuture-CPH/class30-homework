@@ -80,6 +80,23 @@ function calcMath(command){
 
 
 
+function setTimer(command) {
+    let minutes = parseInt(command.split(" ")[4]);
+
+    if (!minutes) {
+        return "add valid number of minutes!";
+    }
+
+    setTimeout(() => {
+        console.log("timer done!");
+    }, minutes * 60000); 
+
+    return `Timer set for ${minutes} minutes.`;
+}
+
+
+
+
 
 
 
@@ -110,14 +127,9 @@ function getReply(command){
             return `The answer is ${calcMath(command)}`;
         }
        
-    
-        
+        if(command.startsWith("set a timer for")) {
+            return setTimer(command);
+        }
 
         return "Im not advanced enough to answer this."
 }
-
-
-
-
-
-
