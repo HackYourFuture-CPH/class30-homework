@@ -46,6 +46,16 @@ function showOnTodoList(){
     }
 }
 
+function todaysDate(){
+    let day = new Date();
+    let today = day.getDate();
+    let monthNames = ["January", "February", "March", "April", "May", "June", 
+                   "July", "August", "September", "October", "November", "December"];
+    let month = monthNames[day.getMonth()];
+    let year = day.getFullYear();
+
+    return `${today} ${month} ${year}`
+}
 
 
 
@@ -69,6 +79,10 @@ function getReply(command){
             return showOnTodoList();
         }
 
+        if(command === "What day is it today?"){
+            return todaysDate();
+        }
+
         return "Im not advanced enough to answer this."
 }
 
@@ -77,4 +91,4 @@ function getReply(command){
 
 
 
-
+console.log(getReply("What day is it today?")); 
