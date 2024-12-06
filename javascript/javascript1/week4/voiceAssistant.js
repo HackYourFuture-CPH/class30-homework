@@ -10,7 +10,6 @@ function saveName(command){
 }
 
 
-
 function getName(){
     if(theirName){
         return (`You name is ${theirName}`);
@@ -23,8 +22,9 @@ function getName(){
 function addTodoList(command){
     let todo = command.slice(4, command.indexOf("to my todo"));
     todoList.push(todo);
-    return `${todo} added to you todo`;
+    console.log( `${todo} added to you todo`);
 }
+
 
 function removeFromTodoList(command){
     let todo = command.slice(7, command.indexOf("from my todo"));
@@ -40,9 +40,9 @@ function removeFromTodoList(command){
 
 function showOnTodoList(){
     if(todoList.length === 0){
-        console.log("your todo list is empty");
+        return("your todo list is empty");
     }else{
-        console.log(`You have ${todoList.lenght} things to do ${todoList.join(" , ")}` )
+        console.log(`You have ${todoList.length} things to do ${todoList.join(",")}` )
     }
 }
 
@@ -57,9 +57,24 @@ function getReply(command){
         }
 
 
-        if (command == "What is my name?") {
+        if(command == "What is my name?") {
             return getName();
+        }
+
+        if(command.startsWith("add") && command.endsWith("to my todo")){
+            return addTodoList(command);
+        }else if(command.startsWith("remove") && command.endsWith("from my todo")){
+            return removeFromTodoList(command);
+        }else if(command === "what is on my todo?") {
+            return showOnTodoList();
         }
 
         return "Im not advanced enough to answer this."
 }
+
+
+
+
+
+
+
