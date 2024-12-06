@@ -143,6 +143,7 @@ console.log(getReply("What is my name?"));
 console.log(getReply("Add fishing to my todo"));
 console.log(getReply("Remove fishing from my todo"));
 console.log(getReply("Add singing in the shower to my todo"));
+console.log(getReply("What is on my todo?"));
 console.log(getReply("What is the purpose of life?"));
 console.log(getReply("Set a timer for 2 minutes")); //You should wait for that x min to see the full response
 console.log(getReply("Set a timer for time minutes"));
