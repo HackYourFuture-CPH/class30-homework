@@ -58,6 +58,29 @@ function todaysDate(){
 }
 
 
+function calcMath(command){
+    let num1 = parseFloat(command.split(" ")[2]);
+    let operator = command.split(" ")[3];
+    let num2 = parseFloat(command.split(" ")[4]);
+
+
+    switch (operator) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            return num1 / num2;
+        default:
+            return "Im not able to solve that.";
+    }
+}
+
+
+
+
 
 
 
@@ -83,6 +106,13 @@ function getReply(command){
             return todaysDate();
         }
 
+        if (command.startsWith("what is")) {
+            return `The answer is ${calcMath(command)}`;
+        }
+       
+    
+        
+
         return "Im not advanced enough to answer this."
 }
 
@@ -91,4 +121,3 @@ function getReply(command){
 
 
 
-console.log(getReply("What day is it today?")); 
