@@ -7,7 +7,11 @@ const travelInformation = {
      const durationInt = Math.floor(obj.destinationDistance / obj.speed *60);
      const durationHrs = Math.floor(durationInt/60);
      const durationMn = Math.floor(durationInt%60);
-     let durationInfo = `${durationHrs}hours and ${durationMn}minutes`
+
+     const hoursText = durationHrs >= 2 ? "hours" : "hour";
+     const minutesText = durationMn >=2 ? "minutes" : "minute";
+
+     let durationInfo = `${durationHrs}${hoursText} and ${durationMn}${minutesText}`
      return obj.duration = durationInfo
   }
 
