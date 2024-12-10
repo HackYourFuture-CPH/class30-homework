@@ -1,5 +1,5 @@
 
-function getReply(comand){
+function getReply(command){
     // name
     let sentence = 'Hello, my name is Benjamin.';
     let parts = sentence.split(" ");
@@ -40,43 +40,43 @@ function getReply(comand){
     // Time
     let currentTime = new Date().toLocaleTimeString();
 
-    if (comand === 'Hello, my name is Benjamin.') {
+    if (command === 'Hello, my name is Benjamin.') {
         return `Nice to meet you, ${name}`;
     } 
     
-    else if (comand === 'What is my name?') {
+    else if (command === 'What is my name?') {
         return `Your name is ${name}`;
     }
     
-    else if (comand === 'Add fishing to my todo') {
+    else if (command === 'Add fishing to my todo') {
     return `${toDo} added to your todo.` ;
 }
 
-else if (comand === 'Add singing in the shower to my todo') {
+else if (command === 'Add singing in the shower to my todo') {
     return list ;
 }
 
-else if (comand === 'Remove fishing from my todo') {
+else if (command === 'Remove fishing from my todo') {
     return `Removed ${toDo} from your todo.` ;
 }
 
-else if (comand === 'What is on my todo?') {
+else if (command === 'What is on my todo?') {
     return list ;
 }
 
-else if (comand === 'What day is it today?') {
+else if (command === 'What day is it today?') {
     return humanReadable;
 }
 
-else if (comand ==='What is 3+3'){
+else if (command ==='What is 3+3'){
     return result;
 }
 
-else if (comand === 'Set a timer for 4 minutes') {
+else if (command === 'Set a timer for 4 minutes') {
     return `Timer set for ${timer}.` ;
 }
 
-else if (comand === 'What time is it?') {
+else if (command === 'What time is it?') {
     return `The current time is ${currentTime}.`;
 }
 
