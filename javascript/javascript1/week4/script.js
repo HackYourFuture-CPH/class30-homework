@@ -82,15 +82,13 @@ function removeToDo(cmd) {
 function getTodoList() {
 	if (todos.length > 0) {
 		return `You have ${todos.length} todos: ${todos.join(" and ")}`;
-	}
+	} else return "There are no any tasks in your todo list";
 }
 
 function getDate() {
 	const currentDate = new Date();
 	const day = currentDate.getDate();
-	const month = new Intl.DateTimeFormat("en-UK", { month: "long" }).format(
-		currentDate
-	);
+	const month = currentDate.toLocaleString("default", { month: "long" });
 
 	const year = currentDate.getFullYear();
 	return `${day}. of ${month} ${year}`;
