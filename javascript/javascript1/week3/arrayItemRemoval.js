@@ -1,18 +1,18 @@
 const names = [
-    "Peter",
-    "Ahmad",
-    "Yana",
-    "kristina",
-    "Rasmus",
-    "Samuel",
-    "katrine",
-    "Tala",
-]; 
+  "Peter",
+  "Ahmad",
+  "Yana",
+  "kristina",
+  "Rasmus",
+  "Samuel",
+  "katrine",
+  "Tala",
+];
 const nameToRemove = "Ahmad";
 
-const indexOfArray = names.indexOf(nameToRemove)
+const indexOfArray = names.indexOf(nameToRemove);
 
-names.splice(indexOfArray, 1)
+names.splice(indexOfArray, 1);
 
 // Code done
 
