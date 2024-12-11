@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <style>
+    .recipe-container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+      max-width: 600px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recipe App</h1>
+
+  <div id="recipeDisplay"></div>
+
+  <h2>Add a New Recipe</h2>
+  <form id="addRecipeForm">
+    <label for="recipeTitle">Recipe Title:</label>
+    <input type="text" id="recipeTitle" name="recipeTitle" required><br><br>
+
+    <label for="recipeDescription">Description:</label>
+    <textarea id="recipeDescription" name="recipeDescription" required></textarea><br><br>
+
+    <label for="recipePicture">Picture URL:</label>
+    <input type="url" id="recipePicture" name="recipePicture" required><br><br>
+
+    <h3>Ingredients (at least 5):</h3>
+    <div id="ingredientsList">
+      <div class="ingredient">
+        <label>Ingredient Name:</label>
+        <input type="text" class="ingredient-name" required>
+        <label>Amount:</label>
+        <input type="text" class="ingredient-amount" required>
+      </div>
+    </div>
+    <button type="button" id="addIngredientButton">Add Ingredient</button><br><br>
+
+    <button type="submit">Add Recipe</button>
+  </form>
+
+  <script src="index.js"></script>
+</body>
+</html>
