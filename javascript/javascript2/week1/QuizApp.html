@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="QuizApp.css">
+</head>
+<body>
+    <h1>Quiz App</h1>
+
+    <!-- Quiz formular -->
+    <form id="quiz-form">
+        <label for="question">Question:</label>
+        <input type="text" id="question" placeholder="Enter the question" required maxlength="140">
+    
+        <div>
+            <label>Option A:</label>
+            <input type="text" id="optionA" required>
+            <input type="radio" name="correct" value="1"> Correct
+        </div>
+
+        <div>
+            <label>Option B:</label>
+            <input type="text" id="optionB" required>
+            <input type="radio" name="correct" value="2"> Correct
+        </div>
+
+        <div>
+            <label>Option C:</label>
+            <input type="text" id="optionC" required>
+            <input type="radio" name="correct" value="3"> Correct
+        </div>
+    
+        <div>
+            <label>Option D:</label>
+            <input type="text" id="optionD" required>
+            <input type="radio" name="correct" value="4"> Correct
+        </div>
+
+        <button type="submit">Save Question</button>
+        <button type="button" id="randomize-btn">Randomize Options</button>
+    </form>
+
+    <script src="QuizApp.js"></script>
+</body>
+</html>
+
