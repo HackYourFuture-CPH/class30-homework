@@ -75,6 +75,7 @@ function whatIsName(){
 function addTodo(command){
   const task = command.split(' ').slice(1, command.split(' ').length - 3).join(' ');
   todo.push(task);
+  console.log(`${task} added to your todo list`)
   return todo;
 }
 
@@ -85,6 +86,7 @@ function removeItem(array, value){
       array.splice(i,1)
   else i++
  }
+ console.log(`${value} removed from todo list!`)
  return array;
 }
 
@@ -141,6 +143,7 @@ console.log(getReply("What is my name?"));
 console.log(getReply("Hello my name is Farzaneh"));
 console.log(getReply("What is my name?")); 
 console.log(getReply("Add fishing to my todo"));
+console.log(getReply("remove fishing from my todo"));
 console.log(getReply("Add singing in the shower to my todo"));
 console.log(getReply("What day is it today?"));
 console.log(getReply("What is 3 * 3"));
