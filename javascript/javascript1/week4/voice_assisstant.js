@@ -126,11 +126,12 @@ function getReply(command) {
 
   if (command.toLowerCase().includes("set a timer for")) {
     const timerInMinutes = parseInt(command.split(" ")[4]);
+    const timerUnit = command.split(" ")[5].toLowerCase();
     setTimeout(() => {
       console.log("Timer is done");
     }, timerInMinutes * 60 * 1000);
 
-    console.log(`Timer is set for ${timerInMinutes} minutes`);
+    console.log(`Timer is set for ${timerInMinutes} ${timerUnit}`);
   }
 
   //!------------ Additional scenario----------!
@@ -165,5 +166,5 @@ getReply("What is on my todo?");
 getReply("What day is it today?");
 getReply("What is 3 + 3?");
 getReply("What is 4 * 12?");
-getReply("Set a timer for 1 minutes");
+getReply("Set a timer for 2 minutes");
 getReply("What day is today?");
