@@ -123,18 +123,22 @@ function calculate(input) {
 }
 
 function setTimer(input) {
-  const time = input.match(/Set a timer for (\d+) minutes/i);
+  const time = input.match(/Set a timer for (\d+) (minute|minutes)/i);
 
   if (time) {
     const minutes = parseInt(time[1], 10);
-    console.log(`Timer set for ${minutes} minutes.`);
+    console.log(
+      `Timer set for  ${minutes} ${
+        minutes === 1 ? "minute" : "minutes"
+      } minutes.`
+    );
     const milliseconds = minutes * 60 * 1000;
     setTimeout(() => {
       console.log("Timer done.");
     }, milliseconds);
     return "Counting";
   } else {
-    return "Invalid command. Please use the format: 'Set a timer for n minutes'.";
+    return "Invalid command. Please use the format: 'Set a timer for n minutes' or 'Set a timer for 1 minute'.";
   }
 }
 
@@ -145,7 +149,7 @@ console.log(getReply("Remove fishing from my todo"));
 console.log(getReply("Add singing in the shower to my todo"));
 console.log(getReply("What is on my todo?"));
 console.log(getReply("What is the purpose of life?"));
-console.log(getReply("Set a timer for 2 minutes")); //You should wait for that x min to see the full response
+console.log(getReply("Set a timer for 1 minutes")); //You should wait for that x min to see the full response
 console.log(getReply("Set a timer for time minutes"));
 console.log(getReply("what is 4 * 12"));
 console.log(getReply("what is 89 / 12"));
