@@ -11,9 +11,10 @@ const weekDaysArr = [
 function getEventWeekday(daysFromNow) {
   const todaysIndex = new Date().getDay();
   const eventDaysIndex = (todaysIndex + daysFromNow) % 7;
-  return console.log(weekDaysArr[eventDaysIndex]);
+  return weekDaysArr[eventDaysIndex];
 }
 
-getEventWeekday(1);
-getEventWeekday(100);
-getEventWeekday(82);
+const actualWeekday = getEventWeekday(1);
+console.log(actualWeekday);
+console.log(getEventWeekday(100));
+console.log(getEventWeekday(82));
