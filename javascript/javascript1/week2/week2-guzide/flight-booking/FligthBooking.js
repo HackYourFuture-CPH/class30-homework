@@ -4,9 +4,6 @@ function getFullname(
   useFormalName = false,
   gender = "female"
 ) {
-  firstname = firstname || "";
-  surname = surname || "";
-
   if (!firstname && !surname) {
     return "Please provide your FIRST NAME and SURNAME!";
   }
