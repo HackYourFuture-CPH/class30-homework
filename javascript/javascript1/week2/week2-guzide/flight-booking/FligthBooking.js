@@ -4,8 +4,9 @@ function getFullname(
   useFormalName = false,
   gender = "female"
 ) {
-  if (!firstname && !surname) {
-    return "Please provide your FIRST NAME and SURNAME!";
+  if (!firstname || !surname) {
+    console.log("Please provide both your FIRST NAME and SURNAME.");
+    return null;
   }
 
   let nameTitle = "";
@@ -18,10 +19,12 @@ function getFullname(
       nameTitle = "";
     }
   }
-
-  return console.log(nameTitle + firstname + " " + surname);
+  let fullName = nameTitle + firstname + " " + surname;
+  return fullName;
 }
 
-getFullname("Benjamin", "Hughes", true, "");
-
-// you can try more possibilities here >> getFullname()
+console.log(getFullname("Benjamin", "How", false, "male"));
+console.log(getFullname("Benjamin", "", true, "male"));
+console.log(getFullname("", "How", true, "male"));
+console.log(getFullname("Sara", "Jensen", true, "female"));
+console.log(getFullname("Benjamin", "Hughes", true, "male"));
