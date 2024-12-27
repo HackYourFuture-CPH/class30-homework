@@ -22,11 +22,11 @@ console.log("--------------------------");
 function getNote(id) {
   if (id === undefined || typeof id !== "number") {
     console.log("Error: Invalid or Missing id");
-    return null;
+    return;
   }
-  for (let i = 0; i < notes.length; i++) {
-    if (id === notes[i].id) {
-      return notes[i];
+  for (const note of notes) {
+    if (id === note.id) {
+      return note;
     }
   }
 }
@@ -41,12 +41,9 @@ console.log("--------------------------");
 //Log out notes
 
 function logOutNotesFormatted() {
-  for (let i = 0; i < notes.length; i++) {
+  for (const note of notes) {
     console.log(
-      "The note with id: " +
-        notes[i].id +
-        " has the following note text: " +
-        notes[i].content
+      `The note with id: ${note.id} has the following note text: ${note.id}`
     );
   }
 }
@@ -55,17 +52,17 @@ logOutNotesFormatted();
 
 //new feature: Remove Note
 
-function removeNote(content) {
-  for (let i = 0; i < notes.length; i++) {
-    if (notes[i].content === content) {
-      const deletedNote = notes.splice(i, 1)[0];
-      return console.log(
-        "The note with content: " + deletedNote.content + " is deleted."
-      );
+function removeNote(id) {
+  let index = 0;
+  for (const note of notes) {
+    if (note.id === id) {
+      const deletedNote = notes.splice(index, 1)[0];
+      return console.log(`The note by id: ${deletedNote.id} is deleted.`);
     }
+    index++;
   }
-  console.log("Error: Note with content " + content + " not found.");
+  console.log(`Error: Note with id:${id} is not found.`);
 }
 
-removeNote("Do laundry");
-removeNote("Find note");
+removeNote(1);
+removeNote(2);
