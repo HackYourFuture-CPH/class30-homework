@@ -6,11 +6,11 @@ function getNumberOfStudents() {
 
 function addStudentToClass(studentName) {
   if (studentName == "") {
-    console.log("You can't leave this area empty");
+    console.log("Student name cannot be empty");
     return;
   }
 
-  if (studentName === "Queen Mary") {
+  if (studentName === "Queen") {
     if (!class07Students.includes(studentName)) {
       class07Students.push(studentName);
       console.log(class07Students);
