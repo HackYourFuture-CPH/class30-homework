@@ -11,10 +11,8 @@ const names = [
 ];
 const nameToRemove = "Ahmad";
 
-// Write some code here
-let removeElement = names.indexOf(nameToRemove);
-names.splice(removeElement, 1);
-// Code done
+let indexToRemove = names.indexOf(nameToRemove);
+names.splice(indexToRemove, 1);
 
 console.log(names);
 console.log("-----------------------------------------");
