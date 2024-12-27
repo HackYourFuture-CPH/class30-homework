@@ -32,6 +32,7 @@ function canBuyMoreCandy() {
   for (let i = 0; i < boughtCandyPrices.length; i++) {
     totalPrice += boughtCandyPrices[i];
   }
+  console.log(totalPrice);
   if (totalPrice < amountToSpend) {
     console.log("You can buy more, so please do!");
     return true;
@@ -43,6 +44,6 @@ function canBuyMoreCandy() {
 
 addCandy("toffee", 40);
 addCandy("sweet", 61);
-addCandy("chewing-gum");
+addCandy("chewing-gum", 10);
 canBuyMoreCandy();
 console.log(boughtCandyPrices);
