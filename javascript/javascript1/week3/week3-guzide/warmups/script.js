@@ -23,13 +23,10 @@ const travelInformation = {
   destinationDistance: 432,
 };
 function travelDuration(travelinfo) {
-  const rawTravelDuration = travelinfo.destinationDistance / travelinfo.speed;
-  const rawdecimalMinutes = rawTravelDuration - Math.floor(rawTravelDuration);
-  const decimalMinutes = parseFloat(rawdecimalMinutes.toPrecision(3));
-  const minutes = decimalMinutes * 60;
-  const integerMinutes = Math.floor(minutes);
-  const hours = rawTravelDuration - rawdecimalMinutes;
-  return hours + " hours and " + integerMinutes + " minutes";
+  const hours = Math.floor(travelinfo.destinationDistance / travelinfo.speed);
+  const minutes =
+    ((travelinfo.destinationDistance / travelinfo.speed) * 60) % 60;
+  return `${hours} hours and ${minutes} minutes`;
 }
 const travelTime = travelDuration(travelInformation);
 console.log(travelTime); // 8 hours and 38 minutes
