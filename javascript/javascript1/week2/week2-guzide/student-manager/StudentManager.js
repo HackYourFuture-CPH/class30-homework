@@ -10,28 +10,31 @@ function addStudentToClass(studentName) {
     return;
   }
 
-  if (studentName === "Queen") {
-    if (!class07Students.includes(studentName)) {
+  if (!class07Students.includes(studentName)) {
+    if (studentName === "Queen") {
       class07Students.push(studentName);
       console.log(class07Students);
+      return;
     }
-    return;
-  }
 
-  if (getNumberOfStudents() >= 6) {
-    console.log("Cannot add more students to class 07");
+    if (getNumberOfStudents() >= 6) {
+      console.log("Cannot add more students to class 07");
+    }
+
+    class07Students.push(studentName);
+  } else {
+    console.log(`"${studentName}" is already in your class!`);
     return;
   }
-  class07Students.push(studentName);
   console.log(class07Students);
 }
 
-addStudentToClass("");
 addStudentToClass("Güzide");
 addStudentToClass("Mustafa");
 addStudentToClass("Jovita");
 addStudentToClass("Elitsa");
 addStudentToClass("Mads");
+addStudentToClass("Güzide");
 addStudentToClass("Tuba");
-addStudentToClass("Oğuz");
-addStudentToClass("Queen Mary");
+addStudentToClass("Queen");
+addStudentToClass("");
