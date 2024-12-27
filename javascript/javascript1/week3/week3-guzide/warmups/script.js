@@ -25,7 +25,7 @@ const travelInformation = {
 function travelDuration(travelinfo) {
   const hours = Math.floor(travelinfo.destinationDistance / travelinfo.speed);
   const minutes =
-    ((travelinfo.destinationDistance / travelinfo.speed) * 60) % 60;
+    Math.floor((travelinfo.destinationDistance / travelinfo.speed) * 60) % 60;
   return `${hours} hours and ${minutes} minutes`;
 }
 const travelTime = travelDuration(travelInformation);
