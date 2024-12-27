@@ -18,5 +18,8 @@ function chooseClothes(temperature) {
   }
 }
 
+chooseClothes(5);
 chooseClothes(40);
+chooseClothes(15);
+chooseClothes(28);
 chooseClothes(-40);
