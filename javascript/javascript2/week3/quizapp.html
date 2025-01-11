@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Whiz 🧙‍♂️</title>
+    <link rel="stylesheet" href="quizzapp.css">
+</head>
+<body>
+
+
+    <div id="page-1" class="page active">
+        <h1>Quiz Whiz 🧙‍♂️</h1>
+        <h2>Create Your Quiz</h2>
+        <div class="quiz-creation">
+            <form id="add-question-form">
+                <label for="question-text">Enter your question:</label>
+                <input type="text" id="question-text" placeholder="Type your question here" required>
+                <button type="submit" class="button">Add Question</button>
+            </form>
+            <form id="add-option-form">
+                <label for="option-text">Enter an option:</label>
+                <input type="text" id="option-text" placeholder="Type your option here" required>
+                <label>
+                    <input type="checkbox" id="is-correct"> Is this the correct answer?
+                </label>
+                <button type="submit" class="button">Add Option</button>
+            </form>
+            <button id="save-quiz-button" class="button">Save Quiz</button>
+        </div>
+
+
+        <button id="next-to-players" class="button">Next</button>
+    </div>
+
+    <div id="page-2" class="page">
+        <h1> Add Players: </h1>
+        <div class="player-names">
+            <label for="player1-name">Player 1: </label>
+            <input type="text" id="player1-name" placeholder="Enter Player 1 Name">
+            <label for="player2-name">Player 2: </label>
+            <input type="text" id="player2-name" placeholder="Enter Player 2 Name">
+        </div>
+        <button id="start-quiz-button" class="button">Start Quiz</button>
+    </div>
+
+
+
+    <div id="page-3" class="page">
+        <h1>Play the Quiz</h1>
+        <div class="players">
+            <div id="player1" class="player">
+                <span class="name"></span>: 
+                <input type="number" class="score" value="0" readonly> points
+                <button class="correct button">Correct</button>
+                <button class="wrong button">Wrong</button>
+            </div>
+            <div id="player2" class="player">
+                <span class="name"></span>: 
+                <input type="number" class="score" value="0" readonly> points
+                <button class="correct button">Correct</button>
+                <button class="wrong button">Wrong</button>
+            </div>
+        </div>
+        <div class="timer">Time left: <span id="timer">10</span>s</div>
+        <button id="next-to-scores" class="button">Show Scores</button>
+    </div>
+
+
+    
+    <div id="page-4" class="page">
+        <h1>Final Scores</h1>
+        <div id="score-summary"></div>
+        <button id="try-again-button" class="button">Try Again</button>
+        <button id="new-quiz-button" class="button">Start New Quiz</button>
+    </div>
+
+    <script src="quizapp.js"></script>
+</body>
+</html>
