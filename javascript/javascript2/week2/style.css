@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+body {
+    background: #001e4d
+}
+
+.panel {
+    width: 60%;
+    max-width: 40%;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 30px;
+ 
+
+
+}
+
+.panel-right {
+    justify-content: right;
+    display: flex;
+
+}
+
+.panel h1 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+
+
+
+}
+
+.panel h2 {
+    font-size: 18px;
+    color: #8f1212;
+    font-weight: 600;
+}
+
+.btn {
+    font-weight: 500;
+    background: #fff;
+    color: #222;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #222;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px ;   
+    font-size: 1.5rem;
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px;
+
+
+}
+#start-btn {
+    background: green;
+    color: #fff;
+  
+   
+ 
+  
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+
+
+}
+.Correct {
+    background: rgb(178, 230, 178);
+    
+}
+.Incorrect {
+    background: rgb(239, 174, 174);
+    
+}
