@@ -1,0 +1,27 @@
+{
+    "playersInfo": [
+      { "name": "", "score": 0 },
+      { "name": "", "score": 0 }
+    ],
+    "quizQuestions": [
+      {
+        "question": "What is the capital of France?",
+        "options": [
+          { "text": "Paris", "isCorrect": true },
+          { "text": "London", "isCorrect": false },
+          { "text": "Berlin", "isCorrect": false },
+          { "text": "Madrid", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "What is 2 + 2?",
+        "options": [
+          { "text": "3", "isCorrect": false },
+          { "text": "4", "isCorrect": true },
+          { "text": "22", "isCorrect": false },
+          { "text": "5", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+  

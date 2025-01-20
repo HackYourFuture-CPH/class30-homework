@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Quiz App</h1>
+  <form id="quizForm">
+    <label for="question">Question (max 140 characters):</label>
+    <input type="text" id="question" maxlength="140" required>
+
+    <div id="options">
+      <label>Option 1:</label>
+      <input type="text" class="option" required>
+      <input type="radio" name="correctOption" value="0" required> Correct
+      <br>
+      <label>Option 2:</label>
+      <input type="text" class="option" required>
+      <input type="radio" name="correctOption" value="1"> Correct
+      <br>
+      <label>Option 3:</label>
+      <input type="text" class="option" required>
+      <input type="radio" name="correctOption" value="2"> Correct
+      <br>
+      <label>Option 4:</label>
+      <input type="text" class="option" required>
+      <input type="radio" name="correctOption" value="3"> Correct
+    </div>
+
+    <button type="button" id="shuffleOptions">Shuffle Options</button>
+    <button type="submit">Add Question</button>
+  </form>
+
+  <div id="questionsList">
+    <h2>Questions</h2>
+    <ul id="questionsContainer"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

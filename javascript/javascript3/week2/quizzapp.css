@@ -1,0 +1,202 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, white, #eddad5);
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #4a148c;
+  border-style: double;
+  border-width: 50%;
+}
+
+h1 {
+  margin: 20px 0;
+  animation: pulse 2s infinite;
+}
+h2 {
+  font-size: 15px;
+  font-weight: lighter;
+}
+button {
+  background-color: #4a148c;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff9800;
+  transform: scale(1.1);
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px;
+  border: 2px solid #4a148c;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  display: block;
+  margin: 10px auto;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  border-style: ridge;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in;
+}
+
+
+.quiz-container h1:before {
+  content: '🧙‍♂️';
+  margin-right: 10px;
+  font-size: 1.5em;
+  background-image:url("file:///Users/Aminata/Downloads/undraw_online-test_20lm-2.svg");
+}
+
+.quiz-container h1:after {
+  content: '🧙‍♀️';
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
+.quiz-image,
+.players-image,
+.playing-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 70%;
+  height: auto;
+}
+
+#make-quiz-page,
+#add-players-page {
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+form input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #5548c8;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px turquoise, 0 0 20px salmon, 0 0 30px pink
+  }
+  50% {
+    text-shadow: 0 0 15px purple, 0 0 25px plum, 0 0 35px #f44336;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.timer {
+  font-size: 1.5em;
+  color: #d500f9;
+  text-align: center;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 250px;
+  font-size: 1em;
+}
+
+
+.quiz-result {
+  text-align: center;
+  font-size: 1.5em;
+  color: #4caf50;
+  margin-top: 20px;
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
