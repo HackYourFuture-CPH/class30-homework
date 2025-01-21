@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    background-color: #eef4ff;
+    color: #333;
+}
+
+.panel {
+    width: 80%;
+    max-width: 800px;
+    min-height: 40vh;
+    background-color: #fff;
+    margin: 20% auto;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid #eb8328;
+
+}
+
+.panel h1 {
+    font-size: 1.9rem;
+    color: #e96500;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.panel-right {
+    justify-content: right;
+    display: flex;
+    margin: 30px;
+
+}
+
+.btn {
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+    padding: 10px;
+    width: 40%;
+    border: 1px solid #222;
+    margin: 20px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    justify-content: center;
+}
+
+.btn:hover {
+    background: #ffc491;
+    color: #fff;
+}
+
+.quiz {
+    margin-left: 20px;
+
+}
+
+.quiz h2 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+
+}
+
+#exit-btn {
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    width: 10%;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+#next-btn {
+    background: #e96500;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    width: 15%;
+    align-items: right;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background: rgb(178, 230, 178);
+
+}
+
+.incorrect {
+    background: rgb(239, 174, 174);
+
+}
+
+
+
