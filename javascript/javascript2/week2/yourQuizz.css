@@ -1,0 +1,117 @@
+
+* {
+  margin: 0;
+  padding: 0;
+ font-family: "Poppins", sans-serif;
+}
+
+body {
+ 
+  background-color: #eef4ff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Panel styles */
+.panel-add {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  margin: 5% auto;
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid #eb8328;
+
+}
+
+.panel-add h1 {
+  font-size: 1.8rem;
+  color: #e96500;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Question input styles */
+.add-question {
+  background: #faab6f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+ 
+}
+
+.add-question input,
+.add-options input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #faab6f;
+  font-size: 1rem;
+}
+
+/* Options styles */
+.add-options {
+  background: #fff;
+  border: 1px solid #faab6f;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+}
+
+.add-options label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Button styles */
+.btn-question {
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin: 50px auto 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #47b047;
+  color: #fff;
+}
+
+
+
+
+#exit-btn {
+        background: red;
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        width: 10%;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+    
+    
+    
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .panel-add {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .add-question,
+  .add-options {
+    border-radius: 10px;
+  }
+
+  .btn-question,
+  #exit-btn {
+    font-size: 0.9rem;
+  }
+}
+
