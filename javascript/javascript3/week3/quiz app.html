@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz Whiz 🧙‍♂️ </title>
+    <link rel="stylesheet" href="quizzapp.css">
+</head>
+<body>
+
+
+    <div id="page-1" class="page active">
+        <h1>Quiz Whiz 🧙‍♂️</h1>
+        <img src="undraw_questions_g2px.png" alt="Make a Quiz Illustration" class="quiz-image">
+        <button id="default-quiz"> Play an existing Quiz </button>
+        <button id="user-quiz"> Create Your Own Quiz ! </button>
+
+        <div id="page-2" class="page active"></div>
+        <h2>Create Your Quiz</h2>
+        <div class="quiz-creation">
+            <form id="add-question-form">
+                <label for="question-text">Enter your question:</label>
+                <input type="text" id="question-text" placeholder="Type your question here" required>
+                <button type="submit" class="button">Add Question</button>
+            </form>
+            <form id="add-option-form">
+                <label for="option-text">Enter an option:</label>
+                <input type="text" id="option-text" placeholder="Type your option here" required>
+                <label>
+                    <input type="checkbox" id="is-correct"> Is this the correct answer?
+                </label>
+                <button type="submit" class="button">Add Option</button>
+            </form>
+            <ol id="questions-list"> Your Questions are :</ol>
+            <button id="save-quiz-button" class="button">Save Quiz</button>
+        </div>
+
+
+        <button id="next-to-players-button" class="button">Next</button>
+    </div>
+
+    <div id="page-3" class="page">
+
+        <h1> Add Players: </h1>
+        <img src="undraw_playing-cards_yoqo.png" alt="Add Players Illustration" class="players-image">
+        <div class="player-names">
+            <form>
+                <label for="player1">Player 1:</label>
+                <input type="text" id="player1-name" class="player-name">
+                <label for="player2">Player 2:</label>
+                <input type="text" id="player2-name" class="player-name">
+                <button type="button" id="next-to-quiz-button">Next</button>
+              </form>
+        </div>
+       
+    </div>
+
+
+
+    <div id="page-4" class="page">
+       
+        <h1>Play the Quiz</h1>
+        <img src="undraw_select-player_sppe.png" alt=" Play Illustration" class="playing-image">
+        <button id="start-quiz-button" class="button">Start Quiz</button>
+        <div class="players">
+            <div id="player1" class="player">
+                <span class="name"></span>
+                <button class ="next-button"> Next </button>
+                <input type="number" class="score" value="0" readonly> Player 1 points </input>
+                <button class="correct button">Correct</button>
+                <button class="wrong button">Wrong</button>
+            </div>
+            <div id="player2" class="player">
+                <span class="name"></span> 
+                <input type="number" class="score" value="0" readonly>  Player 2 points </input>
+                <button class="correct button"> Correct </button>
+                <button class="wrong button"> Wrong </button>
+            </div>
+        </div>
+        <div class="timer">Time left: <span id="timer">10</span>s</div>
+
+
+        <div id="quiz">
+            <div id="result" class="result"></div>
+            <button id="submit" class="button">Submit</button>
+            <button id="retry" class="button hide">Retry</button>
+            <button id="showAnswer" class="button hide">Show Answer</button>
+          </div>
+
+
+        </div>
+        <button id="next-to-scores-button" class="button">Show Scores</button>
+    </div>
+
+
+    
+    <div id="page-5" class="page">
+        <h1>Final Scores</h1>
+        <img src="undraw_awards_faq6.png" alt="Winners" class="winners-image">
+        <div id="score-summary"></div>
+        <h2>The Winner is :</h2>
+        <button id="try-again-button" class="button">Try Again</button>
+        <button id="new-quiz-button" class="button">Start New Quiz</button>
+    </div>
+
+    <script src="quizapp.js"></script>
+</body>
+</html>
