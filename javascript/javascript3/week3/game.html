@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+  <div class="panel-add">
+    <div class="exit">
+      <button onclick="location.href='yourQuiz.html'" id="before-btn">Previous</button>
+    </div>
+    <h1>Players</h1>
+
+    <div class="players-name">
+      <div id="player1">
+        <h3 id="player1-name-display">Player 1</h3>
+        <input type="number" class="score" value="0" readonly> points
+        <button class="correct-btn" id="player1-correct-btn">Correct</button>
+        <button class="wrong-btn" id="player1-wrong-btn">Wrong</button>
+      </div>
+
+      <div id="player2">
+        <h3 id="player2-name-display">Player 2</h3>
+        <input type="number" class="score" value="0" readonly> points
+        <button class="correct-btn" id="player2-correct-btn">Correct</button>
+        <button class="wrong-btn" id="player2-wrong-btn">Wrong</button>
+      </div>
+    </div>
+
+    <h1> Your Quiz App </h1>
+    <div class="timer"> Time left: <span id="timer">10</span> </div>
+
+    <div class="quiz">
+      <h2 id="question">Question here</h2>
+      <div id="option-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+        <button class="btn">Answer 5</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="next-btn">Next</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+
+</body>
+
+</html>
