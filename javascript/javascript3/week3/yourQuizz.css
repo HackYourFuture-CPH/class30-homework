@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  margin: 0; 
+  background-color: #f0f0f0; 
+}
+
+
+
+#quiz h1{
+
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+  font-size: 2rem;
+}
+/* Players section */
+.players-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  font-size: 1.3rem;
+
+
+}
+
+.players-name h2 {
+  font-size: 1.5rem;
+  color: #e96500;
+  margin-bottom: 20px;
+}
+
+
+.players-name label {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+
+}
+
+.players-name input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+/* Panel styles */
+.panel-add {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  margin:auto;
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid #eb8328;
+
+}
+
+.panel-add h1 {
+  font-size: 1.2rem;
+  color: #e96500;
+  padding: 10px 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Question input styles */
+.add-question label {
+
+  font-size: 1.2rem;
+  color: #e96500;
+  padding: 10px 0;
+  text-align: left;
+  margin-bottom: 20px;
+  
+}
+.checkbox-container{
+display: inline-flex;
+margin: 15px;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+    width: 30px;
+    height: 10px;
+    accent-color: #28a745; /* Change the color as desired */
+   
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.add-question input,
+.add-options input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #faab6f;
+  font-size: 1rem;
+
+
+}
+
+
+/* Options styles */
+
+
+.add-options label {
+  display: flex;
+  margin: 10px 0;
+}
+
+
+
+#exit-btn {
+  background: red;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  width: 10%;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+
+
+
+}
+
+
+#save-button {
+  display: block; /* Hace que el botón sea un elemento de bloque */
+  background-color: #ea8d29;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 80px auto; /* Centra el botón horizontalmente */
+  cursor: pointer;
+  text-align: center;
+}
+
+#startYourGame {
+  display: block; /* Hace que el botón sea un elemento de bloque */
+  background-color: #429731;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 80px auto; /* Centra el botón horizontalmente */
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .panel-add {
+    width: 100%;
+    padding: 20px;
+  }
+
+}

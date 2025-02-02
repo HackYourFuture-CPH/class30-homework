@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yourQuizz.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="panel-add">
+
+        <div class="exit">
+            <button onclick="location.href='firstPage.html'" id="exit-btn">Exit</button>
+        </div>
+        <div id="quiz">
+            <h1> Create your Own Quiz </h1>
+
+            <div class="players-name">
+                <h2>Enter Players Name</h2>
+                <label for="player1-name">Player 1</label>
+                <input type="text" id="player1-name" name="name-player" placeholder=" Enter name">
+                <label for="player2-name">Player 2 </label>
+                <input type="text" id="player2-name" name="name-player" placeholder="Enter name">
+
+            </div>
+        </div>
+
+        <div class="add-question">
+            <h1> Add Question </h1>
+            <form id="add-question-form">
+                <input type="text" id="question" name="question" placeholder="Add your question" required>
+            </form>
+            <form id="add-options-form">
+                <div class="add-options">
+                    <label for="option-text">Answer 1:</label>
+                    <input type="text" id="answer1" placeholder="Enter your option here" required>
+                    <div class="checkbox-container">
+                        <input type="radio" name="correctAnswer" value="0" required>
+                        <label for="checkbox1">Correct Answer</label>
+
+                    </div>
+                    <label for="option-text">Answer 2:</label>
+                    <input type="text" id="answer2" placeholder="Enter your option here" required>
+                    <div class="checkbox-container">
+                        <input type="radio" name="correctAnswer" value="1" required>
+                        <label for="checkbox2">Correct Answer</label>
+                    </div>
+
+                    <label for="option-text">Answer 3:</label>
+                    <input type="text" id="answer3" placeholder="Enter your option here" required>
+                    <div class="checkbox-container">
+                        <input type="radio" name="correctAnswer" value="2" required>
+                        <label for="checkbox3">Correct Answer</label>
+                    </div>
+
+                    <label for="option-text">Answer 4:</label>
+                    <input type="text" id="answer4" placeholder="Enter your option here" required>
+                    <div class="checkbox-container">
+                        <input type="radio" name="correctAnswer" value="3" required>
+                        <label for="checkbox4">Correct Answer</label>
+                    </div>
+
+                    <button id="save-button" class="button">Save Question</button>
+                </div>
+            </form>
+
+            <div class="filter">
+                <input type="text" id="search" placeholder="Filter questions...">
+            </div>
+            <div class="questions" id="questionsContainer"></div>
+
+            <button id="startYourGame" class="button">Start your Game</button>
+        </div>
+
+
+
+    </div>
+
+<script src="yourQuizz.js"> </script>
+    
+</body>
+
+</html>

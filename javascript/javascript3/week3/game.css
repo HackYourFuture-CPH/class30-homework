@@ -1,0 +1,216 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f0f0f0; 
+}
+
+.panel-add {
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    min-height: 40vh;
+    background-color: #fff;
+    margin: 0; 
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid #eb8328;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.panel-add h1 {
+    font-size: 1.9rem;
+    color: #e96500;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30;
+
+}
+.panel-add h3{
+    font-size: 1.7rem;
+    color: #e96500;
+    padding: 20px 0;
+    text-align: left;
+
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 20%;
+
+}
+
+
+.timer {
+    font-size: 1.2rem;
+    color: #e96500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.players-name{
+    font-size: 1.3rem;
+    margin: 10px 0;
+    padding: 50px;
+    display: flex;
+    border-bottom: 1px solid #333;
+
+
+}
+.players-name input {
+    width: 15%;
+    border-radius: 10px;
+    border: 1px solid #222;
+    margin: 5px;
+
+}
+.players-name .correct-btn {
+    color: #fff;
+    background-color: rgb(64, 192, 64);
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 20%;
+    height: auto;
+    border-style: none;
+    cursor: pointer;
+}
+.quiz {
+    margin-left: 20px;
+
+}
+
+
+.players-name .wrong-btn {
+    color: #fff;
+    background-color: rgb(253, 72, 72);
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 20%;
+    height: auto;
+    border-style: none;
+    cursor: pointer;
+
+}
+.score{
+    font-size: 1.2rem;
+    color: #e96500;
+    text-align: center; 
+
+}
+
+
+#before-btn {
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    width: 10%;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+
+
+}
+
+#next-btn {
+    background: #e96500;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    width: 15%;
+    align-items: right;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+
+    float: right;
+}.btn {
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+    padding: 10px;
+    width: 40%;
+    border: 1px solid #222;
+    margin: 20px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    justify-content: center;
+
+
+}
+
+
+
+.btn:hover {
+    background: #ffc491;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background: rgb(178, 230, 178);
+
+}
+
+.incorrect {
+    background: rgb(239, 174, 174);
+
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .panel-add {
+        width: 95%;
+        padding: 20px;
+
+    
+    }
+
+
+    .players-name input {
+        width: 80%;
+        ;
+    
+    }
+
+    .btn {
+        width: 30%;
+    
+    }
+
+    .players-name .correct-btn , .players-name .wrong-btn {
+        width: 40%;
+        font-size: small;
+   
+    
+    }       
+
+
+
+}
