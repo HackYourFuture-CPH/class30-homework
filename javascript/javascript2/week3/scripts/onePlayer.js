@@ -6,21 +6,32 @@ const pointHolder = quizContainer.querySelector("#point-holder");
 const questionTitle = quizContainer.querySelector("#question-title");
 const buttons = quizContainer.querySelectorAll("button");
 
+
+
+async function fetchQuestion(){
+  const response = await fetch("https://raw.githubusercontent.com/jalilhu/jalilhu.github.io/refs/heads/main/data/quiz_data.json")
+  const data = await response.json()
+  
+  await resultAndSwitch(data.questions);
+}
+
+
 let correctPoints = 0;
 let incorrectPoints = 0;
 
-let currentQuestionIndex = 0; 
+let currentQuestionIndex = 0;
 let answer;
 
-resultAndSwitch();
-
-
-async function resultAndSwitch() {
-  while (currentQuestionIndex < questions.length) {
-    const question = questions[currentQuestionIndex];
+await fetchQuestion()
+async function resultAndSwitch(data) {
+  console.log(data)
+  while (currentQuestionIndex < data.length) {
+    const question = data[currentQuestionIndex];
 
     questionTitle.textContent = question.question;
-    quantity.textContent = `${currentQuestionIndex + 1} out of ${questions.length}`;
+    quantity.textContent = `${currentQuestionIndex + 1} out of ${
+      data.length
+    }`;
     pointHolder.textContent = `Correct: ${correctPoints}`;
     questionNumber.textContent = `Incorrect: ${incorrectPoints}`;
     answer = question.answer;
@@ -28,12 +39,13 @@ async function resultAndSwitch() {
     let value = await new Promise((resolve) => {
       buttons.forEach((button) => {
         button.addEventListener("click", () => {
-          resolve(button.value === "true"); 
+          resolve(button.value === "true");
         });
       });
     });
 
     if (value === answer) {
+      console.log(value, answer)
       correctPoints++;
     } else {
       incorrectPoints++;
@@ -47,12 +59,10 @@ async function resultAndSwitch() {
   quantity.textContent = "";
   pointHolder.textContent = `Correct: ${correctPoints}`;
   questionNumber.textContent = `Incorrect: ${incorrectPoints}`;
+  buttons.forEach((button)=>{
+    button.style.display = "none"
+  })
 }
-
-
-
-
-
 
 // <section id="quiz-container">
 //     <h3 id="quantity-outof">1 out of 10</h3>

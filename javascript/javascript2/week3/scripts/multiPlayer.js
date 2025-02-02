@@ -1,4 +1,4 @@
-import { questions } from "./questions.js";
+//import { questions } from "./questions.js";
 const quizContainer = document.querySelectorAll(".quiz-container");
 const quantity = document.querySelectorAll(".quantity-outof");
 const questionNumber = document.querySelectorAll(".question-number");
@@ -7,9 +7,18 @@ const questionTitle = document.querySelectorAll(".question-title");
 const buttonsPlayer1 = document.querySelectorAll(".buttons-player1");
 const buttonsPlayer2 = document.querySelectorAll(".buttons-player2");
 
-await whoIsTheWinner();
 
-async function resultAndSwitchPlayer1() {
+async function fetchQuestion(){
+  const response = await fetch("https://raw.githubusercontent.com/jalilhu/jalilhu.github.io/refs/heads/main/data/quiz_data.json")
+  const data = await response.json()
+  const sortedAlphabetically =  data.questions.sort() 
+  await whoIsTheWinner(sortedAlphabetically);
+}
+
+
+await fetchQuestion()
+
+async function resultAndSwitchPlayer1(questions) {
   let correctPoints = 0;
   let incorrectPoints = 0;
 
@@ -56,7 +65,7 @@ async function resultAndSwitchPlayer1() {
   return [correctPoints, incorrectPoints];
 }
 
-async function resultAndSwitchPlayer2() {
+async function resultAndSwitchPlayer2(questions) {
   let correctPoints = 0;
   let incorrectPoints = 0;
 
@@ -103,10 +112,10 @@ async function resultAndSwitchPlayer2() {
   return [correctPoints, incorrectPoints];
 }
 
-async function whoIsTheWinner() {
+async function whoIsTheWinner(data) {
   const [player1Scores, player2Scores] = await Promise.all([
-    resultAndSwitchPlayer1(),
-    resultAndSwitchPlayer2(),
+    resultAndSwitchPlayer1(data),
+    resultAndSwitchPlayer2(data),
   ]);
     let player1Score = player1Scores[0] + player2Scores[1]
     let player2Score = player2Scores[0] + player1Scores[1]
