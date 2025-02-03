@@ -1,7 +1,7 @@
 const owner = "jalilhu";
 const repo = "Quiz_App";
-const path = "userQuestions.json"; // Path to the JSON file
-const token = "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";
+const path = "userQuestions.json"; 
+
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
 
 export async function updateFile(newContent, commitMessage = "Updated JSON file") {
