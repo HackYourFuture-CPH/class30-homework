@@ -1,7 +1,10 @@
-const owner = "jalilhu";
-const repo = "Quiz_App";
-const path = "userQuestions.json"; 
+import { CONFIG } from "./token.js";
 
+const owner = "jalilhu";
+
+const repo = "Quiz_App";
+const path = "userQuestions.json"; // Path to the JSON file
+const token = CONFIG.GITHUB_TOKEN;
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
 
 export async function updateFile(newContent, commitMessage = "Updated JSON file") {
@@ -19,7 +22,8 @@ export async function updateFile(newContent, commitMessage = "Updated JSON file"
         const sha = data.sha;
 
         // Prepare updated content (convert object to base64)
-        const updatedContent = Buffer.from(JSON.stringify(newContent, null, 2)).toString("base64");
+        const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(newContent, null, 2))));
+        console.log("it is updating")
 
         // PUT request to update the file
         const updateResponse = await fetch(apiUrl, {
@@ -41,6 +45,29 @@ export async function updateFile(newContent, commitMessage = "Updated JSON file"
         console.log("File updated successfully!");
     } catch (error) {
         console.error("Error:", error.message);
+    }
+}
+export async function fetchJsonFile() {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+    try {
+        const response = await fetch(apiUrl, {
+            headers: {
+                Accept: "application/vnd.github.v3+json"
+            }
+        });
+
+        if (!response.ok) throw new Error(`Error fetching file: ${response.statusText}`);
+
+        const data = await response.json(); // Get JSON response
+
+        // Decode Base64 content
+        const jsonContent = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+
+        console.log("📂 JSON File Content:", jsonContent);
+        return jsonContent;
+    } catch (error) {
+        console.error("❌ Error:", error.message);
     }
 }
 

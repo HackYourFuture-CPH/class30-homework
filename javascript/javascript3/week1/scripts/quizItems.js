@@ -1,4 +1,4 @@
-import { updateFile } from "./quizToSaveApi";
+import { updateFile } from "./quizToSaveApi.js";
 
 
 let amountReceived = parseInt(
@@ -6,7 +6,7 @@ let amountReceived = parseInt(
   10
 );
 const ListOfAllQuiz = [];
-let body = document.body;
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Page loaded successfully");
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (button === buttons[buttons.length - 1]) {
         itemRecived = collapseForm(parent);
         sendDataToLocalStorage(itemRecived);
-        nextButton();
+        // nextButton();
       }
     });
   });
@@ -91,6 +91,7 @@ function checkIfDuplicateAndSave(itemRecived, arrayOfData) {
     }
     localStorage.setItem("allItem", JSON.stringify(ListOfAllQuiz));
     updateFile(ListOfAllQuiz, "Questions Updated")
+    console.log("it is updating")
 }
 
 function nextButton() {
@@ -262,23 +263,3 @@ function collapseForm(form) {
   return parseData;
 }
 
-//
-//{question-1: 'capital', option-1: 'berlin', option-2: 'oslo', option-3: 'munich', option-4: 'hamburg', …}
-// Choice-2
-// :
-// "on"
-// option-1
-// :
-// "berlin"
-// option-2
-// :
-// "oslo"
-// option-3
-// :
-// "munich"
-// option-4
-// :
-// "hamburg"
-// question-1
-// :
-// "capital"
