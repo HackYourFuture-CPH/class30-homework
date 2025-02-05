@@ -88,5 +88,26 @@ WHERE st.name != "Done"; /* all tasks that are not done 23*/
 SELECT title
 FROM `task`
 ORDER BY created DESC; /*tasks ordered by the most recently created*/
+SELECT * FROM task
+WHERE created = (SELECT MAX(created) FROM task); /*getting the most recently created task*/
+
+SELECT title, due_date
+FROM `task`
+WHERE (title LIKE '%database%') OR (description LIKE '%database%'); /* title and due date of all tasks containing "database" in title or description*/
+
+SELECT tk.title, st.name 
+FROM `task` as tk 
+JOIN `status` as st ON tk.status_id = st.id; /* getting all tasks and status as text*/
+
+SELECT st.name, COUNT(tk.status_id)
+FROM `status`as st 
+JOIN `task` as tk ON tk.status_id = st.id
+GROUP BY st.name; /*aggregating tasks by each status name*/
+
+SELECT st.name, COUNT(tk.status_id)
+FROM `status`as st 
+JOIN `task` as tk ON tk.status_id = st.id
+GROUP BY st.name
+ORDER BY COUNT(tk.status_id) DESC; /*descending ordering of the status names by number of tasks */
 
 
