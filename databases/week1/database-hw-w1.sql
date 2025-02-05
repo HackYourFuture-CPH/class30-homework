@@ -1,7 +1,3 @@
-SELECT * FROM users;
-SELECT * FROM task;
-SELECT * FROM status;
-
 -- Find out how many tasks are in the task table
 SELECT count(id) FROM task;
 
