@@ -16,6 +16,7 @@ SELECT title FROM task
 WHERE status_id != (SELECT id FROM status
 WHERE name = 'Done');
 
+
 -- 5. Get all the tasks, sorted with the most recently created first
 SELECT * FROM task
 ORDER BY created_at DESC;
