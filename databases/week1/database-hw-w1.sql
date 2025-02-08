@@ -7,11 +7,11 @@ WHERE due_date is NULL;
 
 -- Find all the tasks that are marked as done
 SELECT * FROM task 
-WHERE status_id IN (SELECT id FROM status WHERE name LIKE "%done%");
+WHERE status_id = (SELECT id FROM status WHERE name = 'Done');
 
 -- Find all the tasks that are not marked as done
 SELECT * FROM task
-WHERE status_id NOT IN (SELECT id FROM status WHERE name LIKE "%done%");
+WHERE status_id NOT IN (SELECT id FROM status WHERE name = 'Done');
 
 -- Get all the tasks, sorted with the most recently created first
 SELECT * FROM task
@@ -30,17 +30,17 @@ OR description LIKE "%database%";
 -- Get the title and status (as text) of all tasks
 SELECT task.title AS task_title, status.name AS task_status
 FROM task
-LEFT JOIN status on task.status_id = status.id;
+INNER JOIN status on task.status_id = status.id;
 
 -- Get the name of each status, along with a count of how many tasks have that status
 SELECT status.name AS task_status, count(task.title) AS task_count 
 FROM task
-LEFT JOIN status on task.status_id = status.id
+INNER JOIN status on task.status_id = status.id
 GROUP BY task_status;
 
 -- Get the names of all statuses, sorted by the status with most tasks first
 SELECT status.name AS task_status, count(task.title) AS task_count 
 FROM task
-LEFT JOIN status on task.status_id = status.id
+INNER JOIN status on task.status_id = status.id
 GROUP BY task_status
 ORDER BY task_count DESC;
