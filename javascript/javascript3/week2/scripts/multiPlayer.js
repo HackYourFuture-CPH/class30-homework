@@ -6,17 +6,20 @@ const pointHolder = document.querySelectorAll(".point-holder");
 const questionTitle = document.querySelectorAll(".question-title");
 const buttonsPlayer1 = document.querySelectorAll(".buttons-player1");
 const buttonsPlayer2 = document.querySelectorAll(".buttons-player2");
+const error = new Audio('./audio/error.mp3');
+const correct = new Audio('./audio/correct.mp3')
 
 
-async function fetchQuestion(){
-  const response = await fetch("https://raw.githubusercontent.com/jalilhu/jalilhu.github.io/refs/heads/main/data/quiz_data.json")
-  const data = await response.json()
-  const sortedAlphabetically =  data.questions.sort() 
+async function fetchQuestion() {
+  const response = await fetch(
+    "https://raw.githubusercontent.com/jalilhu/jalilhu.github.io/refs/heads/main/data/quiz_data.json"
+  );
+  const data = await response.json();
+  const sortedAlphabetically = data.questions.sort();
   await whoIsTheWinner(sortedAlphabetically);
 }
 
-
-await fetchQuestion()
+await fetchQuestion();
 
 async function resultAndSwitchPlayer1(questions) {
   let correctPoints = 0;
@@ -49,8 +52,28 @@ async function resultAndSwitchPlayer1(questions) {
     });
 
     if (value === answer) {
+      correct.play()
+      setTimeout(() => {
+        document.querySelector(
+          ".quiz-container:nth-child(1)"
+        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      }, 500);
+      document.querySelector(
+        ".quiz-container:nth-child(1)"
+      ).style.backgroundColor = "rgba(0, 255, 34, 0.37)";
+
       correctPoints++;
     } else {
+      error.play()
+      setTimeout(() => {
+        document.querySelector(
+          ".quiz-container:nth-child(1)"
+        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      }, 500);
+      document.querySelector(
+        ".quiz-container:nth-child(1)"
+      ).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+
       incorrectPoints++;
     }
 
@@ -96,8 +119,28 @@ async function resultAndSwitchPlayer2(questions) {
     });
 
     if (value === answer) {
+      correct.play()
+      setTimeout(() => {
+        document.querySelector(
+          ".quiz-container:nth-child(2)"
+        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+       
+      }, 500);
+      document.querySelector(
+        ".quiz-container:nth-child(2)"
+      ).style.backgroundColor = "rgba(0, 255, 34, 0.37)";
+
       correctPoints++;
     } else {
+      document.querySelector(
+        ".quiz-container:nth-child(2)"
+      ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      error.play()
+      setTimeout(() => {}, 500);
+      document.querySelector(
+        ".quiz-container:nth-child(2)"
+      ).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+
       incorrectPoints++;
     }
 
@@ -117,12 +160,11 @@ async function whoIsTheWinner(data) {
     resultAndSwitchPlayer1(data),
     resultAndSwitchPlayer2(data),
   ]);
-    let player1Score = player1Scores[0] + player2Scores[1]
-    let player2Score = player2Scores[0] + player1Scores[1]
-    
+  let player1Score = player1Scores[0] + player2Scores[1];
+  let player2Score = player2Scores[0] + player1Scores[1];
 
   if (player1Score > player2Score) {
-    console.log(player1Score , player2Score)
+    console.log(player1Score, player2Score);
     createWinnerElements("Player One", player1Score, player2Score);
   } else if (player2Score > player1Score) {
     createWinnerElements("Player Two", player1Score, player2Score);
@@ -131,19 +173,24 @@ async function whoIsTheWinner(data) {
   }
 }
 function createWinnerElements(playerName, player1Score, player2Score) {
-    console.log(player1Score, player2Score)
-    console.log(typeof player1Score, typeof player2Score)
+  console.log(player1Score, player2Score);
+  console.log(typeof player1Score, typeof player2Score);
   let winnerContainer = document.createElement("div");
-  let playerOneScore = document.createElement('p')
-  let playerTwoScore = document.createElement('p')
-  playerOneScore.textContent = `Player 1 Score: ${player1Score}`
-  playerTwoScore.textContent = `Player 2 Score: ${player2Score}`
-  winnerContainer.appendChild(playerOneScore)
-  winnerContainer.appendChild(playerTwoScore)
+  let playerOneScore = document.createElement("p");
+  let playerTwoScore = document.createElement("p");
+  playerOneScore.textContent = `P1 Score: ${player1Score}`;
+  playerTwoScore.textContent = `P2 Score: ${player2Score}`;
+  winnerContainer.appendChild(playerOneScore);
+  winnerContainer.appendChild(playerTwoScore);
   winnerContainer.className = "winner";
   let winnerTitle = document.createElement("h1");
-  winnerTitle.textContent = `THE WINNER ${playerName}`;
+  let winnerName = document.createElement('h1');
+  winnerTitle.textContent = `THE WINNER`;
+  winnerName.textContent= `${playerName}`
   winnerContainer.appendChild(winnerTitle);
+  winnerContainer.appendChild(winnerName)
   const main = document.querySelector("main");
+  document.querySelector('.quiz-container:nth-child(1)').style.display = 'none';
+  document.querySelector('.quiz-container:nth-child(2)').style.display = 'none';
   main.appendChild(winnerContainer);
 }

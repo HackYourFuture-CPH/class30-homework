@@ -1,37 +1,55 @@
+html{
+    height: 100vh;
+    width: 100vw;
+}
 body{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     margin: 0;
+    font-family: "Trirong", serif;
     
 }
-form{
-    background-color: rgba(213, 241, 180, 0.5);
-    margin: 20px auto;
+.containerOfEachQuiz{
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    place-items: center;
-    width: 500px;
-    padding: 30px;
-    border-radius: 30px;
+    height: 100%;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 500px;
+    
+    gap: 0;
+    padding: 0;
+}
+
+
 .questionLabel{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px 20px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .questionInput{
+    all: unset;
     font-style: normal;
-    border: 2px solid grey;
+    border:  none;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 0 10px;
     width: 100%;
     height: 30px;
-    border-radius: 5px;
     box-shadow: 0;
     text-shadow: 0;
-    margin: 20px;
+    font-family: 12px;
 }
 .optContainer{
     width: 100%;
@@ -39,27 +57,26 @@ form{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    place-items: center;
-    
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 50px 0;
+    position: relative;
 }
 .optLabel{
-    width: 80%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
-    text-align: center;
-    margin: 20px 0 5px 0;
 
 
 }
 .optContainer input{
-    font-style: normal;
-    border: 2px solid grey;
-    width: 40%;
-    height: 30px;
-    border-radius: 5px;
+    all: unset;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    font-size: 12px;
+    padding: 10px;
     box-shadow: 0;
     text-shadow: 0;
+   
+
 
 }
 
@@ -68,48 +85,107 @@ form{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    justify-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(71, 71, 71, 0.1);
-    font-size: 12px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 13px;
+    gap: 10px;
+    border-top: 1px solid black;
+    margin: 0;
+
     
+}
+.titleOptions{
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
 }
 .eachOption{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-items: center;
-    padding: 15px 15px 0 15px;
-    margin: 10px;
-    border: 10px solid grey;
-    border-radius: 10px;
-    border-right: rgba(255, 255, 255, 0.5);
-    border-bottom: rgba(255, 255, 255, 0.5);
-    border-left: rgba(0, 0, 0,  0.1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .eachOption label{
     margin-bottom: 12px;
 }
 .eachOption input{
-    width: 20px;
-    height: 20px;
-    border: 2px solid grey;
+
+    width: 15px;
+    height: 15px;
+    
     padding-bottom: 0;
     margin-bottom: 0;
 }
 button{
+    
+    all: unset;
+    position: relative;
     padding: 10px 40px;
-    border: 0;
-    border-radius: 10px;
     background-color:  rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    display: inline-block;
+    overflow: hidden;
+}
+button::after{
+    position: absolute;
+    content: "";
+    height: 80% ;
+    width: 100%;
+    border-top: 1px solid black;
+    background-color: transparent;
+
+    top: 0;
+    left: 0;
+
+    animation: button-border 3s ease-in-out alternate-reverse both infinite;
+
+}
+button::before{
+    position: absolute;
+    content: "";
+    height: 100% ;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+
+    bottom: 0;
+    left: 0;
+   animation: button-border 3s ease-in-out reverse both infinite;
+
+}
+
+button::after:hover{
+    animation: button-border 3s forwards ease-in infinite;
+}
+button:hover{
+    /* animation: button-border 3s alternate ease-in; */
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    transition: 1s ease-out;
+   
+}
+
+@keyframes button-border {
+    0%{
+       height: 100%;
+       width: 0;
+    }
+    50%{
+        display: block;
+       width: 100%;
+       height: 100%;
+    }
+    100%{
+        left: 300px;
+        height: 100%;
+        width: 0;
+        border: none;
+    }
+    
 }
 .quizContainer{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -126,3 +202,25 @@ button{
     font-weight: 400;
     font-size: 14px;
 }
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "✔";
+    color: black;
+    font-size: 15px;
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    display: block;
+  }

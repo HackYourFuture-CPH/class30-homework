@@ -19,7 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let i = 1; i < amountReceived + 1; i++) {
     generateQuizElement(i);
   }
+  const checkboxes = document.querySelectorAll("input[type='checkbox']");
 
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      checkboxes.forEach((cb) => {
+        if (cb !== this) cb.checked = false;
+      });
+    });
+  });
+  
+  
   // let  checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
   // checkboxes.forEach((checkbox) => {
@@ -49,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (button === buttons[buttons.length - 1]) {
         itemRecived = collapseForm(parent);
         sendDataToLocalStorage(itemRecived);
-        // nextButton();
+        nextButton();
       }
     });
   });
@@ -111,16 +121,17 @@ function generateQuizElement(number) {
   let questionLabel = document.createElement("label");
   questionLabel.className = "questionLabel";
   questionLabel.setAttribute("for", `question-${number}`);
-  questionLabel.id = `question-${number}`;
-  questionLabel.textContent = `Question - ${number}`;
-
+  questionLabel.id = `que-${number}`;
+  questionLabel.textContent = `Q-${number}`
   questionLabel.appendChild(document.createElement("br"));
 
   let inputQuestion = document.createElement("input");
   inputQuestion.className = "questionInput";
+  inputQuestion.required = true;
   inputQuestion.id = `question-${number}`;
   inputQuestion.type = "text";
-  inputQuestion.name = `question-${number}`;
+  inputQuestion.name = `que-${number}`;
+  inputQuestion.placeholder = "Enter your question here..."
 
   inputQuestion.appendChild(document.createElement("br"));
   form.appendChild(questionLabel);
@@ -130,20 +141,26 @@ function generateQuizElement(number) {
   optDiv.className = "optContainer";
 
   for (let i = 1; i < 5; i++) {
+    const options_choice_holder = document.createElement('div')
+    options_choice_holder.className = "options-choice-holder";
+    
     let optLabel = document.createElement("label");
     optLabel.className = "optLabel";
     optLabel.setAttribute("for", `input-${i}-${number}`);
     optLabel.id = `int-${i}-${number}`;
-    optLabel.textContent = `Possible Answer-${i}`;
+    optLabel.textContent = `${i}- `;
     // optLabel.appendChild(document.createElement("br"))
-    optDiv.appendChild(optLabel);
+    options_choice_holder.appendChild(optLabel);
 
     let ChoiceInput = document.createElement("input");
+    ChoiceInput.required = true
     ChoiceInput.type = "text";
-    ChoiceInput.id = `ipt-${i}-${number}`;
+    ChoiceInput.placeholder = "Enter your answer here..."
+    ChoiceInput.id = `input-${i}-${number}`;
     ChoiceInput.name = `option-${i}`;
     // ChoiceInput.appendChild(document.createElement("br"))
-    optDiv.appendChild(ChoiceInput);
+    options_choice_holder.appendChild(ChoiceInput);
+    optDiv.appendChild(options_choice_holder)
   }
   let options = generateQuizOptions();
 
@@ -167,6 +184,7 @@ function generateQuizOptions() {
 
   let titleOptions = document.createElement("h3");
   titleOptions.className = "titleOptions";
+  titleOptions.textContent = "Correct option"
   optionsDiv.appendChild(titleOptions);
   titleOptions.appendChild(document.createElement("br"));
   let ulOptions = document.createElement("div");
@@ -179,15 +197,16 @@ function generateQuizOptions() {
     eachOpton.className = "eachOption";
     let optionLabel = document.createElement("label");
     optionLabel.className = "optionLabel";
-    optionLabel.setAttribute("for", `input-${i}-${num}`);
-    optionLabel.id = `input-${i}-${num}`;
-    optionLabel.textContent = `is ${i} correct?`;
+    optionLabel.setAttribute("for", `check-${i}-${num}`);
+    optionLabel.id = `checkbox-${i}-${num}`;
+    optionLabel.textContent = `${i}`;
     // optionLabel.appendChild(document.createElement("br"))
     eachOpton.appendChild(optionLabel);
 
     let optionCheckBoxInput = document.createElement("input");
+    optionCheckBoxInput.required = true
     optionCheckBoxInput.type = "checkbox";
-    optionCheckBoxInput.id = `input-${i}-${num}`;
+    optionCheckBoxInput.id = `check-${i}-${num}`;
     optionCheckBoxInput.name = `Choice-${i}`;
 
     eachOpton.appendChild(optionCheckBoxInput);
