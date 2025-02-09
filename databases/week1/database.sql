@@ -37,7 +37,7 @@ GROUP BY status.name;
 
 SELECT status.name, COUNT(task.id) AS task_count
 FROM status
-JOIN task ON status.id = task.status_id
+LEFT JOIN task ON status.id = task.status_id
 GROUP BY status.name
 ORDER BY task_count DESC;
 
