@@ -1,3 +1,5 @@
+USE hyf_lesson1
+
 SELECT COUNT(*) AS total_tasks FROM task;
 
 SELECT COUNT(*) AS invalid_due_dates 
