@@ -56,7 +56,7 @@ FROM tasks
 WHERE status_id = 3;
 
 -- Find all the tasks that are not marked as done
-ELECT * 
+SELECT * 
 FROM tasks 
 WHERE status_id = 3;
 
