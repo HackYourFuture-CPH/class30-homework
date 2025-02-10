@@ -53,3 +53,33 @@ insert into user_task (user_id, task_id) values(9, 28);
 insert into user_task (user_id, task_id) values(10, 31);
 insert into user_task (user_id, task_id) values(11, 32);
 
+
+--Part 1:
+-- Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id
+INSERT INTO task (title, description, created, updated, due_date, status_id, user_id)
+VALUES
+('Do sql homework', 'Check the github!','2025-2-10 17:54:16','2025-2-25 06:54:16','2025-3-13 06:54:16', 2, NULL);
+
+-- Change the title of a task
+UPDATE task
+SET title = 'Update Data for Homework Assignment'
+WHERE task.title = 'Make the databases perform better'
+
+-- Change a task due date
+UPDATE task
+SET due_date = '2024-12-22 06:00:00'
+WHERE id = 1; 
+
+-- Change a task status
+UPDATE task
+SET status_id = 3
+WHERE id = 1; 
+
+-- Mark a task as complete
+UPDATE task
+SET status_id = (SELECT id FROM status WHERE status.name = 'Done')
+WHERE task.title = 'Update Data for Homework Assignment';
+
+-- Delete a task
+DELETE FROM task
+WHERE id = 5;
