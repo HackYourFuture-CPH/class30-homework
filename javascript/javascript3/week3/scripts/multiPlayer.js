@@ -21,26 +21,23 @@ async function fetchQuestion() {
 
 await fetchQuestion();
 
-async function resultAndSwitchPlayer1(questions) {
+async function resultAndSwitchPlayer(questions, playerIndex) {
   let correctPoints = 0;
   let incorrectPoints = 0;
-
   let currentQuestionIndex = 0;
   let answer;
-
+  
   while (currentQuestionIndex < questions.length) {
     const question = questions[currentQuestionIndex];
 
-    questionTitle[0].textContent = question.question;
-    quantity[0].textContent = `${currentQuestionIndex + 1} out of ${
-      questions.length
-    }`;
-    pointHolder[0].textContent = `Correct: ${correctPoints}`;
-    questionNumber[0].textContent = `Incorrect: ${incorrectPoints}`;
+    questionTitle[playerIndex].textContent = question.question;
+    quantity[playerIndex].textContent = `${currentQuestionIndex + 1} out of ${questions.length}`;
+    pointHolder[playerIndex].textContent = `Correct: ${correctPoints}`;
+    questionNumber[playerIndex].textContent = `Incorrect: ${incorrectPoints}`;
     answer = question.answer;
 
     let value = await new Promise((resolve) => {
-      buttonsPlayer1.forEach((button) => {
+      (playerIndex === 0 ? buttonsPlayer1 : buttonsPlayer2).forEach((button) => {
         button.addEventListener(
           "click",
           () => {
@@ -51,114 +48,37 @@ async function resultAndSwitchPlayer1(questions) {
       });
     });
 
+    const quizContainer = document.querySelector(`.quiz-container:nth-child(${playerIndex + 1})`);
+
     if (value === answer) {
-      correct.play()
-      setTimeout(() => {
-        document.querySelector(
-          ".quiz-container:nth-child(1)"
-        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-      }, 500);
-      document.querySelector(
-        ".quiz-container:nth-child(1)"
-      ).style.backgroundColor = "rgba(0, 255, 34, 0.37)";
-
-      correctPoints++;
+      correct.play();
+      quizContainer.style.backgroundColor = "rgba(0, 255, 34, 0.37)";
     } else {
-      error.play()
-      setTimeout(() => {
-        document.querySelector(
-          ".quiz-container:nth-child(1)"
-        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-      }, 500);
-      document.querySelector(
-        ".quiz-container:nth-child(1)"
-      ).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
-
-      incorrectPoints++;
+      error.play();
+      quizContainer.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
     }
 
+    setTimeout(() => {
+      quizContainer.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    }, 500);
+
+    value === answer ? correctPoints++ : incorrectPoints++;
     currentQuestionIndex++;
   }
 
   console.log("Quiz completed!");
-  questionTitle[0].textContent = "Quiz completed!";
-  quantity[0].textContent = "";
-  pointHolder[0].textContent = `Correct: ${correctPoints}`;
-  questionNumber[0].textContent = `Incorrect: ${incorrectPoints}`;
-  return [correctPoints, incorrectPoints];
-}
-
-async function resultAndSwitchPlayer2(questions) {
-  let correctPoints = 0;
-  let incorrectPoints = 0;
-
-  let currentQuestionIndex = 0;
-  let answer;
-
-  while (currentQuestionIndex < questions.length) {
-    const question = questions[currentQuestionIndex];
-
-    questionTitle[1].textContent = question.question;
-    quantity[1].textContent = `${currentQuestionIndex + 1} out of ${
-      questions.length
-    }`;
-    pointHolder[1].textContent = `Correct: ${correctPoints}`;
-    questionNumber[1].textContent = `Incorrect: ${incorrectPoints}`;
-    answer = question.answer;
-
-    let value = await new Promise((resolve) => {
-      buttonsPlayer2.forEach((button) => {
-        button.addEventListener(
-          "click",
-          () => {
-            resolve(button.value === "true");
-          },
-          { once: true }
-        );
-      });
-    });
-
-    if (value === answer) {
-      correct.play()
-      setTimeout(() => {
-        document.querySelector(
-          ".quiz-container:nth-child(2)"
-        ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-       
-      }, 500);
-      document.querySelector(
-        ".quiz-container:nth-child(2)"
-      ).style.backgroundColor = "rgba(0, 255, 34, 0.37)";
-
-      correctPoints++;
-    } else {
-      document.querySelector(
-        ".quiz-container:nth-child(2)"
-      ).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-      error.play()
-      setTimeout(() => {}, 500);
-      document.querySelector(
-        ".quiz-container:nth-child(2)"
-      ).style.backgroundColor = "rgba(255, 0, 0, 0.5)";
-
-      incorrectPoints++;
-    }
-
-    currentQuestionIndex++;
-  }
-
-  console.log("Quiz completed!");
-  questionTitle[1].textContent = "Quiz completed!";
-  quantity[1].textContent = "";
-  pointHolder[1].textContent = `Correct: ${correctPoints}`;
-  questionNumber[1].textContent = `Incorrect: ${incorrectPoints}`;
+  questionTitle[playerIndex].textContent = "Quiz completed!";
+  quantity[playerIndex].textContent = "";
+  pointHolder[playerIndex].textContent = `Correct: ${correctPoints}`;
+  questionNumber[playerIndex].textContent = `Incorrect: ${incorrectPoints}`;
+  
   return [correctPoints, incorrectPoints];
 }
 
 async function whoIsTheWinner(data) {
   const [player1Scores, player2Scores] = await Promise.all([
-    resultAndSwitchPlayer1(data),
-    resultAndSwitchPlayer2(data),
+    resultAndSwitchPlayer(data, 0),
+    resultAndSwitchPlayer(data, 1),
   ]);
   let player1Score = player1Scores[0] + player2Scores[1];
   let player2Score = player2Scores[0] + player1Scores[1];

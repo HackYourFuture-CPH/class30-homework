@@ -62,17 +62,27 @@ async function resultAndSwitch(data) {
   buttons.forEach((button)=>{
     button.style.display = "none"
   })
+  document.querySelector('section').style.display = 'none';
+  createWinnerElements(correctPoints, incorrectPoints)
 }
 
-// <section id="quiz-container">
-//     <h3 id="quantity-outof">1 out of 10</h3>
-//     <div id="point-number-holder">
-//         <p id="question-number">Question</p>
-//         <p id="point-holder">Point</p>
-//     </div>
-//     <h2 id="question-title">question</h2>
-//     <div id="buttons-holder">
-//         <button id="true-button">True</button>
-//         <button id="false-button">False</button>
-//     </div>
-// </section>
+function createWinnerElements(correct, incorrect) {
+  let winnerContainer = document.createElement("div");
+  let incorrectScore = document.createElement("p");
+  let correctStore = document.createElement("p");
+  incorrectScore.textContent = `Incorrect: ${incorrect}`;
+  correctStore.textContent = `Correct: ${correct}`;
+  winnerContainer.appendChild(incorrectScore);
+  winnerContainer.appendChild(correctStore);
+  winnerContainer.className = "winner";
+  let winnerTitle = document.createElement("h1");
+  if(correct > incorrect){
+    winnerTitle.textContent = `You Win`;
+  }else{
+    winnerTitle.textContent = `You Loose`;
+  }
+  winnerContainer.appendChild(winnerTitle);
+  const main = document.querySelector("main");
+
+  main.appendChild(winnerContainer);
+}

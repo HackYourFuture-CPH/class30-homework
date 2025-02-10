@@ -1,13 +1,14 @@
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    
+    font-family: "Trirong", serif;
+
 }
 
-#form-container{
+#form-container {
     width: 500px;
     max-width: 1300px;
 
@@ -17,7 +18,8 @@ body{
     margin: 20px auto;
 
 }
-form{
+
+form {
     width: 100%;
     margin: 20px auto;
     display: flex;
@@ -26,51 +28,114 @@ form{
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 30px;
-    background-color: antiquewhite;
     padding: 10px 0;
 }
 
-form label{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+form label {
+
     text-align: center;
     margin: 20px 0;
 
 }
-form div{
+
+form div {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
-form div label{
+
+form div label {
     border-bottom: 2px solid grey;
     padding: 10px;
     margin: 0 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     font-size: 13px;
-    position:relative;
+    position: relative;
 }
-form div label input{
-   width: 15px;
-   height: 15px;
-   position:absolute;
-   top: 45px;
-   left: 16px;
-   
+
+form div label input {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+
 
 }
-form button{
+
+form button {
     padding: 5px 20px;
     margin: 0 0 20px 0;
 }
-.quizLabelID{
+
+.quizLabelID {
     font-size: 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
-.questionNumber{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.questionNumber {
+
     font-size: 13px;
     text-align: left;
     width: 80%;
+}
+.quizQuestion{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 5px 10px;
+    margin: 5px 30%;
+    text-align: center;
+}
+
+form label{
+    font-size: 19px;
+   
+    margin: 10px 15px;
+    padding: 10px;
+    width: 30%;
+    position: relative;
+
+}
+
+form label::after{
+position: absolute;
+content: " ";
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+
+}
+.quiz-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+.quiz-form button{
+    all: unset;
+    margin: 10px 30%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+
+}
+.quiz-form button:hover{
+    background-color:transparent;
+    transform: translateY(2px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.quiz-form button:active{
+    transform: translateY(4px); /* Moves button down more when clicked */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.form-items{
+    border-bottom: 1px solid black;
 }

@@ -1,10 +1,10 @@
-import { CONFIG } from "./token.js";
+
 
 const owner = "jalilhu";
 
 const repo = "Quiz_App";
 const path = "userQuestions.json"; // Path to the JSON file
-const token = CONFIG.GITHUB_TOKEN;
+const token = ""
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
 
 export async function updateFile(newContent, commitMessage = "Updated JSON file") {

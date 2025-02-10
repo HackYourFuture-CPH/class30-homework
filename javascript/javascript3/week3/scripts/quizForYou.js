@@ -1,6 +1,8 @@
 import { fetchJsonFile } from "./quizToSaveApi.js"
 
-const questions = await fetchJsonFile()
+const questionsV2 = await fetchJsonFile()
+const questions =  JSON.parse(localStorage.getItem("allItem") || "{}");
+console.log(questions)
 
 
 

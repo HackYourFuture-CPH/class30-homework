@@ -11,11 +11,39 @@ body{
     
 }
 .containerOfEachQuiz{
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-around;
+    padding: 20px 0;
+    position: relative;
+    margin: 20px 0;
+
+}
+.containerOfEachQuiz::after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    width: 50%;
+    height: 20%;
+    background-color:transparent;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: -1;
+    
+}
+.containerOfEachQuiz::before{
+    position: absolute;
+    content: " ";
+    top: 0px;
+    width: 70%;
+    height: 20%;
+    background-color:transparent;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    z-index: -2;
+    
 }
 
 form{
@@ -35,8 +63,9 @@ form{
     text-align: left;
     margin: 0;
     padding: 0;
-    width: 100%;
+   
 }
+
 
 .questionInput{
     all: unset;
@@ -157,16 +186,32 @@ button::before{
 
 button::after:hover{
     animation: button-border 3s forwards ease-in infinite;
+
 }
 button:hover{
     /* animation: button-border 3s alternate ease-in; */
     cursor: pointer;
     padding: 10px;
     font-size: 15px;
+    background-color: rgba(128, 128, 128, 0.293);
+
     transition: 1s ease-out;
    
 }
 
+.questionTitle{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.optionsitem{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+p:has(strong) {
+    border: 1px solid black;
+
+}
 @keyframes button-border {
     0%{
        height: 100%;
@@ -223,4 +268,39 @@ input[type="checkbox"] {
   
   input[type="checkbox"]:checked::before {
     display: block;
+  }
+
+  @media (min-width: 200px) and (max-width: 760px) {
+ 
+    form{
+      width: 70%;
+    }
+    .containerOfEachQuiz::after{
+     width: 80%;
+      
+  }
+  .containerOfEachQuiz::before{
+     width: 80%;
+      
+  }
+  
+  }
+  @media (min-width: 761px) {
+ 
+    form{
+      width: 70%;
+    }
+    .containerOfEachQuiz{
+        max-width: 900px;
+        margin: 20px auto;
+    }
+    .containerOfEachQuiz::after{
+     width: 80%;
+      
+  }
+  .containerOfEachQuiz::before{
+     width: 80%;
+      
+  }
+  
   }
