@@ -10,7 +10,7 @@ const error = new Audio('./audio/error.mp3');
 const correct = new Audio('./audio/correct.mp3')
 
 
-async function fetchQuestion() {
+async function  fetchQuestion() {
   const response = await fetch(
     "https://raw.githubusercontent.com/jalilhu/jalilhu.github.io/refs/heads/main/data/quiz_data.json"
   );

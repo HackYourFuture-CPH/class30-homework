@@ -125,6 +125,7 @@ main {
     top: 80px;
     width: 90%;
     text-align: center;
+    font-size: 1.2rem;
 
 }
 
@@ -353,3 +354,130 @@ main {
 .buttons-player1 {}
 
 .buttons-player2 {}
+
+@media (max-width: 800px) {
+    main{
+        flex-direction: column;
+    }
+    .quiz-container{
+        width: 80%;
+    }
+    .question-title{
+        font-size: 1.3rem;
+    }
+    .winner{
+        width: 300px;
+        height: 300px;
+
+    }
+     
+  
+    
+    }
+    @media (max-width: 315px) {
+    
+    .quiz-container{
+        width: 90%;
+        border-bottom: 1px solid black;
+    }
+    .question-title{
+        font-size: 1.0rem;
+    }
+    .winner{
+        width: 200px;
+        height: 200px;
+
+    }
+    .winner h1:nth-child(3){
+        position:absolute;
+        animation: winner-anim 3s forwards ease-in-out;
+        
+    }
+    .winner h1:nth-child(4){
+        position:absolute;
+        animation: player-anim 3s alternate both;
+        animation-delay: 3s;
+    }
+    @keyframes player-anim {
+        0%{
+            display: none;
+            font-size: 0;
+        }
+    
+        30%{
+            display: block;
+            font-size: 20px;
+        }
+        50%{
+    
+        }
+        70%{
+            color: black;
+        }
+        75%{
+            color: red;
+        }
+        80%{
+            color: green;
+        }
+        85%{
+            color: blue;
+        }
+        90%{
+            color: yellow;
+    
+        }
+        95%{
+    
+        }
+    
+        100%{
+    
+            font-size: 30px;
+            color: black;
+        }
+    }
+    
+       
+    
+    @keyframes winner-anim {
+        0%{
+            font-size: 0;
+        }
+    
+        30%{
+            font-size: 20px;
+        }
+        50%{
+    
+        }
+        70%{
+            color: black;
+        }
+        75%{
+            color: red;
+        }
+        80%{
+            color: green;
+        }
+        85%{
+            color: blue;
+        }
+        90%{
+            color: yellow;
+    
+        }
+        95%{
+    
+        }
+    
+        100%{
+    
+            font-size: 30px;
+            color: transparent;
+    
+        } 
+    }
+    
+    
+    }

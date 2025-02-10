@@ -100,7 +100,7 @@ function checkIfDuplicateAndSave(itemRecived, arrayOfData) {
         console.error("formData-2 is null or invalid!");
     }
     localStorage.setItem("allItem", JSON.stringify(ListOfAllQuiz));
-    updateFile(ListOfAllQuiz, "Questions Updated")
+    // updateFile(ListOfAllQuiz, "Questions Updated")
     console.log("it is updating")
 }
 
