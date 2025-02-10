@@ -1,0 +1,5 @@
+CREATE DATABASE my_database 
+    DEFAULT CHARACTER SET utf8mb4;
+
+
+   
