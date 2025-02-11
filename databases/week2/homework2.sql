@@ -86,3 +86,44 @@ SELECT YEAR(created) AS year, MONTHNAME(created) AS month, COUNT(*) AS task_coun
 FROM task
 GROUP BY year, month
 ORDER BY year, month;
+
+
+-- Part4
+-- Event planning database
+
+CREATE TABLE venues (
+    venue_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    location TEXT NOT NULL,
+    capacity INT NOT NULL
+);
+
+CREATE TABLE organizers (
+    organizer_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE events (
+    event_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    event_date DATETIME NOT NULL,
+    venue_id INT NOT NULL,
+    organizer_id INT NOT NULL,
+    CONSTRAINT `fk_venues` FOREIGN KEY (venue_id) REFERENCES venues(venue_id),
+    CONSTRAINT `fk_organizer` FOREIGN KEY (organizer_id) REFERENCES organizers(organizer_id)
+);
+
+CREATE TABLE guests (
+    guest_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE event_guests (
+    event_id INT NOT NULL,
+    guest_id INT NOT NULL,
+    PRIMARY KEY (event_id, guest_id),
+    CONSTRAINT `fk_evnet_guest_event` FOREIGN KEY (event_id) REFERENCES events(event_id),
+    CONSTRAINT `fk_event_guest_guest` FOREIGN KEY (guest_id) REFERENCES guests(guest_id)
+);
