@@ -1,58 +1,3 @@
--- Updating data with lesson2-data.sql before starting homework
-CREATE TABLE `user_task` (
-  `user_id` int(10) unsigned NOT NULL,
-  `task_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY(`user_id`, `task_id`),
-  CONSTRAINT `fk_user_task_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_user_task_task` FOREIGN KEY (`task_id`) REFERENCES `task` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Users-tasks
-insert into user_task (user_id, task_id) values(1, 5);
-insert into user_task (user_id, task_id) values(1, 35);
-insert into user_task (user_id, task_id) values(1, 11);
-insert into user_task (user_id, task_id) values(2, 4);
-insert into user_task (user_id, task_id) values(2, 26);
-insert into user_task (user_id, task_id) values(2, 29);
-insert into user_task (user_id, task_id) values(3, 22);
-insert into user_task (user_id, task_id) values(3, 13);
-insert into user_task (user_id, task_id) values(3, 19);
-insert into user_task (user_id, task_id) values(4, 24);
-insert into user_task (user_id, task_id) values(4, 20);
-insert into user_task (user_id, task_id) values(5, 20);
-insert into user_task (user_id, task_id) values(5, 18);
-insert into user_task (user_id, task_id) values(5, 15);
-insert into user_task (user_id, task_id) values(6, 10);
-insert into user_task (user_id, task_id) values(6, 7);
-insert into user_task (user_id, task_id) values(6, 27);
-insert into user_task (user_id, task_id) values(7, 33);
-insert into user_task (user_id, task_id) values(7, 18);
-insert into user_task (user_id, task_id) values(7, 23);
-insert into user_task (user_id, task_id) values(8, 26);
-insert into user_task (user_id, task_id) values(8, 30);
-insert into user_task (user_id, task_id) values(8, 11);
-insert into user_task (user_id, task_id) values(9, 34);
-insert into user_task (user_id, task_id) values(9, 15);
-insert into user_task (user_id, task_id) values(9, 1);
-insert into user_task (user_id, task_id) values(10, 29);
-insert into user_task (user_id, task_id) values(10, 16);
-insert into user_task (user_id, task_id) values(10, 1);
-insert into user_task (user_id, task_id) values(11, 26);
-insert into user_task (user_id, task_id) values(11, 27);
-insert into user_task (user_id, task_id) values(11, 17);
-insert into user_task (user_id, task_id) values(11, 2);
-insert into user_task (user_id, task_id) values(1, 3);
-insert into user_task (user_id, task_id) values(2, 6);
-insert into user_task (user_id, task_id) values(3, 8);
-insert into user_task (user_id, task_id) values(4, 9);
-insert into user_task (user_id, task_id) values(5, 12);
-insert into user_task (user_id, task_id) values(6, 14);
-insert into user_task (user_id, task_id) values(7, 21);
-insert into user_task (user_id, task_id) values(8, 25);
-insert into user_task (user_id, task_id) values(9, 28);
-insert into user_task (user_id, task_id) values(10, 31);
-insert into user_task (user_id, task_id) values(11, 32);
-
 
 --Part 1:
 -- Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id
@@ -113,4 +58,31 @@ ALTER Table class
 ADD COLUMN status ENUM('not-started','ongoing','finished') NULL;
 SELECT * FROM class
 
+--Part3
+-- Get all the tasks assigned to users whose email ends in @spotify.com
+SELECT task.id, task.title, user_task.task_id, user_task.user_id, `user`.id
+FROM task
+JOIN user_task ON task.id = user_task.task_id
+JOIN `user` ON `user`.id = user_task.user_id
+WHERE `user`.email LIKE '%@spotify.com';
 
+-- Get all the tasks for 'Donald Duck' with status 'Not started'
+SELECT task.id, task.title, `user`.name, status.name
+FROM task
+JOIN user_task on task.id = user_task.task_id
+JOIN `user` on `user`.id = user_task.user_id
+JOIN status on task.status_id = status.id
+WHERE `user`.name = 'Donald Duck' AND status.name = 'Not started';
+
+-- Get all the tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
+SELECT task.title , task.created, `user`.name
+FROM task
+JOIN user_task ON task.id = user_task.task_id
+JOIN `user` on `user`.id = user_task.user_id
+WHERE `user`.name = 'Maryrose Meadows' AND MONTH(task.created) = 10;
+
+-- Find how many tasks where created in each month
+SELECT YEAR(created) AS year, MONTHNAME(created) AS month, COUNT(*) AS task_count
+FROM task
+GROUP BY year, month
+ORDER BY year, month;
