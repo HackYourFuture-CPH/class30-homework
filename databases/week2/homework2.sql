@@ -83,3 +83,34 @@ WHERE task.title = 'Update Data for Homework Assignment';
 -- Delete a task
 DELETE FROM task
 WHERE id = 5;
+
+
+-- Part2: School database
+---class table
+CREATE TABLE `class`(
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `begins` DATETIME NOT NULL,
+  `ends` DATETIME NULL
+);
+
+---Student table
+CREATE TABLE `student`(
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NULL,
+  `class_id` INT(10) UNSIGNED NOT NULL,
+    CONSTRAINT `fk_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+---Create an index on the name column of the student table.
+CREATE INDEX index_name
+ON student (name);
+
+---Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished
+ALTER Table class
+ADD COLUMN status ENUM('not-started','ongoing','finished') NULL;
+SELECT * FROM class
+
+
