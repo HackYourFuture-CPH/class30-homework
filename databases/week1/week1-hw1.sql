@@ -26,7 +26,7 @@ WHERE status_id in (
 );
 
 -- Get all the tasks, sorted with the most recently created first
-SELECT id, title, created 
+SELECT *
 FROM task
 ORDER BY created DESC;
 
