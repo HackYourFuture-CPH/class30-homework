@@ -23,4 +23,21 @@ WHERE id = 9;
 
 SELECT* FROM task;
 
+SELECT * 
+FROM task 
+WHERE email LIKE '%@spotify.com';
 
+SELECT * 
+FROM task 
+WHERE assigned_to = 'Donald Duck' 
+AND status = 'Not started';
+
+SELECT * 
+FROM task
+WHERE assigned_to = 'Maryrose Meadows' 
+AND MONTH(created) = 9;
+
+SELECT MONTH(created) AS month, COUNT(*) AS task_count
+FROM tasks
+GROUP BY MONTH(created)
+ORDER BY month;
