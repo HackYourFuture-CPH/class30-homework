@@ -56,3 +56,40 @@ CREATE INDEX inx_name on students(name);
 
 ALTER Table classes 
 ADD status  ENUM ('not-started', 'ongoing', 'finished');
+
+--part 3
+use hyf_lesson2;
+
+select * 
+from `user` U
+JOIN user_task ut
+on u.id= ut.user_id
+JOIN task t
+ON t.id=ut.task_id
+where u.email like "%@spotify.com";
+
+
+select t.id, t.title, t.description, t.created, t.updated, t.due_date, s.name
+from user u
+join user_task ut
+on u.id=ut.user_id
+join task t
+on t.id= ut.task_id
+join status s on t.status_id=s.id
+where u.name='Donald Duck' and s.name='Not started';
+
+select * 
+from user u
+JOIN user_task ut
+on u.id=ut.user_id
+join task t
+on t.id=ut.task_id and u.name= 'Maryrose Meadows'
+where (month(created)=9);
+
+
+SELECT MONTH(t.created) AS month, COUNT(*) AS task_count
+FROM task t
+GROUP BY MONTH(t.created)
+ORDER BY month;
+
+
