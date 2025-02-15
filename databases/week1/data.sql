@@ -1,9 +1,8 @@
+-- Active: 1739137835692@@0.0.0.0@3306@my_db
 -- 1. Find out how many tasks are in the task table
 SELECT count(*) 
 from task;
 
-SELECT * 
-FROM task 
 
 -- 2. Find out how many tasks in the task table do not have a valid due date
 SELECT count (*) 
