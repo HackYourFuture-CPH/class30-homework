@@ -30,6 +30,3 @@ where id = 3;
 # Delete a task
 delete from task 
 where user_id  = 1;
-
-
-SELECT * FROM task;

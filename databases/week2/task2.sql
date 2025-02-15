@@ -27,9 +27,3 @@ CREATE INDEX indexName ON Student(name);
 #Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished (hint: enumerations).
 ALTER TABLE Class
 ADD status ENUM('not-started', 'ongoing', 'finished');    
-
-
-
-
-
-
