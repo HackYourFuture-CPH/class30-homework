@@ -74,5 +74,5 @@ GROUP BY MONTH(created)
 ORDER BY month_number;
 
 
--- Part 4: Creating a database
+
 
