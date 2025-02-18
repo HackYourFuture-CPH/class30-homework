@@ -1,0 +1,14 @@
+CREATE DATABASE task_manager;
+USE task_manager;
+
+CREATE TABLE task (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    due_date DATE,
+    status_id INT NOT NULL,
+    user_id INT NOT NULL,
+    is_deleted BOOLEAN DEFAULT FALSE
+);
