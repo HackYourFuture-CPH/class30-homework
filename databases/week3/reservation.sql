@@ -10,8 +10,9 @@ CREATE TABLE Reservations (
 
 select * from Reservations;
 
-INSERT INTO Reservations (name, email, phone) 
-VALUES ('John Doe', 'john@example.com', '1234567890');
+INSERT INTO Reservations (meal_id, name, email, phone) 
+select id, 'John Doe', 'john.doe@example.com', '1234567890' 
+from Meals where id = 1;
 
 select * from Reservations where id = 1;
 

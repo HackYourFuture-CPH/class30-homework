@@ -8,20 +8,11 @@ CREATE TABLE Meals (
   created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Reservations (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  meal_id INT,
-  name VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  phone VARCHAR(20),
-  created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (meal_id) REFERENCES Meals(id) ON DELETE CASCADE
-);
-
 select * from Meals;
 
 INSERT INTO Meals (title, description, location, max_reservations, price) 
-VALUES ('Pasta Night', 'Enjoy a homemade Italian dinner', 'Aarhus', 10, 12.50);
+select 'Pasta Night', 'Enjoy a homemade Italian dinner', 'Copenhagen', 10, 12.50 
+from DUAL;
 
 select * from Meals where id = 1;
 
