@@ -145,4 +145,4 @@ from meal m
 JOIN review r
 on m.id=r.meal_id
 GROUP BY m.id
-ORDER BY avrage_stars DESC ;
+ORDER BY avrage_stars ;
