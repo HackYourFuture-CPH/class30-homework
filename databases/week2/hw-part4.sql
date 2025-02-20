@@ -15,7 +15,6 @@ CREATE TABLE `emp` (
 )
 
 
-
 CREATE TABLE `job` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `title` varchar(255) NOT NULL
@@ -26,21 +25,47 @@ CREATE TABLE `dep` (
   `name` varchar(255) NOT NULL
 )
 
+CREATE TABLE  `projects` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `project_name` varchar(255) NOT NULL,
+  `start_date` DATETIME NOT NULL,
+  `end_date` DATETIME NOT NULL
+)
+
+CREATE TABLE `project_assignment` (
+  `emp_id` int(10) unsigned NOT NULL,
+  `project_id` INT(10) UNSIGNED NOT NULL,
+  PRIMARY KEY (`emp_id`, `project_id`),
+  FOREIGN KEY (`emp_id`) REFERENCES `emp` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+)
+  
+
+insert into emp (name, phone, email, jobt_id, dep_id) values ( 'Jan Dark', '40404080', 'darkjan@company.dk', 1, 1);
+insert into emp ( name, phone, email, jobt_id, dep_id) values ('Ali Uyumaz', '50894910', 'uyurali@company.dk', 2, 2);
+insert into emp ( name, phone, email, jobt_id, dep_id) values ('Mette Hojbjergsen', '40989880', 'hojbmet@company.dk', 1, 1);
+insert into emp (name, phone, email, jobt_id, dep_id) values ('Fariha Kerimi', '30304080', 'kerfarh@company.dk', 3, 1);
+insert into emp (name, phone, email, jobt_id, dep_id) values ('Jovita Paulina', '29104070', 'paujov@company.dk', 4, 2);
+
+insert into job (title) values ('Software Engineer');
+insert into job (title) values ('Project Manager');
+insert into job (title) values ('UX_UI Designer');
+insert into job (title) values ('Business Analyst');
 
 
-insert into emp (id, name, phone, email, jobt_id, dep_id) values (1, 'Jan Dark', '40404080', 'darkjan@company.dk', 1, 1);
-insert into emp (id, name, phone, email, jobt_id, dep_id) values (2, 'Ali Uyumaz', '50894910', 'uyurali@company.dk', 2, 2);
-insert into emp (id, name, phone, email, jobt_id, dep_id) values (3, 'Mette Hojbjergsen', '40989880', 'hojbmet@company.dk', 1, 1);
-insert into emp (id, name, phone, email, jobt_id, dep_id) values (4, 'Fariha Kerimi', '30304080', 'kerfarh@company.dk', 3, 1);
-insert into emp (id, name, phone, email, jobt_id, dep_id) values (5, 'Jovita Paulina', '29104070', 'paujov@company.dk', 4, 2);
 
-insert into job (id, title) values (1, 'Software Engineer');
-insert into job (id, title) values (2, 'Project Manager');
-insert into job (id, title) values (3, 'UX_UI Designer');
-insert into job (id, title) values (4, 'Business Analyst');
+insert into dep (name) values ('Product Development');
+insert into dep (name) values ('Business Management');
 
+insert into projects (project_name, start_date, end_date) VALUES
+('Website Redesign', '2024-01-01 09:00:00', '2024-06-01 18:00:00'),
+('AI Chatbot Development', '2024-02-15 10:00:00', '2024-08-15 17:00:00'),
+('Mobile App Launch', '2024-03-10 08:30:00', '2024-09-30 16:00:00');
 
-
-insert into dep (id, name) values (1, 'Product Development');
-insert into dep (id, name) values (2, 'Business Management');
+insert into project_assignment (emp_id, project_id) VALUES
+(1,1),
+(2,1),
+(3,2),
+(4,2),
+(5,3);
 
