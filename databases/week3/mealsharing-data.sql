@@ -118,6 +118,11 @@ WHERE id = 15;
 SELECT *
 FROM review;
 
+  -- Add a new review
+insert into Review (title, description, meal_id, stars, created_date) 
+VALUES
+('I am burning!', 'I was not informed about the alergens,I have hives on my skin and my face is burning... Never Recommend!', 5, 1, '2025-02-02 09:30:12');
+
   -- Get a review with any id, fx 1
 SELECT *
 FROM review
@@ -132,4 +137,64 @@ WHERE id = 10;
 DELETE FROM review 
 WHERE id = 3;
 
+-- Additional queries
+insert into Meal(title, description, location, `when`, max_reservations, price, created_date) 
+VALUE
+('Sütlaç', 'It is a baked rice pudding made with rice, milk, sugar and spices', 'Trabzon', '2025-03-06 14:30:00', 4, 60.00, '2023-09-01 18:08:09');
 
+insert into Reservation (number_of_guests, meal_id, created_date, contact_phonenumber, contact_name, contact_email) 
+VALUES
+(1, 5, '2024-11-10 20:30:25', '+90 3364858012', 'Chanda Jawagi', 'jawagicha@contact.com');
+
+insert into Review (title, description, meal_id, stars, created_date) 
+VALUES
+('Wow<3', 'I have tried various types of rice puddings so far, but giiirl it was sooo tasty, creamy, like baby food <3', 5, 5, '2025-03-10 18:40:50')
+-- Functionality
+  --Get meals that has a price smaller than a specific price fx 90
+SELECT *
+FROM meal
+WHERE price < 100;
+
+  -- Get meals that still has available reservations
+SELECT *
+FROM meal
+WHERE max_reservations > (
+  SELECT COALESCE(SUM(number_of_guests), 0)
+  FROM reservation
+  WHERE meal.id = reservation.meal_id
+);
+
+  /* Get meals that partially match a title. 
+  Rød grød med will match the meal with the title Rød grød med fløde */
+SELECT *
+FROM meal
+WHERE title LIKE '%sü%';
+
+  -- Get meals that has been created between two dates
+SELECT id, title, created_date
+FROM meal
+WHERE '2023-08-10 10:30:25' < created_date <'2024-11-10 00:30:25';
+
+  -- Get only specific number of meals fx return only 5 meals
+SELECT *
+FROM meal
+LIMIT 2, 4;
+
+  -- Get the meals that have good reviews
+SELECT m.title as mt, r.meal_id, r.stars
+FROM meal m
+LEFT JOIN review r ON m.id = r.meal_id
+WHERE r.stars >= 4;
+
+  -- Get reservations for a specific meal sorted by created_date
+SELECT *
+FROM reservation
+WHERE meal_id = 2
+ORDER BY created_date ASC;
+
+  -- Sort all meals by average number of stars in the reviews
+SELECT m.*, AVG(r.stars) as avg_stars
+FROM meal m
+LEFT JOIN review r ON m.id = r.meal_id
+GROUP BY m.id
+ORDER BY avg_stars DESC;
