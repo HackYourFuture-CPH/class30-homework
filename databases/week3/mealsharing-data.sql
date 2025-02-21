@@ -45,10 +45,10 @@ VALUES
 
 insert into Reservation (number_of_guests, meal_id, created_date, contact_phonenumber, contact_name, contact_email) 
 VALUES
-(2, 2, '2024-11-10 20:30:25', '+36 3877848600', 'Borisova Minevka', 'bbmin@contact.com'),
-(5, 3, '2024-12-30 22:58:00', '+45 44556677', 'Jens Jensen', 'jesse@contact.com'),
-(1, 2, '2025-02-10 06:00:08', '+33 5864867900', 'Franz Napoleon', 'napofra@contact.com'),
-(3, 1, '2024-01-02 11:20:40', '+44 6677876557', 'Jack Mccormik', 'mcjackie@contact.com');
+(2, 1, '2024-11-10 20:30:25', '+36 3877848600', 'Borisova Minevka', 'bbmin@contact.com'),
+(5, 2, '2024-12-30 22:58:00', '+45 44556677', 'Jens Jensen', 'jesse@contact.com'),
+(1, 1, '2025-02-10 06:00:08', '+33 5864867900', 'Franz Napoleon', 'napofra@contact.com'),
+(3, 2, '2024-01-02 11:20:40', '+44 6677876557', 'Jack Mccormik', 'mcjackie@contact.com');
 
 insert into Review (title, description, meal_id, stars, created_date) 
 VALUES
@@ -88,3 +88,27 @@ WHERE id = 2;
   -- Delete a meal with any id, fx 1
 DELETE FROM meal 
 WHERE id = 3;
+
+--Reservation Tasks
+  -- Get all reservations
+SELECT *
+FROM reservation;
+
+  -- Add a new reservation
+insert into Reservation (number_of_guests, meal_id, created_date, contact_phonenumber, contact_name, contact_email) 
+VALUES
+(8, 4, '2024-11-10 20:30:25', '+90 5064887943', 'Dilay Üzgün', 'diluz@contact.com');
+  
+  -- Get a reservation with any id, fx 1
+SELECT *
+FROM reservation
+WHERE id=15;
+
+  -- Update a reservation with any id, fx 1. Update any attribute fx the title or multiple attributes
+UPDATE reservation
+SET contact_name = 'Mette Jorgen'
+WHERE id = 14;
+
+  -- Delete a reservation with any id, fx 1
+DELETE FROM reservation 
+WHERE id = 15;
