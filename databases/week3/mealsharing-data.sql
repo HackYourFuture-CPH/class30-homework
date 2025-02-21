@@ -66,3 +66,25 @@ VALUES
 ("Not as promoted", "I am dissapointed a little, unfort Kuru-Pilav didn't impress me. A bit too dry for me.", 3, 2, "2025-02-01 07:52:11"),
 ("Super authentic!", "This tasted just like real home-cooked food. Kuru-Pilav was a surprisingly delicious blend of two different taste", 3, 5, "2025-02-17 16:30:50"),
 ("Could be better", "The Kuru-Pilav was decent, but I felt like it was too spicy. Burned till my ears.", 3, 3, "2025-02-06 22:15:29");
+
+--Meal Tasks
+  -- Get all meals
+SELECT *
+FROM `Meal`;
+  -- Add a new meal
+insert into Meal(title, description, location, `when`, max_reservations, price, created_date) 
+VALUE
+('Ispanakli Börek', 'Flaky and creamy, this pastry combines crisp phyllo dough with tangy Turkish white cheese and tender spinach', 'Tekirdağ', '2025-04-24 12:30:00', 6, 125.00, '2023-09-01 18:08:09');
+  -- Get a meal with any id, fx 1
+SELECT *
+FROM meal
+WHERE id=3;
+
+  -- Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
+UPDATE meal
+SET location = 'Tosya', price = 210
+WHERE id = 2;
+
+  -- Delete a meal with any id, fx 1
+DELETE FROM meal 
+WHERE id = 3;
