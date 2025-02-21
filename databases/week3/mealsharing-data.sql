@@ -112,3 +112,24 @@ WHERE id = 14;
   -- Delete a reservation with any id, fx 1
 DELETE FROM reservation 
 WHERE id = 15;
+
+--Review Tasks
+  -- Get all reviews
+SELECT *
+FROM review;
+
+  -- Get a review with any id, fx 1
+SELECT *
+FROM review
+WHERE id=8;
+
+-- Update a review with any id, fx 1. Update any attribute fx the title or multiple attributes
+UPDATE review
+SET stars = 4, title = 'Meh!'
+WHERE id = 10;
+
+  -- Delete a review with any id, fx 1
+DELETE FROM review 
+WHERE id = 3;
+
+
