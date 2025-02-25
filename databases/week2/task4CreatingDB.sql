@@ -24,7 +24,7 @@ INSERT INTO duties (duty_name, description) VALUES
 
 CREATE TABLE `shifts` (
     `id` INT UNSIGNED NOT NULL  PRIMARY KEY AUTO_INCREMENT,
-    `shift_name` ENUM('morning', 'afternoon', 'night')
+    `shift_name` ENUM('morning', 'afternoon', 'night') NOT NULL
 );
 
 INSERT INTO shifts (shift_name) 
