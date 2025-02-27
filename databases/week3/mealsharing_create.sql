@@ -23,7 +23,7 @@ CREATE TABLE reservation (
     contact_phone_number VARCHAR(255),
     contact_name VARCHAR(255),
     contact_email VARCHAR(255),
-    FOREIGN KEY (meal_id) REFERENCES meal(id)
+    FOREIGN KEY (meal_id) REFERENCES meal(id) ON DELETE CASCADE
 );
 
 CREATE TABLE review (
@@ -33,5 +33,5 @@ CREATE TABLE review (
     meal_id INT,
     stars INT,
     created_date DATE,
-    FOREIGN KEY (meal_id) REFERENCES meal(id)
+    FOREIGN KEY (meal_id) REFERENCES meal(id) ON DELETE CASCADE
 );
