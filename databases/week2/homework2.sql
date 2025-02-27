@@ -82,7 +82,7 @@ SELECT task.title , task.created, `user`.name
 FROM task
 JOIN user_task ON task.id = user_task.task_id
 JOIN `user` on `user`.id = user_task.user_id
-WHERE `user`.name = 'Maryrose Meadows' AND MONTH(task.created) = 10;
+WHERE `user`.name = 'Maryrose Meadows' AND MONTH(task.created) = 9;
 
 -- Find how many tasks where created in each month
 SELECT YEAR(created) AS year, MONTHNAME(created) AS month, COUNT(*) AS task_count
