@@ -56,6 +56,9 @@ ON student (name);
 ---Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished
 ALTER Table class
 ADD COLUMN status ENUM('not-started','ongoing','finished') NULL;
+ALTER TABLE class
+MODIFY COLUMN status ENUM('not-started', 'ongoing', 'finished') NOT NULL;
+
 SELECT * FROM class
 
 --Part3
