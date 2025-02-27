@@ -7,8 +7,8 @@ VALUES
 
 -- Change the title of a task
 UPDATE task
-SET title = 'Update Data for Homework Assignment'
-WHERE task.title = 'Make the databases perform better'
+SET title = 'Address review comments'
+WHERE task.id = 33;
 
 -- Change a task due date
 UPDATE task
