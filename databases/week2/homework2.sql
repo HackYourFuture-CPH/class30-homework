@@ -130,3 +130,23 @@ CREATE TABLE event_guests (
     CONSTRAINT `fk_evnet_guest_event` FOREIGN KEY (event_id) REFERENCES events(event_id),
     CONSTRAINT `fk_event_guest_guest` FOREIGN KEY (guest_id) REFERENCES guests(guest_id)
 );
+
+-- Trigger
+CREATE Trigger check_guest_capacity
+BEFORE INSERT ON guests
+FOR EACH ROW
+BEGIN
+     IF (
+        (SELECT COUNT(*) 
+         FROM event_guests 
+         WHERE event_id = NEW.event_id) 
+        >= 
+        (SELECT capacity 
+         FROM events 
+         JOIN venues ON events.venue_id = venues.venue_id 
+         WHERE events.event_id = NEW.event_id)
+    ) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Event capacity exceeded!';
+    END IF;
+END;
