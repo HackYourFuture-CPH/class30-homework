@@ -8,7 +8,7 @@ insert into task (id, title, description, created, updated, due_date, status_id)
 --Change the title of a task
 UPDATE task  SET title= 'My clothes' WHERE task.title ='Wash my clothes';
 --Change a task due date// I changed all the nulls :( 
-UPDATE task SET due_date ='2017-12-07 23:04:38' WHERE due_date iS NULL;
+UPDATE task SET due_date ='2017-12-07 23:04:38' WHERE due_date IS NULL;
 --But now i Know that I should do this instead
 UPDATE task SET due_date= '2017-12-07 22:00:00' where id =38;
 
