@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    },
+    {
+        "id": 2,
+        "type": "doc",
+        "value": "hello world"
+    },
+    {
+        "id": 3,
+        "name": "Wireless Keyboard",
+        "price": "30",
+        "description": "Compact and Bluetooth-enabled, minor scratches"
+    },
+    {
+        "id": 4,
+        "name": "Gaming Mouse",
+        "price": "40",
+        "description": "RGB lighting, high DPI, in good condition"
+    },
+    {
+        "id": 5,
+        "type": "doc",
+        "value": "important notes"
+    },
+    {
+        "id": 6,
+        "name": "4K Monitor",
+        "price": "250",
+        "description": "27-inch, no dead pixels, great for gaming"
+    },
+    {
+        "id": 7,
+        "name": "Used iPhone 11",
+        "price": "300",
+        "description": "128GB, slight scratches on screen, battery at 85%"
+    },
+    {
+        "id": 8,
+        "type": "doc",
+        "value": "meeting agenda"
+    },
+    {
+        "id": 9,
+        "name": "Office Chair",
+        "price": "80",
+        "description": "Ergonomic design, lumbar support, slightly worn"
+    },
+    {
+        "id": 10,
+        "name": "Smartwatch",
+        "price": "120",
+        "description": "Water-resistant, heart-rate monitor, minor scratches"
+    },
+    {
+        "id": 11,
+        "type": "doc",
+        "value": "project plan"
+    },
+    {
+        "id": 12,
+        "name": "Mechanical Keyboard",
+        "price": "90",
+        "description": "Cherry MX switches, RGB backlight, excellent condition"
+    },
+    {
+        "id": 13,
+        "name": "Noise Cancelling Headphones",
+        "price": "180",
+        "description": "Over-ear, great sound quality, travel case included"
+    }
+]
