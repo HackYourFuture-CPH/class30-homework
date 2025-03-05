@@ -36,6 +36,19 @@ app.get("/search", (req, res) => {
   res.status(200).json(documents);
 });
 
+app.get("/documents/:id", (req, res) => {
+  const { id } = req.params;
+  const documents = readDocuments();
+
+  const document = documents.find((doc) => doc.id === parseInt(id));
+
+  if (!document) {
+    return res.status(400).json({ error: "Document not found" });
+  }
+
+  res.status(200).json(document);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
