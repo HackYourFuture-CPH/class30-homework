@@ -29,16 +29,17 @@ app.get("/search",(req,res) =>{
 });
 // GET /documents/:id
 app.get("/documents/:id", (req,res)=>{
-  const documentID = parseInt(req.params.id,10);
-  const document = documents.find(doc => doc.id === documentID);
+
+  const document = documents.find(doc => doc.id === parseInt(req.params.id,10));
+
   if(!document){
-    return res.status(404).json({error: "document not found"});
+    return res.status(404).json({error: "document with given id not found"});
   }
 
   res.json(document);
 });
 
-
+// POST /search
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
