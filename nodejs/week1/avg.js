@@ -2,7 +2,12 @@
 // ref for the average calculation
 
 function calculateAverage(nums) {
-  if (nums.length === 0) return 0;
+  if (nums.length === 0) {
+    console.error(
+      "No arguments given, please provide some numbers with space in between"
+    );
+    return;
+  }
   let sum = nums.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
