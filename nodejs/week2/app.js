@@ -33,6 +33,12 @@ app.get("/search", (req, res) => {
         document.description.toLowerCase().includes(q.toLowerCase())
     );
   }
+
+  if (documents.length === 0) {
+    return res.status(404).json({
+      message: "No records found",
+    });
+  }
   res.status(200).json(documents);
 });
 
@@ -44,7 +50,7 @@ app.get("/documents/:id", (req, res) => {
   const document = documents.find((doc) => doc.id === parseInt(id));
 
   if (!document) {
-    return res.status(400).json({ error: "Document not found" });
+    return res.status(404).json({ error: "Document not found" });
   }
 
   res.status(200).json(document);
@@ -79,6 +85,10 @@ app.post("/search", (req, res) => {
             fields[key].toString().toLowerCase()
       );
     }
+  }
+
+  if (documents.length === 0) {
+    return res.status(404).json({ error: "Document not found" });
   }
   res.status(200).json(documents);
 });
