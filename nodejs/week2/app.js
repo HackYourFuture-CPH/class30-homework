@@ -40,6 +40,33 @@ app.get("/documents/:id", (req,res)=>{
 });
 
 // POST /search
+app.post("/search", (req, res)=>{
+  const query = req.query.q;
+  const fields = req.body.fields;
+
+  if(query && fields) {
+    return res.status(400).json({
+      error: "Cannot use both query and filds at the same time."
+    })
+  }
+  let filteredDocuments = documents;
+  if(query){
+    filteredDocuments = documents.filter(doc =>
+      Object.values(doc).some(value =>
+        typeof value === "string" && value.toLowerCase().includes(query.toLowerCase())
+      )
+    );
+  }
+  if (fields) {
+    filteredDocuments = documents.filter(doc =>
+      Object.entries(fields).every(([key, value]) => doc[key] == value)
+    );
+  }
+
+  res.json(filteredDocuments);
+})
+
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
