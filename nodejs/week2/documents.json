@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Used Apple Airpods",
+    "price": "50",
+    "description": "Battery life is not great"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy Watch",
+    "price": "349",
+    "description": "A smartwatch with long battery life and fitness tracking features"
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM4 Headphones",
+    "price": "650",
+    "description": "Premium noise-canceling headphones with excellent sound quality"
+  }
+]
