@@ -8,6 +8,13 @@ function calculateAverage(nums) {
     );
     return;
   }
+
+  for (let num of nums) {
+    if (isNaN(num)) {
+      console.error("Invalid input, please provide only numbers!");
+      return;
+    }
+  }
   let sum = nums.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
