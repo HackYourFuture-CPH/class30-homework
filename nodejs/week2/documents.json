@@ -1,0 +1,26 @@
+[
+  {
+      "id": 1,
+      "name": "Used Apple Airpods",
+      "price": "50",
+      "description": "Battery life is not great"
+  },
+  {
+      "id": 2,
+      "name": "Logitech Wireless Mouse",
+      "price": "30",
+      "description": "Slight wear on the scroll wheel"
+  },
+  {
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "price": "150",
+      "description": "Screen has minor scratches"
+  },
+  {
+      "id": 4,
+      "name": "Dell Mechanical Keyboard",
+      "price": "70",
+      "description": "Keys are slightly faded"
+  }
+]
