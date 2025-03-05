@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    },
+    {
+        "id": 2,
+        "name": "Brand New Apple iPad Air",
+        "price": "6999",
+        "description": "Brand New"
+    },
+    {
+        "id": 3,
+        "name": "Use Macbook Air 13",
+        "price": "4599",
+        "description": "2020 version, almost new"
+    },
+    {
+        "id": 4,
+        "name": "Apple Watch SE",
+        "price": "1600",
+        "description": "Brand New but open box"
+    }
+]
