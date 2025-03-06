@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "type": "doc",
+    "value": "hello world",
+    "price": "50",
+    "description": "Battery life is not great"
+  },
+  {
+    "id": 2,
+    "type": "doc",
+    "value": "goodbye world",
+    "price": "75",
+    "description": "Excellent condition"
+  }
+]
