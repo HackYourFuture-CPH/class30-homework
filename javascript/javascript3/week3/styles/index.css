@@ -1,0 +1,1344 @@
+body {
+    font-family: "Trirong", serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    background-size: 150%;
+}
+
+#to-quiz {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 5px;
+    font-weight: 700;
+
+}
+
+main {
+    max-width: 1672px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+
+
+}
+
+#title-elements {
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    gap: 5px;
+    font-size: 2em;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+
+}
+
+#game-mode {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.playerimage {
+    width: 100px;
+
+}
+
+.game-mode-title {
+    width: 100%;
+    text-align: center;
+    font-size: 5em;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.mode-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#to-oneplayer,
+#to-multiplayer {
+    cursor: pointer;
+}
+
+#to-oneplayer:hover,
+#to-multiplayer:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    transition: 0.2s ease-in-out;
+}
+
+#title-elements {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+#title-elements p {
+    position: absolute;
+    /* Removes paragraphs from normal flow */
+    height: 20px;
+    width: 20px;
+
+}
+
+/* Correcting nth-child selectors */
+#title-elements p:nth-child(1) {
+    left: 600px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 0s;
+}
+
+#title-elements p:nth-child(2) {
+    left: 630px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 200ms;
+}
+
+#title-elements p:nth-child(3) {
+    left: 655px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 400ms;
+}
+
+#title-elements p:nth-child(4) {
+    left: 690px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 600ms;
+}
+
+#title-elements p:nth-child(5) {
+    left: 720px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 800ms;
+}
+
+#title-elements p:nth-child(6) {
+    left: 750px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1s;
+}
+
+#title-elements p:nth-child(7) {
+    left: 780px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1200ms;
+}
+
+#title-elements p:nth-child(8) {
+    left: 805px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1400ms;
+}
+
+#title-elements p:nth-child(9) {
+    left: 830px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1600ms;
+}
+
+@keyframes move {
+    0% {
+        top: 260px;
+        transform: translateY(50px);
+    }
+
+    30% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    89% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    90% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    100% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+}
+
+#to-quiz {
+    position: relative;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+
+}
+
+#to-quiz p {
+    position: absolute;
+    left: -29px;
+    font-weight: 900;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+    font-size: 4rem;
+
+}
+
+#to-quiz p:nth-child(1) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    left: 550px;
+}
+
+#to-quiz p:nth-child(2) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 200ms;
+    left: 563px;
+}
+
+#to-quiz p:nth-child(3) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 400ms;
+    left: 590px;
+}
+
+#to-quiz p:nth-child(4) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 600ms;
+    left: 605px;
+}
+
+#to-quiz p:nth-child(5) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 800ms;
+    left: 617px;
+}
+
+#to-quiz p:nth-child(6) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1000ms;
+    left: 625px;
+}
+
+#to-quiz p:nth-child(7) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1200ms;
+    left: 655px;
+}
+
+#to-quiz p:nth-child(8) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1400ms;
+    left: 667px;
+}
+
+#to-quiz p:nth-child(9) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1600ms;
+    left: 678px;
+}
+
+#to-quiz p:nth-child(10) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1800ms;
+    left: 691px;
+}
+
+#to-quiz p:nth-child(11) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2000ms;
+    left: 702px;
+}
+
+#to-quiz p:nth-child(12) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2200ms;
+    left: 713px;
+}
+
+#to-quiz p:nth-child(13) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2400ms;
+    left: 725px;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-transform: capitalize;
+        top: 0px;
+        left: 300px;
+        transform: rotateY(700deg);
+
+    }
+
+    40% {
+        transform: rotateY(0deg);
+        left: 700px;
+        top: 10px;
+        text-transform: uppercase;
+
+    }
+
+    70% {
+        color: white;
+    }
+ 
+    
+    90%{
+        color: green;
+    }
+    93%{
+        color:aqua;
+    }
+    96%{
+        color: magenta;
+    }
+    99%{
+        color: rgb(205, 50, 50);
+    }
+    100% {
+        top: 0px;
+        font-size: 15px;
+        
+    }
+
+}
+
+
+#to-quiz img {
+    position: absolute;
+    color: white;
+    width: 20px;
+    top: 50px;
+
+}
+
+#to-quiz:hover {
+    cursor: pointer;
+}
+
+#image0 {
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+
+
+}
+
+#image1 {
+    left: 805px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 300ms;
+
+}
+
+#image2 {
+    left: 810px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 600ms;
+}
+#image3 {
+    left: 815px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 900ms;
+}
+
+@keyframes arrow_animation {
+    0% {
+        top: 15px;
+        left: -50px;
+        filter: invert(0%);
+        
+
+    }
+
+    25% {
+        left: 510px;
+         color: white;
+
+    }
+
+    50% {
+
+        left: 510px;
+        filter: invert(0%);
+
+    }
+
+    75% {
+        left: 510px;
+        display: none;
+         color: white;
+
+    }
+    80%{
+        display: none;
+        left: 750px;
+
+    }
+
+    100% {
+        display: block;
+        left: 750px;
+        top: 15px;
+        filter: invert(0%);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    #title-elements {
+        margin: 0 auto;
+        width: 50%;
+        border: none;
+        
+
+    }
+    .mode-container{
+        border-top: 2px solid black;
+    }
+    #to-quiz{
+        margin-top: 0;
+        padding: 5px;
+        width: 100%;
+        height: 50px;
+    }
+    
+#to-quiz img {
+    position: absolute;
+     color: white;
+    width: 20px;
+    top:  17px;
+
+}
+
+#to-quiz:hover {
+    cursor: pointer;
+}
+
+#image0 {
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    left: 50px;
+
+
+}
+
+#image1 {
+    left: 55px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 300ms;
+
+}
+
+#image2 {
+    left: 60px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 600ms;
+}
+#image3 {
+    left: 65px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 900ms;
+}
+
+@keyframes arrow_animation {
+    0% {
+
+        left: -50px;
+        filter: invert(0%);
+        
+
+    }
+
+    25% {
+        left: 50px;
+         color: white;
+
+    }
+
+    50% {
+
+        filter: invert(0%);
+
+    }
+
+    75% {
+         color: white;
+    }
+
+    100% {
+        filter: invert(0%);
+        left: 75px;
+    }
+
+}
+
+#to-quiz p {
+    position: absolute;
+
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+
+}
+
+#to-quiz p:nth-child(1) {
+    animation:  textAnimation 1s ease-in-out alternate both;
+    left: 95px;
+}
+
+#to-quiz p:nth-child(2) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 200ms;
+    left: 103px;
+}
+
+#to-quiz p:nth-child(3) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 400ms;
+    left: 120px;
+}
+
+#to-quiz p:nth-child(4) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 600ms;
+    left: 133px;
+}
+
+#to-quiz p:nth-child(5) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 800ms;
+    left: 144px;
+}
+
+#to-quiz p:nth-child(6) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1000ms;
+    left: 150px;
+}
+
+#to-quiz p:nth-child(7) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1200ms;
+    left: 165px;
+}
+
+#to-quiz p:nth-child(8) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1400ms;
+    left: 177px;
+}
+
+#to-quiz p:nth-child(9) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1600ms;
+    left: 185px;
+}
+
+#to-quiz p:nth-child(10) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1800ms;
+    left: 195px;
+}
+
+#to-quiz p:nth-child(11) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2000ms;
+    left: 205px;
+}
+
+#to-quiz p:nth-child(12) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2200ms;
+    left: 213px;
+}
+
+#to-quiz p:nth-child(13) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2400ms;
+    left: 223px;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-transform: capitalize;
+        top: 57px;
+        left: 95px;
+        transform: rotateY(700deg);
+
+    }
+
+    40% {
+        transform: rotateY(0deg);
+        left: 100px;
+        top: 5px;
+        text-transform: uppercase;
+
+    }
+
+    70% {
+        color: white;
+    }
+ 
+    
+    90%{
+        color: green;
+    }
+    93%{
+        color:aqua;
+    }
+    96%{
+        color: magenta;
+    }
+    99%{
+        color: rgb(205, 50, 50);
+    }
+    100% {
+        top: 0px;
+        font-size: 15px;
+        
+    }
+
+}
+
+#title-elements p {
+    position: absolute;
+    /* Removes paragraphs from normal flow */
+    height: 20px;
+    width: 20px;
+
+}
+
+/* Correcting nth-child selectors */
+#title-elements p:nth-child(1) {
+    left: 50px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 0s;
+}
+
+#title-elements p:nth-child(2) {
+    left: 75px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 200ms;
+}
+
+#title-elements p:nth-child(3) {
+    left: 95px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 400ms;
+}
+
+#title-elements p:nth-child(4) {
+    left: 127px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 600ms;
+}
+
+#title-elements p:nth-child(5) {
+    left: 140px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 800ms;
+}
+
+#title-elements p:nth-child(6) {
+    left: 160px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1s;
+}
+
+#title-elements p:nth-child(7) {
+    left: 189px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1200ms;
+}
+
+#title-elements p:nth-child(8) {
+    left: 210px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1400ms;
+}
+
+#title-elements p:nth-child(9) {
+    left: 231px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1600ms;
+}
+
+@keyframes move {
+    0% {
+        top: 260px;
+        transform: translateY(50px);
+    }
+
+    30% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    89% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    90% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+    100% {
+        transform: translateY(0);
+        top: 220px;
+    }
+
+}
+.player{
+    margin-top: 0;
+}
+   
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    #title-elements {
+        margin: 0 auto;
+
+
+    }
+
+    #to-quiz{
+        margin-top: 0;
+        padding: 5px;
+        width: 100%;
+        height: 50px;
+    }
+    
+#to-quiz img {
+    position: absolute;
+     color: white;
+
+    width: 20px;
+    top:  17px;
+
+}
+
+#to-quiz:hover {
+    cursor: pointer;
+}
+
+#image0 {
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    left: 50px;
+
+
+}
+
+#image1 {
+    left: 55px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 300ms;
+
+}
+
+#image2 {
+    left: 60px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 600ms;
+}
+#image3 {
+    left: 65px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 900ms;
+}
+
+@keyframes arrow_animation {
+    0% {
+
+        left: -50px;
+        filter: invert(0%);
+        
+
+    }
+
+    25% {
+        left: 50px;
+         color: white;
+
+    }
+
+    50% {
+
+        filter: invert(0%);
+
+    }
+
+    75% {
+         color: white;
+    }
+
+    100% {
+        filter: invert(0%);
+        left: 75px;
+    }
+
+}
+
+#to-quiz p {
+    position: absolute;
+
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+
+}
+
+#to-quiz p:nth-child(1) {
+    animation:  textAnimation 1s ease-in-out alternate both;
+    left: 95px;
+}
+
+#to-quiz p:nth-child(2) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 200ms;
+    left: 103px;
+}
+
+#to-quiz p:nth-child(3) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 400ms;
+    left: 120px;
+}
+
+#to-quiz p:nth-child(4) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 600ms;
+    left: 133px;
+}
+
+#to-quiz p:nth-child(5) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 800ms;
+    left: 144px;
+}
+
+#to-quiz p:nth-child(6) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1000ms;
+    left: 150px;
+}
+
+#to-quiz p:nth-child(7) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1200ms;
+    left: 165px;
+}
+
+#to-quiz p:nth-child(8) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1400ms;
+    left: 177px;
+}
+
+#to-quiz p:nth-child(9) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1600ms;
+    left: 185px;
+}
+
+#to-quiz p:nth-child(10) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1800ms;
+    left: 195px;
+}
+
+#to-quiz p:nth-child(11) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2000ms;
+    left: 205px;
+}
+
+#to-quiz p:nth-child(12) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2200ms;
+    left: 213px;
+}
+
+#to-quiz p:nth-child(13) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2400ms;
+    left: 223px;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-transform: capitalize;
+        top: 57px;
+        left: 95px;
+        transform: rotateY(700deg);
+
+    }
+
+    40% {
+        transform: rotateY(0deg);
+        left: 100px;
+        top: 5px;
+        text-transform: uppercase;
+
+    }
+
+    70% {
+        color: white;
+    }
+ 
+    
+    90%{
+        color: green;
+    }
+    93%{
+        color:aqua;
+    }
+    96%{
+        color: magenta;
+    }
+    99%{
+        color: rgb(205, 50, 50);
+    }
+    100% {
+        top: 5px;
+        font-size: 15px;
+        
+    }
+
+}
+
+#title-elements p {
+    position: absolute;
+    /* Removes paragraphs from normal flow */
+    height: 20px;
+    width: 20px;
+
+}
+
+/* Correcting nth-child selectors */
+#title-elements p:nth-child(1) {
+    left: 250px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 0s;
+}
+
+#title-elements p:nth-child(2) {
+    left: 275px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 200ms;
+}
+
+#title-elements p:nth-child(3) {
+    left: 295px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 400ms;
+}
+
+#title-elements p:nth-child(4) {
+    left: 327px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 600ms;
+}
+
+#title-elements p:nth-child(5) {
+    left: 340px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 800ms;
+}
+
+#title-elements p:nth-child(6) {
+    left: 360px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1s;
+}
+
+#title-elements p:nth-child(7) {
+    left: 389px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1200ms;
+}
+
+#title-elements p:nth-child(8) {
+    left: 410px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1400ms;
+}
+
+#title-elements p:nth-child(9) {
+    left: 431px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1600ms;
+}
+
+.player{
+    margin-top: 0;
+}
+   
+}
+
+    
+@media (min-width: 1025px) and (max-width: 1600px) {
+    #title-elements {
+        margin: 0 auto;
+
+    }
+    #to-quiz{
+        margin-top: 0;
+        padding: 5px;
+        width: 100%;
+        height: 50px;
+    }
+    
+#to-quiz img {
+    position: absolute;
+     color: white;
+    width: 20px;
+    top:  17px;
+
+}
+
+#to-quiz:hover {
+    cursor: pointer;
+}
+
+#image0 {
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    left: 50px;
+
+
+}
+
+#image1 {
+    left: 55px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 300ms;
+
+}
+
+#image2 {
+    left: 60px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 600ms;
+}
+#image3 {
+    left: 65px;
+    animation: arrow_animation 2s ease-in-out forwards  infinite 7s;
+    animation-delay: 900ms;
+}
+
+@keyframes arrow_animation {
+    0% {
+
+        left: -50px;
+        filter: invert(0%);
+        
+
+    }
+
+    25% {
+        left: 50px;
+         color: white;
+
+    }
+
+    50% {
+
+        filter: invert(0%);
+
+    }
+
+    75% {
+         color: white;
+    }
+
+    100% {
+        filter: invert(0%);
+        left: 75px;
+    }
+
+}
+
+#to-quiz p {
+    position: absolute;
+
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+
+}
+
+#to-quiz p:nth-child(1) {
+    animation:  textAnimation 1s ease-in-out alternate both;
+    left: 95px;
+}
+
+#to-quiz p:nth-child(2) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 200ms;
+    left: 103px;
+}
+
+#to-quiz p:nth-child(3) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 400ms;
+    left: 120px;
+}
+
+#to-quiz p:nth-child(4) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 600ms;
+    left: 133px;
+}
+
+#to-quiz p:nth-child(5) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 800ms;
+    left: 144px;
+}
+
+#to-quiz p:nth-child(6) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1000ms;
+    left: 150px;
+}
+
+#to-quiz p:nth-child(7) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1200ms;
+    left: 165px;
+}
+
+#to-quiz p:nth-child(8) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1400ms;
+    left: 177px;
+}
+
+#to-quiz p:nth-child(9) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1600ms;
+    left: 185px;
+}
+
+#to-quiz p:nth-child(10) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 1800ms;
+    left: 195px;
+}
+
+#to-quiz p:nth-child(11) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2000ms;
+    left: 205px;
+}
+
+#to-quiz p:nth-child(12) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2200ms;
+    left: 213px;
+}
+
+#to-quiz p:nth-child(13) {
+    animation: textAnimation 1s ease-in-out alternate both;
+    animation-delay: 2400ms;
+    left: 223px;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-transform: capitalize;
+        top: 57px;
+        left: 95px;
+        transform: rotateY(700deg);
+
+    }
+
+    40% {
+        transform: rotateY(0deg);
+        left: 100px;
+        top: 5px;
+        text-transform: uppercase;
+
+    }
+
+    70% {
+        color: white;
+    }
+ 
+    
+    90%{
+        color: green;
+    }
+    93%{
+        color:aqua;
+    }
+    96%{
+        color: magenta;
+    }
+    99%{
+        color: rgb(205, 50, 50);
+    }
+    100% {
+        top: 5px;
+        font-size: 15px;
+        
+    }
+
+}
+
+#title-elements p {
+    position: absolute;
+    /* Removes paragraphs from normal flow */
+    height: 20px;
+    width: 20px;
+
+}
+
+/* Correcting nth-child selectors */
+#title-elements p:nth-child(1) {
+    left: 450px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 0s;
+}
+
+#title-elements p:nth-child(2) {
+    left: 475px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 200ms;
+}
+
+#title-elements p:nth-child(3) {
+    left: 495px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 400ms;
+}
+
+#title-elements p:nth-child(4) {
+    left: 527px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 600ms;
+}
+
+#title-elements p:nth-child(5) {
+    left: 540px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 800ms;
+}
+
+#title-elements p:nth-child(6) {
+    left: 560px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1s;
+}
+
+#title-elements p:nth-child(7) {
+    left: 589px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1200ms;
+}
+
+#title-elements p:nth-child(8) {
+    left: 610px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1400ms;
+}
+
+#title-elements p:nth-child(9) {
+    left: 631px;
+    animation: move 2s ease-in-out alternate both infinite 7s;
+    animation-delay: 1600ms;
+}
+
+.player{
+    margin-top: 0;
+}
+   
+}
+@media (min-width: 447px) and (max-width: 619px) {
+    #title-elements {
+        margin-right: auto;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media (min-width: 620px) and (max-width: 767px) {
+    #title-elements {
+        margin-right: auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media (min-width: 200px) and (max-width: 446px) {
+    #title-elements {
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media (max-width: 300px) {
+    .mode-container{
+        flex-direction: column;
+    }
+    #title-elements {
+        width: 100%;
+        font-size: 15px;
+
+    }
+
+
+}
+
+
+
+
+
+
