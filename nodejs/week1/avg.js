@@ -11,7 +11,7 @@ export default function getAverage(...numbers) {
     return average;
 };
 
-console.log(getAverage(...input));
+console.log(getAverage(input));
 
 // Optional improvements and considerations:
 //filter the values we pass thru getaverage 
