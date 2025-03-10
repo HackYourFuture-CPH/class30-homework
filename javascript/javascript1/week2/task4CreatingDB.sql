@@ -1,7 +1,7 @@
 CREATE DATABASE `factory_db`
     DEFAULT CHARACTER SET = 'utf8mb4';
     
-USE factory_db
+USE factory_db;
 
 CREATE TABLE `departments` (
     `id` INT UNSIGNED NOT NULL  PRIMARY KEY AUTO_INCREMENT,
@@ -60,8 +60,8 @@ INSERT INTO staff_duties (staff_id, duty_id, created) VALUES
 
 SELECT staff.name AS Employee, staff_duties.created, duties.duty_name, duties.description 
 FROM staff
-JOIN staff_duties ON staff.id = staff_id
-JOIN duties ON staff_duties.duty_id = duties.id
+JOIN staff_duties ON staff.id = staff_duties.staff_id
+JOIN duties ON staff_duties.duty_id = duties.id;
 
 SELECT 
     staff.name AS Employee, 

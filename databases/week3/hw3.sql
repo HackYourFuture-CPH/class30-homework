@@ -29,7 +29,7 @@ CREATE TABLE `review` (
     `title` VARCHAR(100) NOT NULL,
     `description` TEXT,
     `meal_id` INT(10) UNSIGNED NOT NULL,
-    `stars` INT(5) NOt NULL,
+    `stars` INT(5) NOT NULL,
     `created_date` DATE NOT NULL,
     FOREIGN KEY (`meal_id`) REFERENCES `meal`(`id`) ON DELETE CASCADE
 )
@@ -43,9 +43,9 @@ SELECT *
 FROM meal;
 
 INSERT INTO meal (title, description, location, `when`, max_reservations, price, created_date)
-VALUES ('Traditonal Sicilian Pasta Carbonara', 'Master class from of cooking Carbonara from the best sicilain chef.', 'Palermo, IT', '2025-05-09', 25, 34.99, '2025-02-17')
+VALUES ('Traditonal Sicilian Pasta Carbonara', 'Master class from of cooking Carbonara from the best sicilain chef.', 'Palermo, IT', '2025-05-09', 25, 34.99, '2025-02-17');
 
-INSERT INTO meal (title, description, location, `when`, max_reservations, price, created_date) 
+INSERT INTO meal (title, description, location, `when`, max_reservations, price, created_date)
 VALUES ('10 Different ways to make a great pizza', 'Very good mini-course of making real italian pizza', 'Rome, IT', '2025-04-23', 20, 24.00, '2025-02-19');
 
 SELECT *

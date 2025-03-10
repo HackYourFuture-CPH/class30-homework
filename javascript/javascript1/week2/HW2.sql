@@ -3,7 +3,7 @@
 USE hw
 
 INSERT INTO task (title, description, created, updated, due_date, status_id, user_id)
-VALUES ('Do your homework', 'You need to complete your homework, consists of 4 parts', '2025-02-09', '2025-02-11', '2025-02-16', 2, 5 )
+VALUES ('Do your homework', 'You need to complete your homework, consists of 4 parts', '2025-02-09', '2025-02-11', '2025-02-16', 2, 5 );
 
 UPDATE task
 SET title = 'Do your hw and class preparation',
@@ -14,7 +14,7 @@ WHERE id = 36
 DELETE FROM task 
 WHERE id = 36
 
-SELECT * from task
+SELECT * FROM task
 
 -- Part 2: School database
 
