@@ -1,0 +1,30 @@
+{
+  "name": "class30-homework",
+  "version": "1.0.0",
+  "description": "## Get git ready to work on homework",
+  "main": "index.js",
+  "scripts": {
+    "type": "module",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon nodejs/week3/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourFuture-CPH/class30-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackYourFuture-CPH/class30-homework/issues"
+  },
+  "homepage": "https://github.com/HackYourFuture-CPH/class30-homework#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "knex": "^3.1.0",
+    "mysql2": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
