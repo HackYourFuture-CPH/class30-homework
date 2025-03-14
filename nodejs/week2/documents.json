@@ -1,5 +1,13 @@
 [
-    { "id": 1, "title": "First Document", "content": "This is the first document." },
-    { "id": 2, "title": "Second Document", "content": "This document is about Express.js." },
-    { "id": 3, "title": "Third Document", "content": "Search engines are powerful." }
-  ]
+  {
+      "id": 1,
+      "name": "Used Apple Airpods",
+      "price": "50",
+      "description": "Battery life is not great"
+  },
+  {
+      "id": 2,
+      "type": "doc",
+      "value": "hello world"
+  }
+]
