@@ -1,11 +1,16 @@
 import knex from 'knex'
+import mysql from "mysql2";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const knexInstance = knex({
   client: "mysql2",
   connection: {
-    host: process.env.DB_HOST || "127.0.0.1",
-    port: process.env.DB_PORT || 3306,
-    user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "my-secret-pw",
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME || "hyf_node_week3_warmup",
     multipleStatements: true,
   },
@@ -27,9 +32,13 @@ contactsAPIRouter.get("/", async (req, res) => {
   let query = knexInstance.select("*").from("contacts");
 
   if ("sort" in req.query) {
-    const orderBy = req.query.sort.toString();
-    if (orderBy.length > 0) {
-      query = query.orderByRaw(orderBy);
+    const [column, order] = req.query.sort.split(" ");
+    const validColumns = ["first_name", "last_name", "email"];
+    const validOrders = ["asc", "desc", "ASC", "DESC"];
+    if (validColumns.includes(column) && validOrders.includes(order)){
+      query = query.orderBy(column, order);
+    }else{
+      return res.status(400).json({ error : "Invalid sort parameter"});
     }
   }
 
