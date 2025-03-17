@@ -1,0 +1,50 @@
+.app {
+  text-align: center;
+}
+
+.hero {
+  background-image: url('/home/background-home-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-64);
+}
+
+.heroContent {
+  max-width: 500px;
+  text-align: left;
+  color: #fff;
+}
+
+.heroContent p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+p.heroH5 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: var(--spacing-04);
+}
+
+p.heroJumbo {
+  font-size: 100px;
+  font-family: Verdana;
+  font-weight: 100;
+}
+
+
+.exploreButton {
+  height: 250px;
+  width: 250px;
+  line-height: 250px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 4px;
+}

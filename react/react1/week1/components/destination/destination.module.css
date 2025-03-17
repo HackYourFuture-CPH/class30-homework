@@ -1,0 +1,84 @@
+.app {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.planetCard {
+  border: 1px solid var(--border-color);
+  max-width: 70%;
+  margin: var(--spacing-20) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-08);
+  gap: var(--spacing-08);
+}
+
+.planetCard:nth-child(odd) {
+  margin-inline-start: auto;
+}
+
+.planetCard > *:last-child {
+  margin-inline-start: auto;
+}
+
+.planetDescription {
+  padding-block-start: var(--spacing-04);
+  margin-block-end: auto;
+}
+
+.planetThumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 var(--spacing-16);
+}
+
+.wishlistItem {
+  border: 1px solid var(--border-color);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin: var(--spacing-20);
+  padding: var(--spacing-20);
+}
+
+.wishlistItemThumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 var(--spacing-16);
+}
+.wishlistList {
+  display: flex;
+  margin: var(--spacing-16) 0;
+}
+
+.addWishlistItem {
+  border: 1px solid var(--border-color);
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  margin: var(--spacing-20);
+  padding: var(--spacing-20);
+}
+
+.addWishlistItem p {
+  margin-block-end: var(--spacing-20);
+}
+
+.addWishlistItem label {
+  margin: 0;
+  font-size: small;
+}
+
+.addWishlistItem input, 
+.addWishlistItem select {
+  height: 30px;
+  margin-block-end: var(--spacing-20);
+}

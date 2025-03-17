@@ -1,0 +1,77 @@
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-16) var(--spacing-40);
+  height: var(--header-height);
+  max-height: var(--header-height);
+  align-items: center;
+  z-index: 10;
+}
+
+.decorativeLine {
+  height: 0.1px;
+  width: 30vw;
+  background-color: #999;
+  margin-inline-end: -60px;
+  z-index: 10;
+}
+
+.navbarLogo {
+  margin-inline-end: var(--spacing-20);
+}
+
+.navbarLogo img {
+  height: 40px;
+}
+
+.navbarLogo a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+  font-size: large;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-8);
+  margin: var(--spacing-20);
+  background-color: transparent;
+
+}
+
+.navbarBG {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  backdrop-filter: blur(20px);
+}
+
+.navbarList {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  padding: 0 var(--spacing-40);
+  gap: var(--spacing-20);
+  z-index: 10;
+}
+
+.navbarLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.navbarLinks:hover, .isLinkActive {
+  border-block-end: var(--spacing-04) solid var(--border-color);
+  margin-block-end: -4px;
+}
