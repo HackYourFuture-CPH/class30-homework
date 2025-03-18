@@ -3,3 +3,12 @@
   width: 100vw;
   height: 100vh;
 }
+
+.OurValues ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.OurValues li {
+  margin-bottom: 1rem;
+}
