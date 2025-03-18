@@ -3,3 +3,6 @@
 .vscode/
 .vscode/
 **/.vscode/
+node_modules/
+.vscode/
+.dockerignore

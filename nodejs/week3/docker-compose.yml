@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: hyf_node_week3_warmup
+    networks:
+      - mynetwork
+    ports:
+      - "3306:3306"
+  
+  node-app:
+    build: .
+    container_name: node-app-container
+    depends_on:
+      - mysql
+    networks:
+      - mynetwork
+    ports:
+      - "4000:3000"
+
+networks:
+  mynetwork:
+    driver: bridge
