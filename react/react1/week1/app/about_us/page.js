@@ -1,4 +1,5 @@
-import styles from './page.module.css';
+import styles from "./page.module.css";
+import values from "@/components/ui/OurValues.js";
 
 // TASK - React 1 week 1
 // After you are finished with creating the page, move the OurValues, OurCrew, OurPartners components into their own files
@@ -11,7 +12,17 @@ const OurValues = () => {
   // Use the descriptions provided in /app/about_us/README.md
   // Some inspiration ideas found in /data/inspiration_about_us
   return (
-    <p> ADD OUR VALUES HERE </p>
+    <section className={styles.OurValues}>
+      <h2>Our Values</h2>
+      <ul>
+        {values.map((value, index) => (
+          <li key={index}>
+            <h3>{value.title}</h3>
+            <p>{value.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 
@@ -21,10 +32,8 @@ const OurCrew = () => {
   // Use the descriptions provided in /app/about_us/README.md
   // Use the pictures from /public/crew
   // Some inspiration ideas found in /data/inspiration_about_us
-  return (
-    <p> ADD OUR CREW HERE </p>
-  );
-}
+  return <p> ADD OUR CREW HERE </p>;
+};
 
 const OurPartners = () => {
   // TASK - React 1 week 1
@@ -32,11 +41,8 @@ const OurPartners = () => {
   // Use the descriptions provided in /app/about_us/README.md
   // Use the pictures from /public/crew
   // Some inspiration ideas found in /data/inspiration_about_us
-  return (
-    <p> ADD OUR Partners HERE </p>
-  );
-}
-
+  return <p> ADD OUR Partners HERE </p>;
+};
 
 export const Crew = () => {
   return (
@@ -44,19 +50,19 @@ export const Crew = () => {
       <main className="mainContent">
         <h1>About us</h1>
         <section className="card">
-          <h2>Our Values</h2>
-          <OurValues/>
+          {/*<h2>Our Values</h2>*/}
+          <OurValues />
         </section>
         <section className="card">
           <h2>The crew</h2>
-          <OurCrew/>
+          <OurCrew />
         </section>
 
-         {/* TASK - React 1 week 1 */}
-         {/* Add in the "OurPartners" component here */}
+        {/* TASK - React 1 week 1 */}
+        {/* Add in the "OurPartners" component here */}
       </main>
     </div>
   );
-}
+};
 
 export default Crew;
