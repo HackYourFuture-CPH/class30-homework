@@ -5,16 +5,16 @@
 }
 
 .OurValues {
-  background-color: "#121212";
-  color: "#fff";
-  padding: "4rem 2rem";
-  text-align: "center";
+  background-color: #121212;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 .OurValues h2 {
-  font-size: "1rem";
-  font-weight: "bold";
-  text-transform: "uppercase";
-  letter-spacing: "2px";
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   opacity: 0.8;
 }
 
@@ -63,14 +63,15 @@
   transform: scale(1.02);
   transition: transform 0.3s ease-in-out;
 }
+
 .ourCrew {
   padding: 2rem;
   text-align: center;
-  background-image: url("/crew/background.crew-desktop.jpg");
-  background-size: "cover";
-  background-position: "center";
-  background-repeat: "no-repeat";
-  color: "#fff";
+  background-color: #111;
+}
+
+.ourCrew p {
+  padding: 2rem;
 }
 
 .crewList {
@@ -100,4 +101,34 @@
   object-fit: cover;
   margin-bottom: 10px;
   align-self: center;
+}
+
+.ourPartners {
+  background-color: #111;
+  padding: 50px;
+  color: white;
+}
+
+.gridStyle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.imageStyle {
+  max-width: 120px;
+  max-height: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
