@@ -3,7 +3,7 @@
 }
 
 .hero {
-  background-image: url('/home/background-home-desktop.jpg');
+  background-image: url("/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -36,7 +36,6 @@ p.heroJumbo {
   font-family: Verdana;
   font-weight: 100;
 }
-
 
 .exploreButton {
   height: 250px;

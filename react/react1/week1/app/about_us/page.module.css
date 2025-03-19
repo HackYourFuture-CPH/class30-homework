@@ -4,11 +4,100 @@
   height: 100vh;
 }
 
-.OurValues ul {
-  list-style-type: none;
-  padding-left: 0;
+.OurValues {
+  background-color: "#121212";
+  color: "#fff";
+  padding: "4rem 2rem";
+  text-align: "center";
+}
+.OurValues h2 {
+  font-size: "1rem";
+  font-weight: "bold";
+  text-transform: "uppercase";
+  letter-spacing: "2px";
+  opacity: 0.8;
 }
 
-.OurValues li {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: left;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  position: relative;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
   margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  margin-top: 2rem;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+.ourCrew {
+  padding: 2rem;
+  text-align: center;
+  background-image: url("/crew/background.crew-desktop.jpg");
+  background-size: "cover";
+  background-position: "center";
+  background-repeat: "no-repeat";
+  color: "#fff";
+}
+
+.crewList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.crewMember {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  max-width: 250px;
+}
+
+.crewMember:hover {
+  transform: scale(1.05);
+}
+
+.crewImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  align-self: center;
 }

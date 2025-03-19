@@ -1,5 +1,7 @@
 import styles from "./page.module.css";
-import values from "@/components/ui/OurValues.js";
+import values from "@/app/about_us/ourValues.js";
+import OurCrew from "./ourCrew.js";
+import OurPartners from "./ourPartners";
 
 // TASK - React 1 week 1
 // After you are finished with creating the page, move the OurValues, OurCrew, OurPartners components into their own files
@@ -7,41 +9,23 @@ import values from "@/components/ui/OurValues.js";
 // import and use the components from the newly created files
 
 const OurValues = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Values" section
-  // Use the descriptions provided in /app/about_us/README.md
-  // Some inspiration ideas found in /data/inspiration_about_us
   return (
     <section className={styles.OurValues}>
-      <h2>Our Values</h2>
-      <ul>
+      <h2 style={{ textAlign: "center", color: "#fff", padding: "2rem" }}>
+        Our Values
+      </h2>
+      <div className={styles.grid}>
         {values.map((value, index) => (
-          <li key={index}>
-            <h3>{value.title}</h3>
-            <p>{value.description}</p>
-          </li>
+          <div key={index} className={styles.card}>
+            <span className={styles.number}>{value.number}</span>
+            <h4 className={styles.title}>{value.title}</h4>
+            <p className={styles.description}>{value.description}</p>
+            <div className={styles.divider}></div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
-};
-
-const OurCrew = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Crew section"
-  // Use the descriptions provided in /app/about_us/README.md
-  // Use the pictures from /public/crew
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return <p> ADD OUR CREW HERE </p>;
-};
-
-const OurPartners = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Crew section"
-  // Use the descriptions provided in /app/about_us/README.md
-  // Use the pictures from /public/crew
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return <p> ADD OUR Partners HERE </p>;
 };
 
 export const Crew = () => {
@@ -50,16 +34,14 @@ export const Crew = () => {
       <main className="mainContent">
         <h1>About us</h1>
         <section className="card">
-          {/*<h2>Our Values</h2>*/}
           <OurValues />
         </section>
         <section className="card">
-          <h2>The crew</h2>
           <OurCrew />
         </section>
-
-        {/* TASK - React 1 week 1 */}
-        {/* Add in the "OurPartners" component here */}
+        <section className="card">
+          <OurPartners />
+        </section>
       </main>
     </div>
   );
