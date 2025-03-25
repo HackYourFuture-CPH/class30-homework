@@ -19,7 +19,9 @@
   padding: var(--spacing-08) 0;
 }
 
-.footer p, .footer a, .footer li {
+.footer p,
+.footer a,
+.footer li {
   color: #000;
   font-size: medium;
   font-weight: 200;
@@ -45,4 +47,11 @@
 
 .footerList li {
   padding-block: var(--spacing-04);
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
