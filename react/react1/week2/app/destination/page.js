@@ -14,7 +14,7 @@ export const Destinations = () => {
       if (prevSelected.includes(name)) {
         return prevSelected.filter((planet) => planet !== name);
       } else {
-        return [...prevSelected, { name }];
+        return [...prevSelected, name];
       }
     });
     console.log(
