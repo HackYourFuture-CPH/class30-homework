@@ -78,17 +78,6 @@ export const NasaCollaboration = () => {
                   roverName={photo.rover.name}
                 />
               ))}
-
-              {/* TASK - React 1 week 3 */}
-              {/* Create a react component for the <RoverPhoto />, which should accept the following props */}
-              {/* 1. src: source of the img (img_src in the data from the API) */}
-              {/* 2. date: earth_date data coming from the API */}
-              {/* 3. roverName: will be in the rover object - rover.name */}
-
-              {/* TIPS: */}
-              {/* If you don't know how the data looks like you can: */}
-              {/* 1. use console.log() to write the data to the console */}
-              {/* 2. use the network tab in the developer tab - https://developer.chrome.com/docs/devtools/network */}
             </div>
           ) : (
             <p>Loading rover photos...</p>
