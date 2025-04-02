@@ -4,9 +4,20 @@
   height: 100vh;
 }
 
-
 .nasaPicOfTheDayImg {
-  width: auto;
-  height: 400px;
+  width: 100%;
+  height: auto;
+}
 
+.roverPhotosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.roverPhotoCard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
 }
