@@ -4,6 +4,3 @@ node_modules
 jsconfig.json
 next.config.mjs
 data
-public
-app
-components
