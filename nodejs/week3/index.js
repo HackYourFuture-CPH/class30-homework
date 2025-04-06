@@ -96,7 +96,7 @@ apiRouter.get("/last-meal", async (req, res) => {
     res.json({ lastMeal });
   } catch (error) {
     console.error("Error fetching last meal:", error);
-    res.status(500).json({ error: "Failed to fetch last meal" });
+    res.status(404).json({ error: "Failed to fetch last meal" });
   }
 }
 );
