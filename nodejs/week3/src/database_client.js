@@ -1,8 +1,11 @@
 
 import "dotenv/config";
+console.log('DB_PORT', process.env.DB_PORT); // Debug check
 console.log('DB_PASSWORD:', process.env.DB_PASSWORD); // Debug check
 console.log('DB_CLIENT:', process.env.DB_CLIENT); // Should log 'mysql2' or your desired client
 import knex from "knex";
+
+
 
 const database = knex({
   client: process.env.DB_CLIENT,
