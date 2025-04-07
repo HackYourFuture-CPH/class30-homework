@@ -1,8 +1,6 @@
-import express from "express";  
-import knex from "../../database_client.js";
+mport express from "express";
+import knex from "../database_client.js";
 const mealsRouter = express.Router();
-
-
 
 // Get all meals
 const getAllMeals = async () => {
@@ -129,8 +127,6 @@ mealsRouter.get("/", async (req, res) => {
 }
 );
 
-
-
 //Get/Api/meals/:id
 
 mealsRouter.get("/:id", async (req, res) => {
@@ -147,6 +143,7 @@ mealsRouter.get("/:id", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch meal" });
   }
 }
+);
 //PUT/api/meals/:id
 mealsRouter.put("/:id", async (req, res) => {
   try {
@@ -172,9 +169,11 @@ mealsRouter.put("/:id", async (req, res) => {
 }
 
 );
-// DELETE /api/meals/{id}
+ 
+//delete/api/meals/:id
+
 mealsRouter.delete("/:id", async (req, res) => {
- try {
+  try {
     const mealId = +req.params.id;
     const deletedMealNum = await knex("meals").where({ id: mealId }).del();
 
@@ -218,6 +217,13 @@ mealsRouter.get("/:meal_id/reviews", async (req, res) => {
 
 
 export default mealsRouter;
+
+
+
+
+
+
+
 
 
 
