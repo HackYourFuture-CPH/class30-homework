@@ -1,4 +1,4 @@
-mport express from "express";
+import express from "express";
 import knex from "../database_client.js";
 const mealsRouter = express.Router();
 
