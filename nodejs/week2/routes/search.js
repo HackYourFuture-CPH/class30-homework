@@ -39,7 +39,11 @@ searchRouter.get("/documents/:id", (req, res) => {
   const documents = loadDocuments();
   const documentID = Number(req.params.id);
 
-  if (isNaN(documentID)) {
+  if (
+    Number.isNaN(documentID) ||
+    !Number.isInteger(documentID) ||
+    documentID <= 0
+  ) {
     return res
       .status(404)
       .json({ error: `Invalid document id: ${req.params.id}` });
