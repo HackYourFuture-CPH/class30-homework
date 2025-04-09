@@ -13,9 +13,10 @@ const loadDocuments = () => {
   }
 };
 
+const documents = loadDocuments();
+
 //GET /search
 searchRouter.get("/search", (req, res) => {
-  const documents = loadDocuments();
   const q = req.query.q;
   console.log(q);
   if (q) {
@@ -36,7 +37,6 @@ searchRouter.get("/search", (req, res) => {
 //GET /documents/:id
 
 searchRouter.get("/documents/:id", (req, res) => {
-  const documents = loadDocuments();
   const documentID = Number(req.params.id);
 
   if (
@@ -64,7 +64,6 @@ searchRouter.get("/documents/:id", (req, res) => {
 searchRouter.post("/search", (req, res) => {
   const q = req.query.q?.trim() || null;
   const fields = req.body.fields || null;
-  const documents = loadDocuments();
 
   if (q && fields) {
     return res.status(400).json({
