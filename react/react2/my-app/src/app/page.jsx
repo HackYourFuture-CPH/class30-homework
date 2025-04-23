@@ -5,7 +5,8 @@ import SignUpForm from "./components/SignUpForm";
   return (
     <div>
     
-<SignUpForm/>    
+<SignUpForm/> 
+   
     </div>
   )
  }
