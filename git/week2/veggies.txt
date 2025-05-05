@@ -1,5 +1,7 @@
 tomato
 potato
-onion
+cabbage
 aubergine
 spinatch
+capsicum
+brocolli
