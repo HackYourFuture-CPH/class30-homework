@@ -1,6 +1,6 @@
 tomato
 potato
-cabbage
+cucumber
 aubergine
 spinatch
 capsicum
