@@ -1,5 +1,8 @@
 potato
 onion
-carrot
+squash
 tomato
 cucumber
+
+beetroot
+cabbage
