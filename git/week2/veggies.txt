@@ -3,3 +3,6 @@ potato
 chili pepper
 onion
 cabbage
+
+beetroot
+cucumber
