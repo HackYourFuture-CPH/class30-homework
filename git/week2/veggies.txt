@@ -1,5 +1,7 @@
 tomato
 potato
-cabbage
+broccoli
 pepper
 eggplant
+spinach
+zucchini      
