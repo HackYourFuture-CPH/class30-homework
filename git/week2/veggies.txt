@@ -1,5 +1,7 @@
 tomato
 potato
-cucumber
+garlic
 pepper
 eggplant
+corn
+pumpkin
