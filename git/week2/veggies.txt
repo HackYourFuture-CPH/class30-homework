@@ -1,5 +1,8 @@
 tomato
 potato
-carrot
+broccoli
 onion
 cabbage
+
+beetroot
+cucumber
