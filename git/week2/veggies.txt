@@ -1,0 +1,7 @@
+potato
+cabbage
+spinach
+beetroot
+broccoli
+zucchini
+onion
