@@ -1,5 +1,7 @@
 Potato
 Tomato
-Onion
+Ginger
 Cabbage
 Cucumber
+Garlic
+Broccoli
