@@ -1,6 +1,6 @@
 potato
 cabbage
-carrot
+spinach
 beetroot
 broccoli
 zucchini
