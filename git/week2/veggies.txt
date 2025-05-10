@@ -1,5 +1,7 @@
 potato
 cabbage
-beans
+carrot
 beetroot
 broccoli
+zucchini
+onion
