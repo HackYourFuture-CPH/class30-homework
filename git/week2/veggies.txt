@@ -1,5 +1,7 @@
 Carrot
 Broccoli
-Spinach
+Tomato
 Bell pepper
 Cauliflower
+Cucamber
+Zucchini
