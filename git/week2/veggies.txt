@@ -1,6 +1,6 @@
 Potato
 Tomato
-Ginger
+Carrot
 Cabbage
 Cucumber
 Garlic
