@@ -1,5 +1,7 @@
 carrot
 broccoli
-tomato
+onion
 cucumber
 lettuce
+garlic
+lemon
