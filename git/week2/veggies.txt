@@ -1,7 +1,6 @@
 carrot
 onion
 zucchini
-spinach
 tomato
 cucumber
 pepper
