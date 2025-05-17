@@ -1,13 +1,5 @@
-Carrot
-Broccoli
-Tomato
-Bell pepper
-Cauliflower
-Zucchini
-Eggplantonion
+onion
 cucumber
-cherry
+tomato 
 asparagus
 spinach
-apple 
-banana
