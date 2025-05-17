@@ -1,7 +1,5 @@
-Carrot
-Broccoli
-Tomato
-Bell pepper
-Cauliflower
-Zucchini
-Eggplant
+onion
+cucumber
+tomato 
+asparagus
+spinach
