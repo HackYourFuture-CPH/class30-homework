@@ -6,6 +6,8 @@ Cauliflower
 Zucchini
 Eggplantonion
 cucumber
-tomato 
+cherry
 asparagus
 spinach
+apple 
+banana
