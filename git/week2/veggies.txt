@@ -1,5 +1,7 @@
 onion
 cucumber
-tomato 
+cherry
 asparagus
 spinach
+banana
+apple
