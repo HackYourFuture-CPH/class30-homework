@@ -1,5 +1,7 @@
 banana
 ananas
-kiwi
+strawberry
 mango 
 melon
+apple
+salad
