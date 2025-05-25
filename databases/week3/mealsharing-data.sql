@@ -64,7 +64,7 @@ UPDATE CASCADE
 
 insert into Meal
   (title, description, location,
-  `when`, max_reservations, price, created_date) 
+`when`, max_reservations, price, created_date) 
 VALUES
 ('Zeytinyağli Sarma', 'Rice stuffed wine leaves with olive oil, lemon juice and spices', 'Istanbul', '2025-02-27 15:30:00', 5, 59.50, '2024-01-01 10:38:09'),
 ('Dalyan Köfte', 'In the shape of a substantial meatloaf with boiled eggs in it, garnished with peas and carrots in tomato sauce', 'Ankara', '2025-06-25 12:30:00', 2, 189.00, '2024-01-01 10:40:00'),
@@ -105,27 +105,27 @@ FROM `Meal
 -- Add a new meal
 insert into Meal
   (title, description, location,
-  `when`, max_reservations, price, created_date) 
+`when`, max_reservations, price, created_date) 
 VALUE
 ('Ispanakli Börek', 'Flaky and creamy, this pastry combines crisp phyllo dough with tangy Turkish white cheese and tender spinach', 'Tekirdağ', '2025-04-24 12:30:00', 6, 125.00, '2023-09-01 18:08:09');
 -- Get a meal with any id, fx 1
 SELECT *
-FROM meal
+FROM Meal
 WHERE id=3;
 
 -- Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
-UPDATE meal
+UPDATE Meal
 SET location = 'Tosya', price = 210
 WHERE id = 2;
 
 -- Delete a meal with any id, fx 1
-DELETE FROM meal 
+DELETE FROM Meal 
 WHERE id = 3;
 
 --Reservation Tasks
 -- Get all reservations
 SELECT *
-FROM reservation;
+FROM Reservation;
 
 -- Add a new reservation
 insert into Reservation
@@ -135,22 +135,22 @@ VALUES
 
 -- Get a reservation with any id, fx 1
 SELECT *
-FROM reservation
+FROM Reservation
 WHERE id=15;
 
 -- Update a reservation with any id, fx 1. Update any attribute fx the title or multiple attributes
-UPDATE reservation
+UPDATE Reservation
 SET contact_name = 'Mette Jorgen'
 WHERE id = 14;
 
 -- Delete a reservation with any id, fx 1
-DELETE FROM reservation 
+DELETE FROM Reservation 
 WHERE id = 15;
 
 --Review Tasks
 -- Get all reviews
 SELECT *
-FROM review;
+FROM Review;
 
 -- Add a new review
 insert into Review
@@ -160,22 +160,22 @@ VALUES
 
 -- Get a review with any id, fx 1
 SELECT *
-FROM review
+FROM Review
 WHERE id=8;
 
 -- Update a review with any id, fx 1. Update any attribute fx the title or multiple attributes
-UPDATE review
+UPDATE Review
 SET stars = 4, title = 'Meh!'
 WHERE id = 10;
 
 -- Delete a review with any id, fx 1
-DELETE FROM review 
+DELETE FROM Review 
 WHERE id = 3;
 
 -- Additional queries
 insert into Meal
   (title, description, location,
-  `when`, max_reservations, price, created_date) 
+`when`, max_reservations, price, created_date) 
 VALUE
 ('Sütlaç', 'It is a baked rice pudding made with rice, milk, sugar and spices', 'Trabzon', '2025-03-06 14:30:00', 4, 60.00, '2023-09-01 18:08:09');
 
@@ -191,51 +191,51 @@ VALUES
 -- Functionality
 --Get meals that has a price smaller than a specific price fx 90
 SELECT *
-FROM meal
+FROM Meal
 WHERE price < 100;
 
 -- Get meals that still has available reservations
 SELECT *
-FROM meal
+FROM Meal
 WHERE max_reservations > (
   SELECT COALESCE(SUM(number_of_guests), 0)
-FROM reservation
+FROM Reservation
 WHERE meal.id = reservation.meal_id
 );
 
 /* Get meals that partially match a title. 
   Rød grød med will match the meal with the title Rød grød med fløde */
 SELECT *
-FROM meal
+FROM Meal
 WHERE title LIKE '%sü%';
 
 -- Get meals that has been created between two dates
 SELECT id, title, created_date
-FROM meal
+FROM Meal
 WHERE '2023-08-10 10:30:25' < created_date
 <'2024-11-10 00:30:25';
 
 -- Get only specific number of meals fx return only 5 meals
 SELECT *
-FROM meal
+FROM Meal
 LIMIT
 2, 4;
 
 -- Get the meals that have good reviews
 SELECT m.title as mt, r.meal_id, r.stars
-FROM meal m
+FROM Meal m
   LEFT JOIN review r ON m.id = r.meal_id
 WHERE r.stars >= 4;
 
 -- Get reservations for a specific meal sorted by created_date
 SELECT *
-FROM reservation
+FROM Reservation
 WHERE meal_id = 2
 ORDER BY created_date ASC;
 
 -- Sort all meals by average number of stars in the reviews
 SELECT m.*, AVG(r.stars) as avg_stars
-FROM meal m
+FROM Meal m
   LEFT JOIN review r ON m.id = r.meal_id
 GROUP BY m.id
 ORDER BY avg_stars DESC;
