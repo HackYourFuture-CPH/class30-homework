@@ -42,8 +42,6 @@ UPDATE CASCADE
 );
 
 
-
-
 CREATE TABLE `Review`
 (
  `id` int
@@ -97,8 +95,8 @@ VALUES
   ("Super authentic!", "This tasted just like real home-cooked food. Kuru-Pilav was a surprisingly delicious blend of two different taste", 3, 5, "2025-02-17 16:30:50"),
   ("Could be better", "The Kuru-Pilav was decent, but I felt like it was too spicy. Burned till my ears.", 3, 3, "2025-02-06 22:15:29");
 
---Meal Tasks--
--- Get all meals--
+-- Meal Tasks
+-- Get all meals
 SELECT *
 FROM `Meal
 `;
@@ -122,7 +120,7 @@ WHERE id = 2;
 DELETE FROM Meal 
 WHERE id = 3;
 
---Reservation Tasks
+-- Reservation Tasks
 -- Get all reservations
 SELECT *
 FROM Reservation;
@@ -147,7 +145,7 @@ WHERE id = 14;
 DELETE FROM Reservation 
 WHERE id = 15;
 
---Review Tasks
+-- Review Tasks
 -- Get all reviews
 SELECT *
 FROM Review;
@@ -189,12 +187,12 @@ insert into Review
 VALUES
   ('Wow<3', 'I have tried various types of rice puddings so far, but giiirl it was sooo tasty, creamy, like baby food <3', 5, 5, '2025-03-10 18:40:50')
 -- Functionality
---Get meals that has a price smaller than a specific price fx 90
+-- Get meals that has a price smaller than a specific price fx 90
 SELECT *
 FROM Meal
 WHERE price < 100;
 
--- Get meals that still has available reservations
+-- Get meals that still has available reservations --
 SELECT *
 FROM Meal
 WHERE max_reservations > (
