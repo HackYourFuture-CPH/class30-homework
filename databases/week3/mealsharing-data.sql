@@ -64,7 +64,7 @@ UPDATE CASCADE
 
 insert into Meal
   (title, description, location,
-`when`, max_reservations, price, created_date) 
+  `when`, max_reservations, price, created_date) 
 VALUES
 ('Zeytinyağli Sarma', 'Rice stuffed wine leaves with olive oil, lemon juice and spices', 'Istanbul', '2025-02-27 15:30:00', 5, 59.50, '2024-01-01 10:38:09'),
 ('Dalyan Köfte', 'In the shape of a substantial meatloaf with boiled eggs in it, garnished with peas and carrots in tomato sauce', 'Ankara', '2025-06-25 12:30:00', 2, 189.00, '2024-01-01 10:40:00'),
@@ -105,7 +105,7 @@ FROM `Meal
 -- Add a new meal
 insert into Meal
   (title, description, location,
-`when`, max_reservations, price, created_date) 
+  `when`, max_reservations, price, created_date) 
 VALUE
 ('Ispanakli Börek', 'Flaky and creamy, this pastry combines crisp phyllo dough with tangy Turkish white cheese and tender spinach', 'Tekirdağ', '2025-04-24 12:30:00', 6, 125.00, '2023-09-01 18:08:09');
 -- Get a meal with any id, fx 1
@@ -175,7 +175,7 @@ WHERE id = 3;
 -- Additional queries
 insert into Meal
   (title, description, location,
-`when`, max_reservations, price, created_date) 
+  `when`, max_reservations, price, created_date) 
 VALUE
 ('Sütlaç', 'It is a baked rice pudding made with rice, milk, sugar and spices', 'Trabzon', '2025-03-06 14:30:00', 4, 60.00, '2023-09-01 18:08:09');
 
@@ -212,8 +212,8 @@ WHERE title LIKE '%sü%';
 -- Get meals that has been created between two dates
 SELECT id, title, created_date
 FROM Meal
-WHERE '2023-08-10 10:30:25' < created_date
-<'2024-11-10 00:30:25';
+WHERE created_date > '2023-08-10 10:30:25'
+  AND created_date < '2024-11-10 00:30:25';
 
 -- Get only specific number of meals fx return only 5 meals
 SELECT *
